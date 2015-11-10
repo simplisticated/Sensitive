@@ -159,6 +159,29 @@ public extension UIView {
     }
     
     private func handlePinchGestureRecognizer(pinchGestureRecognizer: UIPinchGestureRecognizer) {
+        switch pinchGestureRecognizer.state {
+        case .Possible:
+            break
+        case .Began:
+            let scale = pinchGestureRecognizer.scale
+            transform = CGAffineTransformScale(transform, scale, scale)
+            pinchGestureRecognizer.scale = 1.0
+            break
+        case .Changed:
+            let scale = pinchGestureRecognizer.scale
+            transform = CGAffineTransformScale(transform, scale, scale)
+            pinchGestureRecognizer.scale = 1.0
+            break
+        case .Ended:
+            let scale = pinchGestureRecognizer.scale
+            transform = CGAffineTransformScale(transform, scale, scale)
+            pinchGestureRecognizer.scale = 1.0
+            break
+        case .Cancelled:
+            break
+        case .Failed:
+            break
+        }
     }
     
     private func handleRotationGestureRecognizer(rotationGestureRecognizer: UIRotationGestureRecognizer) {
@@ -168,3 +191,4 @@ public extension UIView {
     }
     
 }
+
