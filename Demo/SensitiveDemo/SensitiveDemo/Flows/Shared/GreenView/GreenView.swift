@@ -40,8 +40,31 @@ class GreenView: UIView {
     
     // MARK: Variables & properties
     
+    private var labelTitle: UILabel!
+    
     
     // MARK: Public methods
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        
+        // Update title label
+        
+        labelTitle.frame = bounds
+    }
+    
+    func attributesForTitle() -> [String : AnyObject] {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .Center
+        
+        return [
+            NSFontAttributeName: UIFont.systemFontOfSize(12.0),
+            NSForegroundColorAttributeName: UIColor.blackColor(),
+            NSKernAttributeName: 1.0,
+            NSParagraphStyleAttributeName: paragraphStyle
+        ]
+    }
     
     
     // MARK: Private methods
@@ -59,6 +82,18 @@ class GreenView: UIView {
         layer.borderColor = UIColor.blackColor().CGColor
         layer.borderWidth = 1.0
         layer.cornerRadius = sideForView / 2.0
+        
+        
+        // Initialize title label
+        
+        labelTitle = UILabel()
+        labelTitle.numberOfLines = 0
+        
+        let textForLabelTitle = "Supports pan and pinch gestures"
+        let attributedTextForLabelTitle = NSAttributedString(string: textForLabelTitle, attributes: attributesForTitle())
+        labelTitle.attributedText = attributedTextForLabelTitle
+        
+        addSubview(labelTitle)
     }
     
     
