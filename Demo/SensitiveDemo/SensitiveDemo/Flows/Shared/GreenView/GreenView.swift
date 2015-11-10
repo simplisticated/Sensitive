@@ -72,7 +72,7 @@ class GreenView: UIView {
     private func customInitialization() {
         // Initialize view
         
-        backgroundColor = .greenColor()
+        backgroundColor = .Sensitive_greenColor
         
         let sideForView: CGFloat = 200.0
         

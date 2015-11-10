@@ -16,6 +16,7 @@
 		695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D301BF168CC008E3B45 /* MainViewController.swift */; };
 		695A3D361BF168CC008E3B45 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695A3D311BF168CC008E3B45 /* MainViewController.xib */; };
 		695A3D371BF168CC008E3B45 /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D341BF168CC008E3B45 /* GreenView.swift */; };
+		697A75321BF1708500229272 /* UIColorExtensionListOfColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		695A3D301BF168CC008E3B45 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		695A3D311BF168CC008E3B45 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		695A3D341BF168CC008E3B45 /* GreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
+		697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionListOfColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,8 @@
 		694D5BB51BF020E9007D0EAA /* SensitiveDemo */ = {
 			isa = PBXGroup;
 			children = (
+				697A752E1BF1706F00229272 /* Classes */,
+				697A752F1BF1706F00229272 /* Extensions */,
 				694D5BE41BF02114007D0EAA /* Flows */,
 				695A3D251BF15DEC008E3B45 /* Libraries */,
 				694D5BB61BF020E9007D0EAA /* AppDelegate.swift */,
@@ -186,6 +190,29 @@
 				695A3D341BF168CC008E3B45 /* GreenView.swift */,
 			);
 			path = GreenView;
+			sourceTree = "<group>";
+		};
+		697A752E1BF1706F00229272 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		697A752F1BF1706F00229272 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				697A75301BF1707900229272 /* Colors */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		697A75301BF1707900229272 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +349,7 @@
 				695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */,
 				695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */,
 				695A3D371BF168CC008E3B45 /* GreenView.swift in Sources */,
+				697A75321BF1708500229272 /* UIColorExtensionListOfColors.swift in Sources */,
 				694D5BB71BF020E9007D0EAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
