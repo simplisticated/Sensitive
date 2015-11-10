@@ -4,7 +4,7 @@
 
 # Sensitive
 
-This library is in early development phase right now. Will be published soon.
+Fresh look at work with gestures in Swift.
 
 ##How To Get Started
 
