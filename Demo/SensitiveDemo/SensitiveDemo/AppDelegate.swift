@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainViewController = MainViewController(nibName: "MainViewController", bundle: nil)
         
         let navigationController = UINavigationController(rootViewController: mainViewController)
-        navigationController.navigationBarHidden = false
+        navigationController.navigationBarHidden = true
         
         window!.rootViewController = navigationController
         

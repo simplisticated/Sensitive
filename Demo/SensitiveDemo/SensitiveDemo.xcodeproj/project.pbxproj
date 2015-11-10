@@ -12,8 +12,10 @@
 		694D5BC11BF020EA007D0EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694D5BBF1BF020EA007D0EAA /* LaunchScreen.storyboard */; };
 		694D5BCC1BF020EA007D0EAA /* SensitiveDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D5BCB1BF020EA007D0EAA /* SensitiveDemoTests.swift */; };
 		694D5BD71BF020EA007D0EAA /* SensitiveDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D5BD61BF020EA007D0EAA /* SensitiveDemoUITests.swift */; };
-		694D5BE91BF02121007D0EAA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D5BE71BF02121007D0EAA /* MainViewController.swift */; };
-		694D5BEA1BF02121007D0EAA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 694D5BE81BF02121007D0EAA /* MainViewController.xib */; };
+		695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */; };
+		695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D301BF168CC008E3B45 /* MainViewController.swift */; };
+		695A3D361BF168CC008E3B45 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695A3D311BF168CC008E3B45 /* MainViewController.xib */; };
+		695A3D371BF168CC008E3B45 /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D341BF168CC008E3B45 /* GreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +47,10 @@
 		694D5BD21BF020EA007D0EAA /* SensitiveDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensitiveDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		694D5BD61BF020EA007D0EAA /* SensitiveDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveDemoUITests.swift; sourceTree = "<group>"; };
 		694D5BD81BF020EA007D0EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		694D5BE71BF02121007D0EAA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		694D5BE81BF02121007D0EAA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionGestures.swift; sourceTree = "<group>"; };
+		695A3D301BF168CC008E3B45 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		695A3D311BF168CC008E3B45 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		695A3D341BF168CC008E3B45 /* GreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				694D5BE41BF02114007D0EAA /* Flows */,
-				694D5BEB1BF021FF007D0EAA /* Sensitive */,
+				695A3D251BF15DEC008E3B45 /* Libraries */,
 				694D5BB61BF020E9007D0EAA /* AppDelegate.swift */,
 				694D5BBD1BF020EA007D0EAA /* Assets.xcassets */,
 				694D5BBF1BF020EA007D0EAA /* LaunchScreen.storyboard */,
@@ -128,34 +132,60 @@
 		694D5BE41BF02114007D0EAA /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				694D5BE51BF02114007D0EAA /* Main */,
+				695A3D2E1BF168CC008E3B45 /* Main */,
+				695A3D321BF168CC008E3B45 /* Shared */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
 		};
-		694D5BE51BF02114007D0EAA /* Main */ = {
+		695A3D251BF15DEC008E3B45 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				694D5BE61BF02114007D0EAA /* MainViewController */,
+				695A3D261BF15DFB008E3B45 /* Sensitive */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		695A3D261BF15DFB008E3B45 /* Sensitive */ = {
+			isa = PBXGroup;
+			children = (
+				695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */,
+			);
+			name = Sensitive;
+			path = ../../../../Source;
+			sourceTree = "<group>";
+		};
+		695A3D2E1BF168CC008E3B45 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				695A3D2F1BF168CC008E3B45 /* MainViewController */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		694D5BE61BF02114007D0EAA /* MainViewController */ = {
+		695A3D2F1BF168CC008E3B45 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				694D5BE71BF02121007D0EAA /* MainViewController.swift */,
-				694D5BE81BF02121007D0EAA /* MainViewController.xib */,
+				695A3D301BF168CC008E3B45 /* MainViewController.swift */,
+				695A3D311BF168CC008E3B45 /* MainViewController.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
 		};
-		694D5BEB1BF021FF007D0EAA /* Sensitive */ = {
+		695A3D321BF168CC008E3B45 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				695A3D331BF168CC008E3B45 /* GreenView */,
 			);
-			name = Sensitive;
-			path = ../../../Source;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		695A3D331BF168CC008E3B45 /* GreenView */ = {
+			isa = PBXGroup;
+			children = (
+				695A3D341BF168CC008E3B45 /* GreenView.swift */,
+			);
+			path = GreenView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				694D5BC11BF020EA007D0EAA /* LaunchScreen.storyboard in Resources */,
-				694D5BEA1BF02121007D0EAA /* MainViewController.xib in Resources */,
+				695A3D361BF168CC008E3B45 /* MainViewController.xib in Resources */,
 				694D5BBE1BF020EA007D0EAA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,8 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */,
+				695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */,
+				695A3D371BF168CC008E3B45 /* GreenView.swift in Sources */,
 				694D5BB71BF020E9007D0EAA /* AppDelegate.swift in Sources */,
-				694D5BE91BF02121007D0EAA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +541,7 @@
 				694D5BDD1BF020EA007D0EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		694D5BDE1BF020EA007D0EAA /* Build configuration list for PBXNativeTarget "SensitiveDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +550,7 @@
 				694D5BE01BF020EA007D0EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		694D5BE11BF020EA007D0EAA /* Build configuration list for PBXNativeTarget "SensitiveDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +559,7 @@
 				694D5BE31BF020EA007D0EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

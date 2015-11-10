@@ -30,16 +30,46 @@ class MainViewController: UIViewController {
     
     // MARK: Variables & properties
     
+    private var greenView: GreenView!
+    
     
     // MARK: Public methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // Initialize view
+        
+        let frameForView = UIScreen.mainScreen().bounds
+        view.frame = frameForView
+        
+        
+        // Initialize green view
+        
+        greenView = GreenView()
+        
+        var frameForGreenView = greenView.frame
+        frameForGreenView.origin.x = (view.bounds.size.width - frameForGreenView.size.width) / 2.0
+        frameForGreenView.origin.y = (view.bounds.size.height - frameForGreenView.size.height) / 2.0
+        greenView.frame = frameForGreenView
+        
+        view.addSubview(greenView)
+        
+        greenView.SN_addPanGestureRecognizer(handleAutomatically: true) { (panGestureRecognizer) -> Void in
+        }
+        
+        greenView.SN_addPinchGestureRecognizer(handleAutomatically: true) { (pinchGestureRecognizer) -> Void in
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     
