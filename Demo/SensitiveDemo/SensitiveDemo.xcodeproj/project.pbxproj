@@ -17,6 +17,9 @@
 		695A3D361BF168CC008E3B45 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695A3D311BF168CC008E3B45 /* MainViewController.xib */; };
 		695A3D371BF168CC008E3B45 /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D341BF168CC008E3B45 /* GreenView.swift */; };
 		697A75321BF1708500229272 /* UIColorExtensionListOfColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */; };
+		69853B231C2239AD00F32102 /* SNTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69853B221C2239AD00F32102 /* SNTapGestureRecognizer.swift */; };
+		69853B251C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69853B241C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift */; };
+		69853B271C223B5400F32102 /* SNTapGestureRecognizerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69853B261C223B5400F32102 /* SNTapGestureRecognizerHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		695A3D311BF168CC008E3B45 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		695A3D341BF168CC008E3B45 /* GreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
 		697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionListOfColors.swift; sourceTree = "<group>"; };
+		69853B221C2239AD00F32102 /* SNTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		69853B241C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNTapGestureRecognizerHandlerBlock.swift; sourceTree = "<group>"; };
+		69853B261C223B5400F32102 /* SNTapGestureRecognizerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNTapGestureRecognizerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 		695A3D261BF15DFB008E3B45 /* Sensitive */ = {
 			isa = PBXGroup;
 			children = (
+				69853B161C22382C00F32102 /* GestureRecognizers */,
 				695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */,
 			);
 			name = Sensitive;
@@ -213,6 +220,56 @@
 				697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		69853B161C22382C00F32102 /* GestureRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				69853B1D1C22398000F32102 /* Pan */,
+				69853B1E1C22398000F32102 /* Pinch */,
+				69853B1F1C22398000F32102 /* Rotation */,
+				69853B201C22398000F32102 /* Swipe */,
+				69853B211C22398000F32102 /* Tap */,
+			);
+			path = GestureRecognizers;
+			sourceTree = "<group>";
+		};
+		69853B1D1C22398000F32102 /* Pan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pan;
+			sourceTree = "<group>";
+		};
+		69853B1E1C22398000F32102 /* Pinch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pinch;
+			sourceTree = "<group>";
+		};
+		69853B1F1C22398000F32102 /* Rotation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rotation;
+			sourceTree = "<group>";
+		};
+		69853B201C22398000F32102 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Swipe;
+			sourceTree = "<group>";
+		};
+		69853B211C22398000F32102 /* Tap */ = {
+			isa = PBXGroup;
+			children = (
+				69853B221C2239AD00F32102 /* SNTapGestureRecognizer.swift */,
+				69853B261C223B5400F32102 /* SNTapGestureRecognizerHandler.swift */,
+				69853B241C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift */,
+			);
+			path = Tap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,10 +404,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */,
+				69853B271C223B5400F32102 /* SNTapGestureRecognizerHandler.swift in Sources */,
 				695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */,
+				69853B231C2239AD00F32102 /* SNTapGestureRecognizer.swift in Sources */,
 				695A3D371BF168CC008E3B45 /* GreenView.swift in Sources */,
 				697A75321BF1708500229272 /* UIColorExtensionListOfColors.swift in Sources */,
 				694D5BB71BF020E9007D0EAA /* AppDelegate.swift in Sources */,
+				69853B251C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

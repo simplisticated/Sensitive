@@ -19,6 +19,15 @@ public extension UIView {
     
     // MARK: Public object methods
     
+    public func onTap(block: SNTapGestureRecognizerHandlerBlock, configureTapGestureRecognizer: ((tapGestureRecognizer: SNTapGestureRecognizer) -> Void)? = nil) -> UIView {
+        let tapGestureRecognizer = SNTapGestureRecognizer(handlerBlock: block)
+        addGestureRecognizer(tapGestureRecognizer)
+        
+        configureTapGestureRecognizer?(tapGestureRecognizer: tapGestureRecognizer)
+        
+        return self
+    }
+    
     public func SN_didRetrieveGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
     }
     
