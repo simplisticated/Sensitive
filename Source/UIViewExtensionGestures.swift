@@ -19,185 +19,88 @@ public extension UIView {
     
     // MARK: Public object methods
     
-    public func onTap(block: SNTapGestureRecognizerHandlerBlock, configureTapGestureRecognizer: ((tapGestureRecognizer: SNTapGestureRecognizer) -> Void)? = nil) -> UIView {
+    public func onTap(block: SNTapGestureRecognizerHandlerBlock, configureTapGestureRecognizer: (tapGestureRecognizer: SNTapGestureRecognizer) -> Void) -> UIView {
         let tapGestureRecognizer = SNTapGestureRecognizer(handlerBlock: block)
         addGestureRecognizer(tapGestureRecognizer)
         
-        configureTapGestureRecognizer?(tapGestureRecognizer: tapGestureRecognizer)
+        configureTapGestureRecognizer(tapGestureRecognizer: tapGestureRecognizer)
         
         return self
     }
     
-    public func SN_didRetrieveGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
-    }
-    
-    public func SN_addTapGestureRecognizerWithConfigurationBlock(configurationBlock: ((tapGestureRecognizer: UITapGestureRecognizer) -> Void)?) -> UITapGestureRecognizer {
-        let gestureRecognizer = SN_addGestureRecognizerOfType(UITapGestureRecognizer.self, handleAutomatically: false) { (gestureRecognizer) -> Void in
-            let tapGestureRecognizer = gestureRecognizer as! UITapGestureRecognizer
-            configurationBlock?(tapGestureRecognizer: tapGestureRecognizer)
+    public func onTap(block: SNTapGestureRecognizerHandlerBlock) -> UIView {
+        let view = onTap(block) { (tapGestureRecognizer) -> Void in
         }
         
-        let tapGestureRecognizer = gestureRecognizer as! UITapGestureRecognizer
-        return tapGestureRecognizer
+        return view
     }
     
-    public func SN_addLongPressGestureRecognizerWithConfigurationBlock(configurationBlock: ((longPressGestureRecognizer: UILongPressGestureRecognizer) -> Void)?) -> UILongPressGestureRecognizer {
-        let gestureRecognizer = SN_addGestureRecognizerOfType(UILongPressGestureRecognizer.self, handleAutomatically: false) { (gestureRecognizer) -> Void in
-            let longPressGestureRecognizer = gestureRecognizer as! UILongPressGestureRecognizer
-            configurationBlock?(longPressGestureRecognizer: longPressGestureRecognizer)
-        }
+    public func onPan(block: SNPanGestureRecognizerHandlerBlock, configurePanGestureRecognizer: (panGestureRecognizer: SNPanGestureRecognizer) -> Void) -> UIView {
+        let panGestureRecognizer = SNPanGestureRecognizer(handlerBlock: block)
+        addGestureRecognizer(panGestureRecognizer)
         
-        let longPressGestureRecognizer = gestureRecognizer as! UILongPressGestureRecognizer
-        return longPressGestureRecognizer
+        configurePanGestureRecognizer(panGestureRecognizer: panGestureRecognizer)
+        
+        return self
     }
     
-    public func SN_addPanGestureRecognizer(handleAutomatically handleAutomatically: Bool, withConfigurationBlock configurationBlock: ((panGestureRecognizer: UIPanGestureRecognizer) -> Void)?) -> UIPanGestureRecognizer {
-        let gestureRecognizer = SN_addGestureRecognizerOfType(UIPanGestureRecognizer.self, handleAutomatically: handleAutomatically) { (gestureRecognizer) -> Void in
-            let panGestureRecognizer = gestureRecognizer as! UIPanGestureRecognizer
-            configurationBlock?(panGestureRecognizer: panGestureRecognizer)
+    public func onPan(block: SNPanGestureRecognizerHandlerBlock) -> UIView {
+        let view = onPan(block) { (panGestureRecognizer) -> Void in
         }
         
-        let panGestureRecognizer = gestureRecognizer as! UIPanGestureRecognizer
-        return panGestureRecognizer
+        return view
     }
     
-    public func SN_addPinchGestureRecognizer(handleAutomatically handleAutomatically: Bool, withConfigurationBlock configurationBlock: ((pinchGestureRecognizer: UIPinchGestureRecognizer) -> Void)?) -> UIPinchGestureRecognizer {
-        let gestureRecognizer = SN_addGestureRecognizerOfType(UIPinchGestureRecognizer.self, handleAutomatically: handleAutomatically) { (gestureRecognizer) -> Void in
-            let pinchGestureRecognizer = gestureRecognizer as! UIPinchGestureRecognizer
-            configurationBlock?(pinchGestureRecognizer: pinchGestureRecognizer)
-        }
+    public func onPinch(block: SNPinchGestureRecognizerHandlerBlock, configurePinchGestureRecognizer: (pinchGestureRecognizer: SNPinchGestureRecognizer) -> Void) -> UIView {
+        let pinchGestureRecognizer = SNPinchGestureRecognizer(handlerBlock: block)
+        addGestureRecognizer(pinchGestureRecognizer)
         
-        let pinchGestureRecognizer = gestureRecognizer as! UIPinchGestureRecognizer
-        return pinchGestureRecognizer
+        configurePinchGestureRecognizer(pinchGestureRecognizer: pinchGestureRecognizer)
+        
+        return self
     }
     
-    public func SN_addRotationGestureRecognizerWithConfigurationBlock(configurationBlock: ((rotationGestureRecognizer: UIRotationGestureRecognizer) -> Void)?) -> UIRotationGestureRecognizer {
-        let gestureRecognizer = SN_addGestureRecognizerOfType(UIRotationGestureRecognizer.self, handleAutomatically: false) { (gestureRecognizer) -> Void in
-            let rotationGestureRecognizer = gestureRecognizer as! UIRotationGestureRecognizer
-            configurationBlock?(rotationGestureRecognizer: rotationGestureRecognizer)
+    public func onPinch(block: SNPinchGestureRecognizerHandlerBlock) -> UIView {
+        let view = onPinch(block) { (pinchGestureRecognizer) -> Void in
         }
         
-        let rotationGestureRecognizer = gestureRecognizer as! UIRotationGestureRecognizer
-        return rotationGestureRecognizer
+        return view
     }
     
-    public func SN_addSwipeGestureRecognizerWithConfigurationBlock(configurationBlock: ((swipeGestureRecognizer: UISwipeGestureRecognizer) -> Void)?) -> UISwipeGestureRecognizer {
-        let gestureRecognizer = SN_addGestureRecognizerOfType(UISwipeGestureRecognizer.self, handleAutomatically: false) { (gestureRecognizer) -> Void in
-            let swipeGestureRecognizer = gestureRecognizer as! UISwipeGestureRecognizer
-            configurationBlock?(swipeGestureRecognizer: swipeGestureRecognizer)
+    public func onRotation(block: SNRotationGestureRecognizerHandlerBlock, configureRotationGestureRecognizer: (rotationGestureRecognizer: SNRotationGestureRecognizer) -> Void) -> UIView {
+        let rotationGestureRecognizer = SNRotationGestureRecognizer(handlerBlock: block)
+        addGestureRecognizer(rotationGestureRecognizer)
+        
+        configureRotationGestureRecognizer(rotationGestureRecognizer: rotationGestureRecognizer)
+        
+        return self
+    }
+    
+    public func onRotation(block: SNRotationGestureRecognizerHandlerBlock) -> UIView {
+        let view = onRotation(block) { (rotationGestureRecognizer) -> Void in
         }
         
-        let swipeGestureRecognizer = gestureRecognizer as! UISwipeGestureRecognizer
-        return swipeGestureRecognizer
+        return view
+    }
+    
+    public func onSwipe(block: SNSwipeGestureRecognizerHandlerBlock, configureSwipeGestureRecognizer: (swipeGestureRecognizer: SNSwipeGestureRecognizer) -> Void) -> UIView {
+        let swipeGestureRecognizer = SNSwipeGestureRecognizer(handlerBlock: block)
+        addGestureRecognizer(swipeGestureRecognizer)
+        
+        configureSwipeGestureRecognizer(swipeGestureRecognizer: swipeGestureRecognizer)
+        
+        return self
+    }
+    
+    public func onSwipe(block: SNSwipeGestureRecognizerHandlerBlock) -> UIView {
+        let view = onSwipe(block) { (swipeGestureRecognizer) -> Void in
+        }
+        
+        return view
     }
     
     
     // MARK: Private object methods
-    
-    private func SN_addGestureRecognizerOfType(type: UIGestureRecognizer.Type, handleAutomatically: Bool, withConfigurationBlock configurationBlock: ((gestureRecognizer: UIGestureRecognizer) -> Void)?) -> UIGestureRecognizer {
-        let selectorForGestureRecognizer = handleAutomatically ? Selector("SN_internalMethod_handleGestureRecognizer:") : Selector("SN_internalMethod_didRetrieveGestureRecognizer:")
-        let gestureRecognizer = type.init(target: self, action: selectorForGestureRecognizer)
-        configurationBlock?(gestureRecognizer: gestureRecognizer)
-        addGestureRecognizer(gestureRecognizer)
-        return gestureRecognizer
-    }
-    
-    internal func SN_internalMethod_didRetrieveGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
-        SN_didRetrieveGestureRecognizer(gestureRecognizer)
-    }
-    
-    internal func SN_internalMethod_handleGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
-        if gestureRecognizer is UITapGestureRecognizer {
-            let tapGestureRecognizer = gestureRecognizer as! UITapGestureRecognizer
-            handleTapGestureRecognizer(tapGestureRecognizer)
-        }
-        else if gestureRecognizer is UILongPressGestureRecognizer {
-            let longPressGestureRecognizer = gestureRecognizer as! UILongPressGestureRecognizer
-            handleLongPressGestureRecognizer(longPressGestureRecognizer)
-        }
-        else if gestureRecognizer is UIPanGestureRecognizer {
-            let panGestureRecognizer = gestureRecognizer as! UIPanGestureRecognizer
-            handlePanGestureRecognizer(panGestureRecognizer)
-        }
-        else if gestureRecognizer is UIPinchGestureRecognizer {
-            let pinchGestureRecognizer = gestureRecognizer as! UIPinchGestureRecognizer
-            handlePinchGestureRecognizer(pinchGestureRecognizer)
-        }
-        else if gestureRecognizer is UIRotationGestureRecognizer {
-            let rotationGestureRecognizer = gestureRecognizer as! UIRotationGestureRecognizer
-            handleRotationGestureRecognizer(rotationGestureRecognizer)
-        }
-        else if gestureRecognizer is UISwipeGestureRecognizer {
-            let swipeGestureRecognizer = gestureRecognizer as! UISwipeGestureRecognizer
-            handleSwipeGestureRecognizer(swipeGestureRecognizer)
-        }
-        
-        SN_internalMethod_didRetrieveGestureRecognizer(gestureRecognizer)
-    }
-    
-    private func handleTapGestureRecognizer(tapGestureRecognizer: UITapGestureRecognizer) {
-    }
-    
-    private func handleLongPressGestureRecognizer(longPressGestureRecognizer: UILongPressGestureRecognizer) {
-    }
-    
-    private func handlePanGestureRecognizer(panGestureRecognizer: UIPanGestureRecognizer) {
-        switch panGestureRecognizer.state {
-        case .Possible:
-            break
-        case .Began:
-            let translatedPoint = panGestureRecognizer.translationInView(self)
-            self.center = CGPointMake(self.center.x + translatedPoint.x, self.center.y + translatedPoint.y)
-            panGestureRecognizer.setTranslation(CGPointZero, inView: self)
-            break
-        case .Changed:
-            let translatedPoint = panGestureRecognizer.translationInView(self)
-            self.center = CGPointMake(self.center.x + translatedPoint.x, self.center.y + translatedPoint.y)
-            panGestureRecognizer.setTranslation(CGPointZero, inView: self)
-            break
-        case .Ended:
-            let translatedPoint = panGestureRecognizer.translationInView(self)
-            self.center = CGPointMake(self.center.x + translatedPoint.x, self.center.y + translatedPoint.y)
-            panGestureRecognizer.setTranslation(CGPointZero, inView: self)
-            break
-        case .Cancelled:
-            break
-        case .Failed:
-            break
-        }
-    }
-    
-    private func handlePinchGestureRecognizer(pinchGestureRecognizer: UIPinchGestureRecognizer) {
-        switch pinchGestureRecognizer.state {
-        case .Possible:
-            break
-        case .Began:
-            let scale = pinchGestureRecognizer.scale
-            transform = CGAffineTransformScale(transform, scale, scale)
-            pinchGestureRecognizer.scale = 1.0
-            break
-        case .Changed:
-            let scale = pinchGestureRecognizer.scale
-            transform = CGAffineTransformScale(transform, scale, scale)
-            pinchGestureRecognizer.scale = 1.0
-            break
-        case .Ended:
-            let scale = pinchGestureRecognizer.scale
-            transform = CGAffineTransformScale(transform, scale, scale)
-            pinchGestureRecognizer.scale = 1.0
-            break
-        case .Cancelled:
-            break
-        case .Failed:
-            break
-        }
-    }
-    
-    private func handleRotationGestureRecognizer(rotationGestureRecognizer: UIRotationGestureRecognizer) {
-    }
-    
-    private func handleSwipeGestureRecognizer(swipeGestureRecognizer: UISwipeGestureRecognizer) {
-    }
     
 }
 

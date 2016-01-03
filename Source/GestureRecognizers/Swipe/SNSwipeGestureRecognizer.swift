@@ -1,14 +1,14 @@
 //
-//  SNTapGestureRecognizer.swift
+//  SNSwipeGestureRecognizer.swift
 //  SensitiveDemo
 //
-//  Created by Igor Matyushkin on 17.12.15.
-//  Copyright © 2015 Igor Matyushkin. All rights reserved.
+//  Created by Igor Matyushkin on 04.01.16.
+//  Copyright © 2016 Igor Matyushkin. All rights reserved.
 //
 
 import UIKit
 
-public class SNTapGestureRecognizer: UITapGestureRecognizer {
+public class SNSwipeGestureRecognizer: UISwipeGestureRecognizer {
     
     // MARK: Class variables & properties
     
@@ -18,10 +18,10 @@ public class SNTapGestureRecognizer: UITapGestureRecognizer {
     
     // MARK: Initializers
     
-    public init(handlerBlock: SNTapGestureRecognizerHandlerBlock) {
+    public init(handlerBlock: SNSwipeGestureRecognizerHandlerBlock) {
         // Create handler
         
-        let handler = SNTapGestureRecognizerHandler(handlerBlock: handlerBlock)
+        let handler = SNSwipeGestureRecognizerHandler(handlerBlock: handlerBlock)
         
         
         // Call super init
@@ -43,7 +43,7 @@ public class SNTapGestureRecognizer: UITapGestureRecognizer {
     
     // MARK: Variables & properties
     
-    private var handler: SNTapGestureRecognizerHandler!
+    private var handler: SNSwipeGestureRecognizerHandler!
     
     
     // MARK: Public methods
