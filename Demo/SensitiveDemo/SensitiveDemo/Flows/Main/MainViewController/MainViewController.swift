@@ -27,10 +27,19 @@ class MainViewController: UIViewController {
     
     // MARK: Outlets
     
+    @IBOutlet private weak var circleView: CircleView!
+    
     
     // MARK: Variables & properties
     
-    private var greenView: GreenView!
+    private let colors: [UIColor] = [
+        .greenColor(),
+        .yellowColor(),
+        .orangeColor(),
+        .whiteColor()
+    ]
+    
+    private var indexOfCurrentColor: Int?
     
     
     // MARK: Public methods
@@ -39,27 +48,17 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         
-        // Initialize view
+        // Initialize circle view
         
-        let frameForView = UIScreen.mainScreen().bounds
-        view.frame = frameForView
-        
-        
-        // Initialize green view
-        
-        greenView = GreenView()
-        
-        var frameForGreenView = greenView.frame
-        frameForGreenView.origin.x = (view.bounds.size.width - frameForGreenView.size.width) / 2.0
-        frameForGreenView.origin.y = (view.bounds.size.height - frameForGreenView.size.height) / 2.0
-        greenView.frame = frameForGreenView
-        
-        view.addSubview(greenView)
-        
-        greenView.SN_addPanGestureRecognizer(handleAutomatically: true) { (panGestureRecognizer) -> Void in
-        }
-        
-        greenView.SN_addPinchGestureRecognizer(handleAutomatically: true) { (pinchGestureRecognizer) -> Void in
+        circleView.onTap {
+            if (self.indexOfCurrentColor == nil) || (self.indexOfCurrentColor! >= self.colors.count - 1) {
+                self.indexOfCurrentColor = 0
+            } else {
+                self.indexOfCurrentColor!++
+            }
+            
+            let colorForCircleView = self.colors[self.indexOfCurrentColor!]
+            self.circleView.backgroundColor = colorForCircleView
         }
     }
     
