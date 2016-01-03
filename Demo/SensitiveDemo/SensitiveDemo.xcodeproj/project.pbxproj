@@ -32,6 +32,11 @@
 		69A1D5EB1C39E1D800ED2B7A /* SNSwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5EA1C39E1D800ED2B7A /* SNSwipeGestureRecognizer.swift */; };
 		69A1D5ED1C39E20B00ED2B7A /* SNSwipeGestureRecognizerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5EC1C39E20B00ED2B7A /* SNSwipeGestureRecognizerHandler.swift */; };
 		69A1D5EF1C39E23B00ED2B7A /* SNSwipeGestureRecognizerHandlerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5EE1C39E23B00ED2B7A /* SNSwipeGestureRecognizerHandlerBlock.swift */; };
+		69A1D5F11C39E5C500ED2B7A /* SNTapGestureRecognizerConfigurationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5F01C39E5C500ED2B7A /* SNTapGestureRecognizerConfigurationBlock.swift */; };
+		69A1D5F31C39E63600ED2B7A /* SNPanGestureRecognizerConfigurationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5F21C39E63600ED2B7A /* SNPanGestureRecognizerConfigurationBlock.swift */; };
+		69A1D5F51C39E66200ED2B7A /* SNPinchGestureRecognizerConfigurationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5F41C39E66200ED2B7A /* SNPinchGestureRecognizerConfigurationBlock.swift */; };
+		69A1D5F71C39E69300ED2B7A /* SNRotationGestureRecognizerConfigurationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5F61C39E69300ED2B7A /* SNRotationGestureRecognizerConfigurationBlock.swift */; };
+		69A1D5F91C39E6BD00ED2B7A /* SNSwipeGestureRecognizerConfigurationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5F81C39E6BD00ED2B7A /* SNSwipeGestureRecognizerConfigurationBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		69A1D5EA1C39E1D800ED2B7A /* SNSwipeGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNSwipeGestureRecognizer.swift; sourceTree = "<group>"; };
 		69A1D5EC1C39E20B00ED2B7A /* SNSwipeGestureRecognizerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNSwipeGestureRecognizerHandler.swift; sourceTree = "<group>"; };
 		69A1D5EE1C39E23B00ED2B7A /* SNSwipeGestureRecognizerHandlerBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNSwipeGestureRecognizerHandlerBlock.swift; sourceTree = "<group>"; };
+		69A1D5F01C39E5C500ED2B7A /* SNTapGestureRecognizerConfigurationBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNTapGestureRecognizerConfigurationBlock.swift; sourceTree = "<group>"; };
+		69A1D5F21C39E63600ED2B7A /* SNPanGestureRecognizerConfigurationBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPanGestureRecognizerConfigurationBlock.swift; sourceTree = "<group>"; };
+		69A1D5F41C39E66200ED2B7A /* SNPinchGestureRecognizerConfigurationBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPinchGestureRecognizerConfigurationBlock.swift; sourceTree = "<group>"; };
+		69A1D5F61C39E69300ED2B7A /* SNRotationGestureRecognizerConfigurationBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNRotationGestureRecognizerConfigurationBlock.swift; sourceTree = "<group>"; };
+		69A1D5F81C39E6BD00ED2B7A /* SNSwipeGestureRecognizerConfigurationBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNSwipeGestureRecognizerConfigurationBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +258,7 @@
 				69A1D5D81C39DFDA00ED2B7A /* SNPanGestureRecognizer.swift */,
 				69A1D5DA1C39E04100ED2B7A /* SNPanGestureRecognizerHandler.swift */,
 				69A1D5DC1C39E07000ED2B7A /* SNPanGestureRecognizerHandlerBlock.swift */,
+				69A1D5F21C39E63600ED2B7A /* SNPanGestureRecognizerConfigurationBlock.swift */,
 			);
 			path = Pan;
 			sourceTree = "<group>";
@@ -258,6 +269,7 @@
 				69A1D5DE1C39E0D300ED2B7A /* SNPinchGestureRecognizer.swift */,
 				69A1D5E01C39E10000ED2B7A /* SNPinchGestureRecognizerHandler.swift */,
 				69A1D5E21C39E12800ED2B7A /* SNPinchGestureRecognizerHandlerBlock.swift */,
+				69A1D5F41C39E66200ED2B7A /* SNPinchGestureRecognizerConfigurationBlock.swift */,
 			);
 			path = Pinch;
 			sourceTree = "<group>";
@@ -268,6 +280,7 @@
 				69A1D5E41C39E15F00ED2B7A /* SNRotationGestureRecognizer.swift */,
 				69A1D5E61C39E18F00ED2B7A /* SNRotationGestureRecognizerHandler.swift */,
 				69A1D5E81C39E1B100ED2B7A /* SNRotationGestureRecognizerHandlerBlock.swift */,
+				69A1D5F61C39E69300ED2B7A /* SNRotationGestureRecognizerConfigurationBlock.swift */,
 			);
 			path = Rotation;
 			sourceTree = "<group>";
@@ -278,6 +291,7 @@
 				69A1D5EA1C39E1D800ED2B7A /* SNSwipeGestureRecognizer.swift */,
 				69A1D5EC1C39E20B00ED2B7A /* SNSwipeGestureRecognizerHandler.swift */,
 				69A1D5EE1C39E23B00ED2B7A /* SNSwipeGestureRecognizerHandlerBlock.swift */,
+				69A1D5F81C39E6BD00ED2B7A /* SNSwipeGestureRecognizerConfigurationBlock.swift */,
 			);
 			path = Swipe;
 			sourceTree = "<group>";
@@ -288,6 +302,7 @@
 				69853B221C2239AD00F32102 /* SNTapGestureRecognizer.swift */,
 				69853B261C223B5400F32102 /* SNTapGestureRecognizerHandler.swift */,
 				69853B241C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift */,
+				69A1D5F01C39E5C500ED2B7A /* SNTapGestureRecognizerConfigurationBlock.swift */,
 			);
 			path = Tap;
 			sourceTree = "<group>";
@@ -440,8 +455,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				69A1D5ED1C39E20B00ED2B7A /* SNSwipeGestureRecognizerHandler.swift in Sources */,
+				69A1D5F71C39E69300ED2B7A /* SNRotationGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5D71C39D91200ED2B7A /* CircleView.swift in Sources */,
+				69A1D5F51C39E66200ED2B7A /* SNPinchGestureRecognizerConfigurationBlock.swift in Sources */,
 				695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */,
+				69A1D5F91C39E6BD00ED2B7A /* SNSwipeGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5E51C39E15F00ED2B7A /* SNRotationGestureRecognizer.swift in Sources */,
 				69A1D5E31C39E12800ED2B7A /* SNPinchGestureRecognizerHandlerBlock.swift in Sources */,
 				69A1D5E91C39E1B100ED2B7A /* SNRotationGestureRecognizerHandlerBlock.swift in Sources */,
@@ -449,10 +467,12 @@
 				69853B271C223B5400F32102 /* SNTapGestureRecognizerHandler.swift in Sources */,
 				69A1D5DB1C39E04100ED2B7A /* SNPanGestureRecognizerHandler.swift in Sources */,
 				69A1D5E11C39E10000ED2B7A /* SNPinchGestureRecognizerHandler.swift in Sources */,
+				69A1D5F11C39E5C500ED2B7A /* SNTapGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5D91C39DFDA00ED2B7A /* SNPanGestureRecognizer.swift in Sources */,
 				695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */,
 				69A1D5E71C39E18F00ED2B7A /* SNRotationGestureRecognizerHandler.swift in Sources */,
 				69853B231C2239AD00F32102 /* SNTapGestureRecognizer.swift in Sources */,
+				69A1D5F31C39E63600ED2B7A /* SNPanGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5DF1C39E0D300ED2B7A /* SNPinchGestureRecognizer.swift in Sources */,
 				69A1D5DD1C39E07000ED2B7A /* SNPanGestureRecognizerHandlerBlock.swift in Sources */,
 				697A75321BF1708500229272 /* UIColorExtensionListOfColors.swift in Sources */,

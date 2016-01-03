@@ -19,7 +19,7 @@ public extension UIView {
     
     // MARK: Public object methods
     
-    public func onTap(block: SNTapGestureRecognizerHandlerBlock, configureTapGestureRecognizer: (tapGestureRecognizer: SNTapGestureRecognizer) -> Void) -> UIView {
+    public func onTap(block: SNTapGestureRecognizerHandlerBlock, configureTapGestureRecognizer: SNTapGestureRecognizerConfigurationBlock) -> UIView {
         let tapGestureRecognizer = SNTapGestureRecognizer(handlerBlock: block)
         addGestureRecognizer(tapGestureRecognizer)
         
@@ -35,7 +35,7 @@ public extension UIView {
         return view
     }
     
-    public func onPan(block: SNPanGestureRecognizerHandlerBlock, configurePanGestureRecognizer: (panGestureRecognizer: SNPanGestureRecognizer) -> Void) -> UIView {
+    public func onPan(block: SNPanGestureRecognizerHandlerBlock, configurePanGestureRecognizer: SNPanGestureRecognizerConfigurationBlock) -> UIView {
         let panGestureRecognizer = SNPanGestureRecognizer(handlerBlock: block)
         addGestureRecognizer(panGestureRecognizer)
         
@@ -51,7 +51,7 @@ public extension UIView {
         return view
     }
     
-    public func onPinch(block: SNPinchGestureRecognizerHandlerBlock, configurePinchGestureRecognizer: (pinchGestureRecognizer: SNPinchGestureRecognizer) -> Void) -> UIView {
+    public func onPinch(block: SNPinchGestureRecognizerHandlerBlock, configurePinchGestureRecognizer: SNPinchGestureRecognizerConfigurationBlock) -> UIView {
         let pinchGestureRecognizer = SNPinchGestureRecognizer(handlerBlock: block)
         addGestureRecognizer(pinchGestureRecognizer)
         
@@ -67,7 +67,7 @@ public extension UIView {
         return view
     }
     
-    public func onRotation(block: SNRotationGestureRecognizerHandlerBlock, configureRotationGestureRecognizer: (rotationGestureRecognizer: SNRotationGestureRecognizer) -> Void) -> UIView {
+    public func onRotation(block: SNRotationGestureRecognizerHandlerBlock, configureRotationGestureRecognizer: SNRotationGestureRecognizerConfigurationBlock) -> UIView {
         let rotationGestureRecognizer = SNRotationGestureRecognizer(handlerBlock: block)
         addGestureRecognizer(rotationGestureRecognizer)
         
@@ -83,7 +83,7 @@ public extension UIView {
         return view
     }
     
-    public func onSwipe(block: SNSwipeGestureRecognizerHandlerBlock, configureSwipeGestureRecognizer: (swipeGestureRecognizer: SNSwipeGestureRecognizer) -> Void) -> UIView {
+    public func onSwipe(block: SNSwipeGestureRecognizerHandlerBlock, configureSwipeGestureRecognizer: SNSwipeGestureRecognizerConfigurationBlock) -> UIView {
         let swipeGestureRecognizer = SNSwipeGestureRecognizer(handlerBlock: block)
         addGestureRecognizer(swipeGestureRecognizer)
         
