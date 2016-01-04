@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SNPinchGestureRecognizerHandler: NSObject {
+internal class SNPinchGestureRecognizerHandler: NSObject {
     
     // MARK: Class variables & properties
     
@@ -18,13 +18,13 @@ public class SNPinchGestureRecognizerHandler: NSObject {
     
     // MARK: Initializers
     
-    public init(handlerBlock: SNPinchGestureRecognizerHandlerBlock) {
+    internal init(handlerBlock: SNPinchGestureRecognizerHandlerBlock) {
         super.init()
         
         
         // Initialize handler block
         
-        self.handlerBlock = handlerBlock
+        _handlerBlock = handlerBlock
     }
     
     
@@ -36,7 +36,26 @@ public class SNPinchGestureRecognizerHandler: NSObject {
     
     // MARK: Variables & properties
     
-    private var handlerBlock: SNPinchGestureRecognizerHandlerBlock!
+    private var _handlerBlock: SNPinchGestureRecognizerHandlerBlock!
+    
+    private var handlerBlock: SNPinchGestureRecognizerHandlerBlock {
+        get {
+            return _handlerBlock
+        }
+    }
+    
+    private var _pinchGestureRecognizer: SNPinchGestureRecognizer?
+    
+    internal var pinchGestureRecognizer: SNPinchGestureRecognizer? {
+        get {
+            return _pinchGestureRecognizer
+        }
+        set {
+            // Update private variable
+            
+            _pinchGestureRecognizer = newValue
+        }
+    }
     
     
     // MARK: Public methods

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SNRotationGestureRecognizerHandler: NSObject {
+internal class SNRotationGestureRecognizerHandler: NSObject {
     
     // MARK: Class variables & properties
     
@@ -18,13 +18,13 @@ public class SNRotationGestureRecognizerHandler: NSObject {
     
     // MARK: Initializers
     
-    public init(handlerBlock: SNRotationGestureRecognizerHandlerBlock) {
+    internal init(handlerBlock: SNRotationGestureRecognizerHandlerBlock) {
         super.init()
         
         
         // Initialize handler block
         
-        self.handlerBlock = handlerBlock
+        _handlerBlock = handlerBlock
     }
     
     
@@ -36,7 +36,26 @@ public class SNRotationGestureRecognizerHandler: NSObject {
     
     // MARK: Variables & properties
     
-    private var handlerBlock: SNRotationGestureRecognizerHandlerBlock!
+    private var _handlerBlock: SNRotationGestureRecognizerHandlerBlock!
+    
+    private var handlerBlock: SNRotationGestureRecognizerHandlerBlock {
+        get {
+            return _handlerBlock
+        }
+    }
+    
+    private var _rotationGestureRecognizer: SNRotationGestureRecognizer?
+    
+    internal var rotationGestureRecognizer: SNRotationGestureRecognizer? {
+        get {
+            return _rotationGestureRecognizer
+        }
+        set {
+            // Update private variable
+            
+            _rotationGestureRecognizer = newValue
+        }
+    }
     
     
     // MARK: Public methods

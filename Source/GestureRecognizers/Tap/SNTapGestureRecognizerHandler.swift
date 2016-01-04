@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SNTapGestureRecognizerHandler: NSObject {
+internal class SNTapGestureRecognizerHandler: NSObject {
     
     // MARK: Class variables & properties
     
@@ -18,13 +18,13 @@ public class SNTapGestureRecognizerHandler: NSObject {
     
     // MARK: Initializers
     
-    public init(handlerBlock: SNTapGestureRecognizerHandlerBlock) {
+    internal init(handlerBlock: SNTapGestureRecognizerHandlerBlock) {
         super.init()
         
         
         // Initialize handler block
         
-        self.handlerBlock = handlerBlock
+        _handlerBlock = handlerBlock
     }
     
     
@@ -36,7 +36,26 @@ public class SNTapGestureRecognizerHandler: NSObject {
     
     // MARK: Variables & properties
     
-    private var handlerBlock: SNTapGestureRecognizerHandlerBlock!
+    private var _handlerBlock: SNTapGestureRecognizerHandlerBlock!
+    
+    private var handlerBlock: SNTapGestureRecognizerHandlerBlock {
+        get {
+            return _handlerBlock
+        }
+    }
+    
+    private var _tapGestureRecognizer: SNTapGestureRecognizer?
+    
+    internal var tapGestureRecognizer: SNTapGestureRecognizer? {
+        get {
+            return _tapGestureRecognizer
+        }
+        set {
+            // Update private variable
+            
+            _tapGestureRecognizer = newValue
+        }
+    }
     
     
     // MARK: Public methods
@@ -45,7 +64,11 @@ public class SNTapGestureRecognizerHandler: NSObject {
     // MARK: Private methods
     
     internal func runHandlerBlock() {
-        handlerBlock()
+        guard tapGestureRecognizer != nil else {
+            return
+        }
+        
+        handlerBlock(tapGestureRecognizer: tapGestureRecognizer!)
     }
     
     

@@ -29,9 +29,14 @@ public class SNSwipeGestureRecognizer: UISwipeGestureRecognizer {
         super.init(target: handler, action: "runHandlerBlock")
         
         
-        // Initialize handler
+        // Update handler
         
-        self.handler = handler
+        handler.swipeGestureRecognizer = self
+        
+        
+        // Initialize private handler variable
+        
+        _handler = handler
     }
     
     
@@ -43,7 +48,13 @@ public class SNSwipeGestureRecognizer: UISwipeGestureRecognizer {
     
     // MARK: Variables & properties
     
-    private var handler: SNSwipeGestureRecognizerHandler!
+    private var _handler: SNSwipeGestureRecognizerHandler!
+    
+    private var handler: SNSwipeGestureRecognizerHandler {
+        get {
+            return _handler
+        }
+    }
     
     
     // MARK: Public methods

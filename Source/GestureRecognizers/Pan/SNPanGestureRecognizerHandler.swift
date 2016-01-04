@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SNPanGestureRecognizerHandler: NSObject {
+internal class SNPanGestureRecognizerHandler: NSObject {
     
     // MARK: Class variables & properties
     
@@ -18,13 +18,13 @@ public class SNPanGestureRecognizerHandler: NSObject {
     
     // MARK: Initializers
     
-    public init(handlerBlock: SNPanGestureRecognizerHandlerBlock) {
+    internal init(handlerBlock: SNPanGestureRecognizerHandlerBlock) {
         super.init()
         
         
         // Initialize handler block
         
-        self.handlerBlock = handlerBlock
+        _handlerBlock = handlerBlock
     }
     
     
@@ -36,7 +36,26 @@ public class SNPanGestureRecognizerHandler: NSObject {
     
     // MARK: Variables & properties
     
-    private var handlerBlock: SNPanGestureRecognizerHandlerBlock!
+    private var _handlerBlock: SNPanGestureRecognizerHandlerBlock!
+    
+    private var handlerBlock: SNPanGestureRecognizerHandlerBlock {
+        get {
+            return _handlerBlock
+        }
+    }
+    
+    private var _panGestureRecognizer: SNPanGestureRecognizer?
+    
+    internal var panGestureRecognizer: SNPanGestureRecognizer? {
+        get {
+            return _panGestureRecognizer
+        }
+        set {
+            // Update private variable
+            
+            _panGestureRecognizer = newValue
+        }
+    }
     
     
     // MARK: Public methods
@@ -45,7 +64,11 @@ public class SNPanGestureRecognizerHandler: NSObject {
     // MARK: Private methods
     
     internal func runHandlerBlock() {
-        handlerBlock()
+        guard panGestureRecognizer != nil else {
+            return
+        }
+        
+        handlerBlock(panGestureRecognizer: panGestureRecognizer!)
     }
     
     

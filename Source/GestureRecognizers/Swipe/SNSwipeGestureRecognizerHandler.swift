@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SNSwipeGestureRecognizerHandler: NSObject {
+internal class SNSwipeGestureRecognizerHandler: NSObject {
     
     // MARK: Class variables & properties
     
@@ -18,13 +18,13 @@ public class SNSwipeGestureRecognizerHandler: NSObject {
     
     // MARK: Initializers
     
-    public init(handlerBlock: SNSwipeGestureRecognizerHandlerBlock) {
+    internal init(handlerBlock: SNSwipeGestureRecognizerHandlerBlock) {
         super.init()
         
         
         // Initialize handler block
         
-        self.handlerBlock = handlerBlock
+        _handlerBlock = handlerBlock
     }
     
     
@@ -36,7 +36,26 @@ public class SNSwipeGestureRecognizerHandler: NSObject {
     
     // MARK: Variables & properties
     
-    private var handlerBlock: SNSwipeGestureRecognizerHandlerBlock!
+    private var _handlerBlock: SNSwipeGestureRecognizerHandlerBlock!
+    
+    private var handlerBlock: SNSwipeGestureRecognizerHandlerBlock {
+        get {
+            return _handlerBlock
+        }
+    }
+    
+    private var _swipeGestureRecognizer: SNSwipeGestureRecognizer?
+    
+    internal var swipeGestureRecognizer: SNSwipeGestureRecognizer? {
+        get {
+            return _swipeGestureRecognizer
+        }
+        set {
+            // Update private variable
+            
+            _swipeGestureRecognizer = newValue
+        }
+    }
     
     
     // MARK: Public methods

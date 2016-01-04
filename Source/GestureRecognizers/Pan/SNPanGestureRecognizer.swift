@@ -29,9 +29,14 @@ public class SNPanGestureRecognizer: UIPanGestureRecognizer {
         super.init(target: handler, action: "runHandlerBlock")
         
         
-        // Initialize handler
+        // Update handler
         
-        self.handler = handler
+        handler.panGestureRecognizer = self
+        
+        
+        // Update private handler variable
+        
+        _handler = handler
     }
     
     
@@ -43,7 +48,13 @@ public class SNPanGestureRecognizer: UIPanGestureRecognizer {
     
     // MARK: Variables & properties
     
-    private var handler: SNPanGestureRecognizerHandler!
+    private var _handler: SNPanGestureRecognizerHandler!
+    
+    private var handler: SNPanGestureRecognizerHandler {
+        get {
+            return _handler
+        }
+    }
     
     
     // MARK: Public methods

@@ -29,9 +29,15 @@ public class SNTapGestureRecognizer: UITapGestureRecognizer {
         super.init(target: handler, action: "runHandlerBlock")
         
         
-        // Initialize handler
         
-        self.handler = handler
+        // Update handler
+        
+        handler.tapGestureRecognizer = self
+        
+        
+        // Update private handler variable
+        
+        _handler = handler
     }
     
     
@@ -43,7 +49,13 @@ public class SNTapGestureRecognizer: UITapGestureRecognizer {
     
     // MARK: Variables & properties
     
-    private var handler: SNTapGestureRecognizerHandler!
+    private var _handler: SNTapGestureRecognizerHandler!
+    
+    private var handler: SNTapGestureRecognizerHandler {
+        get {
+            return _handler
+        }
+    }
     
     
     // MARK: Public methods

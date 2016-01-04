@@ -29,9 +29,14 @@ public class SNPinchGestureRecognizer: UIPinchGestureRecognizer {
         super.init(target: handler, action: "runHandlerBlock")
         
         
-        // Initialize handler
+        // Update handler
         
-        self.handler = handler
+        handler.pinchGestureRecognizer = self
+        
+        
+        // Initialize private handler variable
+        
+        _handler = handler
     }
     
     
@@ -43,7 +48,13 @@ public class SNPinchGestureRecognizer: UIPinchGestureRecognizer {
     
     // MARK: Variables & properties
     
-    private var handler: SNPinchGestureRecognizerHandler!
+    private var _handler: SNPinchGestureRecognizerHandler!
+    
+    private var handler: SNPinchGestureRecognizerHandler {
+        get {
+            return _handler
+        }
+    }
     
     
     // MARK: Public methods

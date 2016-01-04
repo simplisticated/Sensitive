@@ -8,5 +8,5 @@
 
 import Foundation
 
-public typealias SNPanGestureRecognizerHandlerBlock = () -> Void
+public typealias SNPanGestureRecognizerHandlerBlock = (panGestureRecognizer: SNPanGestureRecognizer) -> Void
 

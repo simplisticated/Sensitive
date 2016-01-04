@@ -29,9 +29,14 @@ public class SNRotationGestureRecognizer: UIRotationGestureRecognizer {
         super.init(target: handler, action: "runHandlerBlock")
         
         
-        // Initialize handler
+        // Update handler
         
-        self.handler = handler
+        handler.rotationGestureRecognizer = self
+        
+        
+        // Initialize private handler variable
+        
+        _handler = handler
     }
     
     
@@ -43,7 +48,13 @@ public class SNRotationGestureRecognizer: UIRotationGestureRecognizer {
     
     // MARK: Variables & properties
     
-    private var handler: SNRotationGestureRecognizerHandler!
+    private var _handler: SNRotationGestureRecognizerHandler!
+    
+    private var handler: SNRotationGestureRecognizerHandler {
+        get {
+            return _handler
+        }
+    }
     
     
     // MARK: Public methods

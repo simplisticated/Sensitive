@@ -8,5 +8,5 @@
 
 import Foundation
 
-public typealias SNTapGestureRecognizerHandlerBlock = () -> Void
+public typealias SNTapGestureRecognizerHandlerBlock = (tapGestureRecognizer: SNTapGestureRecognizer) -> Void
 
