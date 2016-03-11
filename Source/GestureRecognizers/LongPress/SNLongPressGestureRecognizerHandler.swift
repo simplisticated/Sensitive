@@ -1,5 +1,5 @@
 //
-//  SNTapGestureRecognizerHandler.swift
+//  SNLongPressGestureRecognizerHandler.swift
 //  Sensitive
 //
 //  Created by Igor Matyushkin on 17.12.15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class SNTapGestureRecognizerHandler: NSObject {
+internal class SNLongPressGestureRecognizerHandler: NSObject {
     
     // MARK: Class variables & properties
     
@@ -18,7 +18,7 @@ internal class SNTapGestureRecognizerHandler: NSObject {
     
     // MARK: Initializers
     
-    internal init(handlerBlock: SNTapGestureRecognizerHandlerBlock) {
+    internal init(handlerBlock: SNLongPressGestureRecognizerHandlerBlock) {
         super.init()
         
         
@@ -36,24 +36,24 @@ internal class SNTapGestureRecognizerHandler: NSObject {
     
     // MARK: Variables & properties
     
-    private var _handlerBlock: SNTapGestureRecognizerHandlerBlock!
+    private var _handlerBlock: SNLongPressGestureRecognizerHandlerBlock!
     
-    private var handlerBlock: SNTapGestureRecognizerHandlerBlock {
+    private var handlerBlock: SNLongPressGestureRecognizerHandlerBlock {
         get {
             return _handlerBlock
         }
     }
     
-    private var _tapGestureRecognizer: SNTapGestureRecognizer?
+    private var _longPressGestureRecognizer: SNLongPressGestureRecognizer?
     
-    internal var tapGestureRecognizer: SNTapGestureRecognizer? {
+    internal var longPressGestureRecognizer: SNLongPressGestureRecognizer? {
         get {
-            return _tapGestureRecognizer
+            return _longPressGestureRecognizer
         }
         set {
             // Update private variable
             
-            _tapGestureRecognizer = newValue
+            _longPressGestureRecognizer = newValue
         }
     }
     
@@ -64,11 +64,11 @@ internal class SNTapGestureRecognizerHandler: NSObject {
     // MARK: Private methods
     
     internal func runHandlerBlock() {
-        guard tapGestureRecognizer != nil else {
+        guard longPressGestureRecognizer != nil else {
             return
         }
         
-        handlerBlock(tapGestureRecognizer: tapGestureRecognizer!)
+        handlerBlock(longPressGestureRecognizer: longPressGestureRecognizer!)
     }
     
     

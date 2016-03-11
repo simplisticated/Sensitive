@@ -15,6 +15,10 @@
 		695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */; };
 		695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D301BF168CC008E3B45 /* MainViewController.swift */; };
 		695A3D361BF168CC008E3B45 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695A3D311BF168CC008E3B45 /* MainViewController.xib */; };
+		696183BD1C93555B00728B9E /* SNLongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696183B91C93555B00728B9E /* SNLongPressGestureRecognizer.swift */; };
+		696183BE1C93555B00728B9E /* SNLongPressGestureRecognizerConfigurationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696183BA1C93555B00728B9E /* SNLongPressGestureRecognizerConfigurationBlock.swift */; };
+		696183BF1C93555B00728B9E /* SNLongPressGestureRecognizerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696183BB1C93555B00728B9E /* SNLongPressGestureRecognizerHandler.swift */; };
+		696183C01C93555B00728B9E /* SNLongPressGestureRecognizerHandlerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696183BC1C93555B00728B9E /* SNLongPressGestureRecognizerHandlerBlock.swift */; };
 		697A75321BF1708500229272 /* UIColorExtensionListOfColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */; };
 		69853B231C2239AD00F32102 /* SNTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69853B221C2239AD00F32102 /* SNTapGestureRecognizer.swift */; };
 		69853B251C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69853B241C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift */; };
@@ -71,6 +75,10 @@
 		695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionGestures.swift; sourceTree = "<group>"; };
 		695A3D301BF168CC008E3B45 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		695A3D311BF168CC008E3B45 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		696183B91C93555B00728B9E /* SNLongPressGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNLongPressGestureRecognizer.swift; sourceTree = "<group>"; };
+		696183BA1C93555B00728B9E /* SNLongPressGestureRecognizerConfigurationBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNLongPressGestureRecognizerConfigurationBlock.swift; sourceTree = "<group>"; };
+		696183BB1C93555B00728B9E /* SNLongPressGestureRecognizerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNLongPressGestureRecognizerHandler.swift; sourceTree = "<group>"; };
+		696183BC1C93555B00728B9E /* SNLongPressGestureRecognizerHandlerBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNLongPressGestureRecognizerHandlerBlock.swift; sourceTree = "<group>"; };
 		697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionListOfColors.swift; sourceTree = "<group>"; };
 		69853B221C2239AD00F32102 /* SNTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		69853B241C2239C400F32102 /* SNTapGestureRecognizerHandlerBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNTapGestureRecognizerHandlerBlock.swift; sourceTree = "<group>"; };
@@ -217,6 +225,17 @@
 			path = MainViewController;
 			sourceTree = "<group>";
 		};
+		696183B81C93554B00728B9E /* LongPress */ = {
+			isa = PBXGroup;
+			children = (
+				696183B91C93555B00728B9E /* SNLongPressGestureRecognizer.swift */,
+				696183BB1C93555B00728B9E /* SNLongPressGestureRecognizerHandler.swift */,
+				696183BC1C93555B00728B9E /* SNLongPressGestureRecognizerHandlerBlock.swift */,
+				696183BA1C93555B00728B9E /* SNLongPressGestureRecognizerConfigurationBlock.swift */,
+			);
+			path = LongPress;
+			sourceTree = "<group>";
+		};
 		697A752E1BF1706F00229272 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				69853B211C22398000F32102 /* Tap */,
+				696183B81C93554B00728B9E /* LongPress */,
 				69853B1D1C22398000F32102 /* Pan */,
 				69853B1E1C22398000F32102 /* Pinch */,
 				69853B1F1C22398000F32102 /* Rotation */,
@@ -460,18 +480,22 @@
 				69A1D5F51C39E66200ED2B7A /* SNPinchGestureRecognizerConfigurationBlock.swift in Sources */,
 				695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */,
 				69A1D5F91C39E6BD00ED2B7A /* SNSwipeGestureRecognizerConfigurationBlock.swift in Sources */,
+				696183BD1C93555B00728B9E /* SNLongPressGestureRecognizer.swift in Sources */,
 				69A1D5E51C39E15F00ED2B7A /* SNRotationGestureRecognizer.swift in Sources */,
 				69A1D5E31C39E12800ED2B7A /* SNPinchGestureRecognizerHandlerBlock.swift in Sources */,
 				69A1D5E91C39E1B100ED2B7A /* SNRotationGestureRecognizerHandlerBlock.swift in Sources */,
+				696183C01C93555B00728B9E /* SNLongPressGestureRecognizerHandlerBlock.swift in Sources */,
 				69A1D5EB1C39E1D800ED2B7A /* SNSwipeGestureRecognizer.swift in Sources */,
 				69853B271C223B5400F32102 /* SNTapGestureRecognizerHandler.swift in Sources */,
 				69A1D5DB1C39E04100ED2B7A /* SNPanGestureRecognizerHandler.swift in Sources */,
+				696183BF1C93555B00728B9E /* SNLongPressGestureRecognizerHandler.swift in Sources */,
 				69A1D5E11C39E10000ED2B7A /* SNPinchGestureRecognizerHandler.swift in Sources */,
 				69A1D5F11C39E5C500ED2B7A /* SNTapGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5D91C39DFDA00ED2B7A /* SNPanGestureRecognizer.swift in Sources */,
 				695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */,
 				69A1D5E71C39E18F00ED2B7A /* SNRotationGestureRecognizerHandler.swift in Sources */,
 				69853B231C2239AD00F32102 /* SNTapGestureRecognizer.swift in Sources */,
+				696183BE1C93555B00728B9E /* SNLongPressGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5F31C39E63600ED2B7A /* SNPanGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5DF1C39E0D300ED2B7A /* SNPinchGestureRecognizer.swift in Sources */,
 				69A1D5DD1C39E07000ED2B7A /* SNPanGestureRecognizerHandlerBlock.swift in Sources */,

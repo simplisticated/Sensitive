@@ -1,6 +1,6 @@
 //
 //  SNPinchGestureRecognizerHandler.swift
-//  SensitiveDemo
+//  Sensitive
 //
 //  Created by Igor Matyushkin on 04.01.16.
 //  Copyright © 2016 Igor Matyushkin. All rights reserved.
@@ -64,7 +64,7 @@ internal class SNPinchGestureRecognizerHandler: NSObject {
     // MARK: Private methods
     
     internal func runHandlerBlock() {
-        handlerBlock()
+        handlerBlock(pinchGestureRecognizer: pinchGestureRecognizer!)
     }
     
     

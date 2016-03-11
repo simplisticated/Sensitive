@@ -1,14 +1,14 @@
 //
-//  SNPinchGestureRecognizer.swift
+//  SNLongPressGestureRecognizer.swift
 //  Sensitive
 //
-//  Created by Igor Matyushkin on 04.01.16.
-//  Copyright © 2016 Igor Matyushkin. All rights reserved.
+//  Created by Igor Matyushkin on 17.12.15.
+//  Copyright © 2015 Igor Matyushkin. All rights reserved.
 //
 
 import UIKit
 
-public class SNPinchGestureRecognizer: UIPinchGestureRecognizer {
+public class SNLongPressGestureRecognizer: UITapGestureRecognizer {
     
     // MARK: Class variables & properties
     
@@ -18,10 +18,10 @@ public class SNPinchGestureRecognizer: UIPinchGestureRecognizer {
     
     // MARK: Initializers
     
-    public init(handlerBlock: SNPinchGestureRecognizerHandlerBlock) {
+    public init(handlerBlock: SNLongPressGestureRecognizerHandlerBlock) {
         // Create handler
         
-        let handler = SNPinchGestureRecognizerHandler(handlerBlock: handlerBlock)
+        let handler = SNLongPressGestureRecognizerHandler(handlerBlock: handlerBlock)
         
         
         // Call super init
@@ -29,12 +29,13 @@ public class SNPinchGestureRecognizer: UIPinchGestureRecognizer {
         super.init(target: handler, action: "runHandlerBlock")
         
         
+        
         // Update handler
         
-        handler.pinchGestureRecognizer = self
+        handler.longPressGestureRecognizer = self
         
         
-        // Initialize private handler variable
+        // Update private handler variable
         
         _handler = handler
     }
@@ -48,9 +49,9 @@ public class SNPinchGestureRecognizer: UIPinchGestureRecognizer {
     
     // MARK: Variables & properties
     
-    private var _handler: SNPinchGestureRecognizerHandler!
+    private var _handler: SNLongPressGestureRecognizerHandler!
     
-    private var handler: SNPinchGestureRecognizerHandler {
+    private var handler: SNLongPressGestureRecognizerHandler {
         get {
             return _handler
         }

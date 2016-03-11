@@ -35,6 +35,22 @@ public extension UIView {
         return view
     }
     
+    public func onLongPress(block: SNLongPressGestureRecognizerHandlerBlock, configureLongPressGestureRecognizer: SNLongPressGestureRecognizerConfigurationBlock) -> UIView {
+        let longPressGestureRecognizer = SNLongPressGestureRecognizer(handlerBlock: block)
+        addGestureRecognizer(longPressGestureRecognizer)
+        
+        configureLongPressGestureRecognizer(longPressGestureRecognizer: longPressGestureRecognizer)
+        
+        return self
+    }
+    
+    public func onLongPress(block: SNLongPressGestureRecognizerHandlerBlock) -> UIView {
+        let view = onLongPress(block) { (longPressGestureRecognizer) -> Void in
+        }
+        
+        return view
+    }
+    
     public func onPan(block: SNPanGestureRecognizerHandlerBlock, configurePanGestureRecognizer: SNPanGestureRecognizerConfigurationBlock) -> UIView {
         let panGestureRecognizer = SNPanGestureRecognizer(handlerBlock: block)
         addGestureRecognizer(panGestureRecognizer)
