@@ -115,6 +115,22 @@ public extension UIView {
         return view
     }
     
+    public func onScreenEdgePan(block: SNScreenEdgePanGestureRecognizerHandlerBlock, configureScreenEdgePanGestureRecognizer: SNScreenEdgePanGestureRecognizerConfigurationBlock) -> UIView {
+        let screenEdgePanGestureRecognizer = SNScreenEdgePanGestureRecognizer(handlerBlock: block)
+        addGestureRecognizer(screenEdgePanGestureRecognizer)
+        
+        configureScreenEdgePanGestureRecognizer(screenEdgePanGestureRecognizer: screenEdgePanGestureRecognizer)
+        
+        return self
+    }
+    
+    public func onScreenEdgePan(block: SNScreenEdgePanGestureRecognizerHandlerBlock) -> UIView {
+        let view = onScreenEdgePan(block) { (screenEdgePanGestureRecognizer) in
+        }
+        
+        return view
+    }
+    
     
     // MARK: Private object methods
     
