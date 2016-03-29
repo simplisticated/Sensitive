@@ -4,7 +4,7 @@
 
 # Sensitive
 
-`Sensitive` library is a new way to work with gestures in iOS. Approach is very similar to Android's `onClick` handler for `View` subclasses. Forget about targets and actions of primitive `UIGestureRecognizer`s. Instead of that, you can simply use blocks with methods like `onTap`, `onPinch`, `onSwipe`, etc. Each `UIView` object includes those methods via special extension. That's all that you should know to start. For details, see `Usage` section.
+`Sensitive` library is a new way to work with gestures in iOS. Approach is very similar to Android's `onClick` handler for `View` subclasses. Forget about targets and actions of primitive `UIGestureRecognizer`s. Instead of that, you can simply use blocks with methods like `onTap`, `onPinch`, `onSwipe`, etc. Each `UIView` object includes those methods via special extension. That's all that you should know to start. For details, see [Usage](#usage) section.
 
 ##How To Get Started
 
@@ -132,4 +132,4 @@ view1.onSwipe { (swipeGestureRecognizer) -> Void in
 
 ## License
 
-`Sensitive` is available under the MIT license. See the `LICENSE` file for more info.
+`Sensitive` is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
