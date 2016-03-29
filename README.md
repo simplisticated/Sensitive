@@ -22,16 +22,16 @@ or
 ## Usage
 
 ```swift
-let view1 = UIView()
+let view = UIView()
 
 
 /*
- * Add tap gesture recognizer with configuration block to view1.
+ * Add tap gesture recognizer with configuration block to view.
  */
 
-view1.onTap({ (tapGestureRecognizer) -> Void in
-    // Handle tap on view1
-    view1.backgroundColor = .greenColor()
+view.onTap({ (tapGestureRecognizer) -> Void in
+    // Handle tap on view
+    view.backgroundColor = .greenColor()
 }) { (tapGestureRecognizer) -> Void in
     // Configure gesture recognizer
     tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -40,81 +40,103 @@ view1.onTap({ (tapGestureRecognizer) -> Void in
 
 
 /*
- * Add tap gesture recognizer without configuration block to view1.
+ * Add tap gesture recognizer without configuration block to view.
  */
 
-view1.onTap { (tapGestureRecognizer) -> Void in
-    // Handle tap on view1
-    view1.backgroundColor = .greenColor()
+view.onTap { (tapGestureRecognizer) -> Void in
+    // Handle tap on view
+    view.backgroundColor = .greenColor()
+}
+
+/*
+ * Add long press gesture recognizer with configuration block to view.
+ */
+
+view.onLongPress({ (longPressGestureRecognizer) -> Void in
+    // Handle long press on view
+    view.backgroundColor = .greenColor()
+}) { (longPressGestureRecognizer) -> Void in
+    // Configure gesture recognizer
+    longPressGestureRecognizer.numberOfTouchesRequired = 1
 }
 
 
 /*
- * Add pan gesture recognizer with configuration block to view1.
+ * Add long press gesture recognizer without configuration block to view.
  */
 
-view1.onPan({ (panGestureRecognizer) -> Void in
-    // Handle pan gesture on view1 here...
+view.onLongPress { (longPressGestureRecognizer) -> Void in
+    // Handle tap on view
+    view.backgroundColor = .greenColor()
+}
+
+
+/*
+ * Add pan gesture recognizer with configuration block to view.
+ */
+
+view.onPan({ (panGestureRecognizer) -> Void in
+    // Handle pan gesture on view here...
 }) { (panGestureRecognizer) -> Void in
     // Configure pan gesture recognizer here...
 }
 
 
 /*
-* Add pan gesture recognizer without configuration block to view1.
-*/
+ * Add pan gesture recognizer without configuration block to view.
+ */
 
-view1.onPan { (panGestureRecognizer) -> Void in
-    // Handle pan gesture on view1 here...
+view.onPan { (panGestureRecognizer) -> Void in
+    // Handle pan gesture on view here...
 }
 
 
 /*
- * Add pinch gesture recognizer with configuration block to view1.
+ * Add pinch gesture recognizer with configuration block to view.
  */
 
-view1.onPinch({ (pinchGestureRecognizer) -> Void in
-    // Handle pinch gesture on view1 here...
+view.onPinch({ (pinchGestureRecognizer) -> Void in
+    // Handle pinch gesture on view here...
 }) { (pinchGestureRecognizer) -> Void in
     // Configure pinch gesture recognizer here...
 }
 
 
 /*
- * Add pinch gesture recognizer without configuration block to view1.
+ * Add pinch gesture recognizer without configuration block to view.
  */
 
-view1.onPinch { (pinchGestureRecognizer) -> Void in
-    // Handle pinch gesture on view1 here...
+view.onPinch { (pinchGestureRecognizer) -> Void in
+    // Handle pinch gesture on view here...
 }
 
 
 /*
- * Add rotation gesture recognizer with configuration block to view1.
+ * Add rotation gesture recognizer with configuration block to view.
  */
 
-view1.onRotation({ (rotationGestureRecognizer) -> Void in
-    // Handle rotation gesture on view1 here...
+view.onRotation({ (rotationGestureRecognizer) -> Void in
+    // Handle rotation gesture on view here...
 }) { (rotationGestureRecognizer) -> Void in
     // Configure rotation gesture recognizer here...
 }
 
 
 /*
-* Add rotation gesture recognizer without configuration block to view1.
-*/
+ * Add rotation gesture recognizer without configuration block to view.
+ */
 
-view1.onRotation { (rotationGestureRecognizer) -> Void in
-    // Handle rotation gesture on view1 here...
+view.onRotation { (rotationGestureRecognizer) -> Void in
+    // Handle rotation gesture on view here...
 }
 
 
 /*
-* Add swipe gesture recognizer with configuration block to view1.
-*/
+ * Add swipe gesture recognizer with configuration block to view.
+ */
 
-view1.onSwipe({ (swipeGestureRecognizer) -> Void in
-    // Handle swipe gesture on view1 here...
+view.onSwipe({ (swipeGestureRecognizer) -> Void in
+    // Handle swipe gesture on view here...
 }) { (swipeGestureRecognizer) -> Void in
     // Configure swipe gesture recognizer here...
     swipeGestureRecognizer.direction = .Right
@@ -122,11 +144,31 @@ view1.onSwipe({ (swipeGestureRecognizer) -> Void in
 
 
 /*
- * Add swipe gesture recognizer without configuration block to view1.
+ * Add swipe gesture recognizer without configuration block to view.
  */
 
-view1.onSwipe { (swipeGestureRecognizer) -> Void in
-    // Handle swipe gesture on view1 here...
+view.onSwipe { (swipeGestureRecognizer) -> Void in
+    // Handle swipe gesture on view here...
+}
+
+
+/*
+ * Add screen edge pan gesture recognizer with configuration block to view.
+ */
+
+view.onScreenEdgePan({ (screenEdgePanGestureRecognizer) in
+    // Handle screen edge pan gesture on view here...
+}) { (screenEdgePanGestureRecognizer) in
+    // Configure screen edge pan gesture recognizer here...
+}
+
+
+/*
+ * Add screen edge pan gesture recognizer without configuration block to view.
+ */
+
+view.onScreenEdgePan { (screenEdgePanGestureRecognizer) in
+    // Handle screen edge pan gesture on view here...
 }
 ```
 
