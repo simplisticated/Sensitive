@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
             if (self.indexOfCurrentColor == nil) || (self.indexOfCurrentColor! >= self.colors.count - 1) {
                 self.indexOfCurrentColor = 0
             } else {
-                self.indexOfCurrentColor!++
+                self.indexOfCurrentColor = self.indexOfCurrentColor! + 1
             }
             
             let colorForCircleView = self.colors[self.indexOfCurrentColor!]
