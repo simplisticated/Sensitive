@@ -26,7 +26,7 @@ public class SNScreenEdgePanGestureRecognizer: UISwipeGestureRecognizer {
         
         // Call super init
         
-        super.init(target: handler, action: "runHandlerBlock")
+        super.init(target: handler, action: #selector(SNScreenEdgePanGestureRecognizerHandler.runHandlerBlock))
         
         
         // Update handler

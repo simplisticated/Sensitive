@@ -26,8 +26,7 @@ public class SNLongPressGestureRecognizer: UITapGestureRecognizer {
         
         // Call super init
         
-        super.init(target: handler, action: "runHandlerBlock")
-        
+        super.init(target: handler, action: #selector(SNLongPressGestureRecognizerHandler.runHandlerBlock))
         
         
         // Update handler

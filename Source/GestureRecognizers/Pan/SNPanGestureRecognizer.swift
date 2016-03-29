@@ -26,7 +26,7 @@ public class SNPanGestureRecognizer: UIPanGestureRecognizer {
         
         // Call super init
         
-        super.init(target: handler, action: "runHandlerBlock")
+        super.init(target: handler, action: #selector(SNPanGestureRecognizerHandler.runHandlerBlock))
         
         
         // Update handler

@@ -26,7 +26,7 @@ public class SNSwipeGestureRecognizer: UISwipeGestureRecognizer {
         
         // Call super init
         
-        super.init(target: handler, action: "runHandlerBlock")
+        super.init(target: handler, action: #selector(SNSwipeGestureRecognizerHandler.runHandlerBlock))
         
         
         // Update handler

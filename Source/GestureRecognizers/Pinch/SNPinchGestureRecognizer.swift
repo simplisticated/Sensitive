@@ -26,7 +26,7 @@ public class SNPinchGestureRecognizer: UIPinchGestureRecognizer {
         
         // Call super init
         
-        super.init(target: handler, action: "runHandlerBlock")
+        super.init(target: handler, action: #selector(SNPinchGestureRecognizerHandler.runHandlerBlock))
         
         
         // Update handler

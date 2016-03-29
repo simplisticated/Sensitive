@@ -26,8 +26,7 @@ public class SNTapGestureRecognizer: UITapGestureRecognizer {
         
         // Call super init
         
-        super.init(target: handler, action: "runHandlerBlock")
-        
+        super.init(target: handler, action: #selector(SNTapGestureRecognizerHandler.runHandlerBlock))
         
         
         // Update handler

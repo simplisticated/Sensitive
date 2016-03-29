@@ -26,7 +26,7 @@ public class SNRotationGestureRecognizer: UIRotationGestureRecognizer {
         
         // Call super init
         
-        super.init(target: handler, action: "runHandlerBlock")
+        super.init(target: handler, action: #selector(SNRotationGestureRecognizerHandler.runHandlerBlock))
         
         
         // Update handler
