@@ -1112,6 +1112,142 @@ public extension UIView {
     }
     
     /**
+    Adds `UISwipeGestureRecognizer` instance to receiver.
+    
+    Since this method returns receiver instance, it supports chain calls.
+    
+    - parameters:
+        - block: Called when `UISwipeGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Receiver instance for support of chain calls.
+    */
+    public func onSwipeUp(block: SNSwipeGestureRecognizerHandlerBlock) -> UIView {
+        /*
+         * Create gesture recognizer instance.
+         */
+        
+        let swipeGestureRecognizer = SNSwipeGestureRecognizer(handlerBlock: block)
+        swipeGestureRecognizer.direction = .Up
+        
+        
+        /*
+         * Add gesture recognizer to receiver.
+         */
+        
+        addGestureRecognizer(swipeGestureRecognizer)
+        
+        
+        /*
+         * Return receiver's instance for support of chain calls.
+         */
+        
+        return self
+    }
+    
+    /**
+    Adds `UISwipeGestureRecognizer` instance to receiver.
+    
+    Since this method returns receiver instance, it supports chain calls.
+    
+    - parameters:
+        - block: Called when `UISwipeGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Receiver instance for support of chain calls.
+    */
+    public func onSwipeRight(block: SNSwipeGestureRecognizerHandlerBlock) -> UIView {
+        /*
+         * Create gesture recognizer instance.
+         */
+        
+        let swipeGestureRecognizer = SNSwipeGestureRecognizer(handlerBlock: block)
+        swipeGestureRecognizer.direction = .Right
+        
+        
+        /*
+         * Add gesture recognizer to receiver.
+         */
+        
+        addGestureRecognizer(swipeGestureRecognizer)
+        
+        
+        /*
+         * Return receiver's instance for support of chain calls.
+         */
+        
+        return self
+    }
+    
+    /**
+    Adds `UISwipeGestureRecognizer` instance to receiver.
+    
+    Since this method returns receiver instance, it supports chain calls.
+    
+    - parameters:
+        - block: Called when `UISwipeGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Receiver instance for support of chain calls.
+    */
+    public func onSwipeDown(block: SNSwipeGestureRecognizerHandlerBlock) -> UIView {
+        /*
+         * Create gesture recognizer instance.
+         */
+        
+        let swipeGestureRecognizer = SNSwipeGestureRecognizer(handlerBlock: block)
+        swipeGestureRecognizer.direction = .Down
+        
+        
+        /*
+         * Add gesture recognizer to receiver.
+         */
+        
+        addGestureRecognizer(swipeGestureRecognizer)
+        
+        
+        /*
+         * Return receiver's instance for support of chain calls.
+         */
+        
+        return self
+    }
+    
+    /**
+    Adds `UISwipeGestureRecognizer` instance to receiver.
+    
+    Since this method returns receiver instance, it supports chain calls.
+    
+    - parameters:
+        - block: Called when `UISwipeGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Receiver instance for support of chain calls.
+    */
+    public func onSwipeLeft(block: SNSwipeGestureRecognizerHandlerBlock) -> UIView {
+        /*
+         * Create gesture recognizer instance.
+         */
+        
+        let swipeGestureRecognizer = SNSwipeGestureRecognizer(handlerBlock: block)
+        swipeGestureRecognizer.direction = .Left
+        
+        
+        /*
+         * Add gesture recognizer to receiver.
+         */
+        
+        addGestureRecognizer(swipeGestureRecognizer)
+        
+        
+        /*
+         * Return receiver's instance for support of chain calls.
+         */
+        
+        return self
+    }
+    
+    /**
     Adds `UIScreenEdgePanGestureRecognizer` instance to receiver.
     
     Since this method returns receiver instance, it supports chain calls.

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SNScreenEdgePanGestureRecognizer: UISwipeGestureRecognizer {
+public class SNScreenEdgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer {
     
     // MARK: Class variables & properties
     

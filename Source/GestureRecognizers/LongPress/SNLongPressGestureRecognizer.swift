@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SNLongPressGestureRecognizer: UITapGestureRecognizer {
+public class SNLongPressGestureRecognizer: UILongPressGestureRecognizer {
     
     // MARK: Class variables & properties
     
