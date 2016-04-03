@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6902FB791CB0B8A80083AD62 /* UIViewExtensionGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6902FB781CB0B8A80083AD62 /* UIViewExtensionGestures.swift */; };
 		694D5BB71BF020E9007D0EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D5BB61BF020E9007D0EAA /* AppDelegate.swift */; };
 		694D5BBE1BF020EA007D0EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 694D5BBD1BF020EA007D0EAA /* Assets.xcassets */; };
 		694D5BC11BF020EA007D0EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694D5BBF1BF020EA007D0EAA /* LaunchScreen.storyboard */; };
 		694D5BCC1BF020EA007D0EAA /* SensitiveDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D5BCB1BF020EA007D0EAA /* SensitiveDemoTests.swift */; };
 		694D5BD71BF020EA007D0EAA /* SensitiveDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D5BD61BF020EA007D0EAA /* SensitiveDemoUITests.swift */; };
-		695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */; };
 		695A3D351BF168CC008E3B45 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695A3D301BF168CC008E3B45 /* MainViewController.swift */; };
 		695A3D361BF168CC008E3B45 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695A3D311BF168CC008E3B45 /* MainViewController.xib */; };
 		696183BD1C93555B00728B9E /* SNLongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696183B91C93555B00728B9E /* SNLongPressGestureRecognizer.swift */; };
@@ -65,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6902FB781CB0B8A80083AD62 /* UIViewExtensionGestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionGestures.swift; sourceTree = "<group>"; };
 		694D5BB31BF020E9007D0EAA /* SensitiveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensitiveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694D5BB61BF020E9007D0EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		694D5BBD1BF020EA007D0EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		694D5BD21BF020EA007D0EAA /* SensitiveDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensitiveDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		694D5BD61BF020EA007D0EAA /* SensitiveDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveDemoUITests.swift; sourceTree = "<group>"; };
 		694D5BD81BF020EA007D0EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionGestures.swift; sourceTree = "<group>"; };
 		695A3D301BF168CC008E3B45 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		695A3D311BF168CC008E3B45 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		696183B91C93555B00728B9E /* SNLongPressGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNLongPressGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -136,6 +136,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6902FB761CB0B8A80083AD62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6902FB771CB0B8A80083AD62 /* View */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6902FB771CB0B8A80083AD62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6902FB781CB0B8A80083AD62 /* UIViewExtensionGestures.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		694D5BAA1BF020E9007D0EAA = {
 			isa = PBXGroup;
 			children = (
@@ -210,7 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				69853B161C22382C00F32102 /* GestureRecognizers */,
-				695A3D271BF15E18008E3B45 /* UIViewExtensionGestures.swift */,
+				6902FB761CB0B8A80083AD62 /* Extensions */,
 			);
 			name = Sensitive;
 			path = ../../../../Source;
@@ -514,11 +530,11 @@
 				69A1D5E11C39E10000ED2B7A /* SNPinchGestureRecognizerHandler.swift in Sources */,
 				69A1D5F11C39E5C500ED2B7A /* SNTapGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5D91C39DFDA00ED2B7A /* SNPanGestureRecognizer.swift in Sources */,
-				695A3D281BF15E18008E3B45 /* UIViewExtensionGestures.swift in Sources */,
 				69A1D5E71C39E18F00ED2B7A /* SNRotationGestureRecognizerHandler.swift in Sources */,
 				69853B231C2239AD00F32102 /* SNTapGestureRecognizer.swift in Sources */,
 				696183BE1C93555B00728B9E /* SNLongPressGestureRecognizerConfigurationBlock.swift in Sources */,
 				69A1D5F31C39E63600ED2B7A /* SNPanGestureRecognizerConfigurationBlock.swift in Sources */,
+				6902FB791CB0B8A80083AD62 /* UIViewExtensionGestures.swift in Sources */,
 				69F35F1E1CAA5FE600C1A6AA /* SNScreenEdgePanGestureRecognizer.swift in Sources */,
 				69A1D5DF1C39E0D300ED2B7A /* SNPinchGestureRecognizer.swift in Sources */,
 				69A1D5DD1C39E07000ED2B7A /* SNPanGestureRecognizerHandlerBlock.swift in Sources */,
