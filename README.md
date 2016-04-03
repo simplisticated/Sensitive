@@ -294,6 +294,42 @@ view.onSwipeOnce { (swipeGestureRecognizer) -> Void in
 
 
 /*
+ * Add swipe up gesture recognizer without configuration block to view.
+ */
+
+view.onSwipeUp { (swipeGestureRecognizer) -> Void in
+    // Handle swipe gesture with up direction on view...
+}
+
+
+/*
+ * Add swipe right gesture recognizer without configuration block to view.
+ */
+
+view.onSwipeRight { (swipeGestureRecognizer) -> Void in
+    // Handle swipe gesture with right direction on view...
+}
+
+
+/*
+ * Add swipe down gesture recognizer without configuration block to view.
+ */
+
+view.onSwipeDown { (swipeGestureRecognizer) -> Void in
+    // Handle swipe gesture with down direction on view...
+}
+
+
+/*
+ * Add swipe left gesture recognizer without configuration block to view.
+ */
+
+view.onSwipeUpLeft { (swipeGestureRecognizer) -> Void in
+    // Handle swipe gesture with left direction on view...
+}
+
+
+/*
  * Add screen edge pan gesture recognizer with configuration block to view.
  */
 
