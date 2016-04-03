@@ -40,6 +40,21 @@ view.onTap({ (tapGestureRecognizer) -> Void in
 
 
 /*
+ * Add one-time tap gesture recognizer with configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onTapOnce({ (tapGestureRecognizer) -> Void in
+    // Handle tap on view
+    view.backgroundColor = .greenColor()
+}) { (tapGestureRecognizer) -> Void in
+    // Configure gesture recognizer
+    tapGestureRecognizer.numberOfTouchesRequired = 1
+    tapGestureRecognizer.numberOfTapsRequired = 2
+}
+
+
+/*
  * Add tap gesture recognizer without configuration block to view.
  */
 
@@ -47,6 +62,18 @@ view.onTap { (tapGestureRecognizer) -> Void in
     // Handle tap on view
     view.backgroundColor = .greenColor()
 }
+
+
+/*
+ * Add one-time tap gesture recognizer without configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onTapOnce { (tapGestureRecognizer) -> Void in
+// Handle tap on view
+view.backgroundColor = .greenColor()
+}
+
 
 /*
  * Add long press gesture recognizer with configuration block to view.
@@ -62,11 +89,36 @@ view.onLongPress({ (longPressGestureRecognizer) -> Void in
 
 
 /*
+ * Add one-time long press gesture recognizer with configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onLongPressOnce({ (longPressGestureRecognizer) -> Void in
+    // Handle long press on view
+    view.backgroundColor = .greenColor()
+}) { (longPressGestureRecognizer) -> Void in
+    // Configure gesture recognizer
+    longPressGestureRecognizer.numberOfTouchesRequired = 1
+}
+
+
+/*
  * Add long press gesture recognizer without configuration block to view.
  */
 
 view.onLongPress { (longPressGestureRecognizer) -> Void in
-    // Handle tap on view
+    // Handle long press on view
+    view.backgroundColor = .greenColor()
+}
+
+
+/*
+ * Add one-time long press gesture recognizer without configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onLongPressOnce { (longPressGestureRecognizer) -> Void in
+    // Handle long press on view
     view.backgroundColor = .greenColor()
 }
 
@@ -83,10 +135,32 @@ view.onPan({ (panGestureRecognizer) -> Void in
 
 
 /*
+ * Add one-time pan gesture recognizer with configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onPanOnce({ (panGestureRecognizer) -> Void in
+    // Handle pan gesture on view here...
+}) { (panGestureRecognizer) -> Void in
+    // Configure pan gesture recognizer here...
+}
+
+
+/*
  * Add pan gesture recognizer without configuration block to view.
  */
 
 view.onPan { (panGestureRecognizer) -> Void in
+    // Handle pan gesture on view here...
+}
+
+
+/*
+ * Add one-time pan gesture recognizer without configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onPanOnce { (panGestureRecognizer) -> Void in
     // Handle pan gesture on view here...
 }
 
@@ -103,10 +177,32 @@ view.onPinch({ (pinchGestureRecognizer) -> Void in
 
 
 /*
+ * Add one-time pinch gesture recognizer with configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onPinchOnce({ (pinchGestureRecognizer) -> Void in
+    // Handle pinch gesture on view here...
+}) { (pinchGestureRecognizer) -> Void in
+    // Configure pinch gesture recognizer here...
+}
+
+
+/*
  * Add pinch gesture recognizer without configuration block to view.
  */
 
 view.onPinch { (pinchGestureRecognizer) -> Void in
+    // Handle pinch gesture on view here...
+}
+
+
+/*
+ * Add one-time pinch gesture recognizer without configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onPinchOnce { (pinchGestureRecognizer) -> Void in
     // Handle pinch gesture on view here...
 }
 
@@ -123,10 +219,32 @@ view.onRotation({ (rotationGestureRecognizer) -> Void in
 
 
 /*
+ * Add one-time rotation gesture recognizer with configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onRotationOnce({ (rotationGestureRecognizer) -> Void in
+    // Handle rotation gesture on view here...
+}) { (rotationGestureRecognizer) -> Void in
+    // Configure rotation gesture recognizer here...
+}
+
+
+/*
  * Add rotation gesture recognizer without configuration block to view.
  */
 
 view.onRotation { (rotationGestureRecognizer) -> Void in
+    // Handle rotation gesture on view here...
+}
+
+
+/*
+ * Add rotation gesture recognizer without configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onRotationOnce { (rotationGestureRecognizer) -> Void in
     // Handle rotation gesture on view here...
 }
 
@@ -144,10 +262,33 @@ view.onSwipe({ (swipeGestureRecognizer) -> Void in
 
 
 /*
+ * Add one-time swipe gesture recognizer with configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onSwipeOnce({ (swipeGestureRecognizer) -> Void in
+    // Handle swipe gesture on view here...
+}) { (swipeGestureRecognizer) -> Void in
+    // Configure swipe gesture recognizer here...
+    swipeGestureRecognizer.direction = .Right
+}
+
+
+/*
  * Add swipe gesture recognizer without configuration block to view.
  */
 
 view.onSwipe { (swipeGestureRecognizer) -> Void in
+    // Handle swipe gesture on view here...
+}
+
+
+/*
+ * Add one-time swipe gesture recognizer without configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onSwipeOnce { (swipeGestureRecognizer) -> Void in
     // Handle swipe gesture on view here...
 }
 
@@ -164,10 +305,32 @@ view.onScreenEdgePan({ (screenEdgePanGestureRecognizer) in
 
 
 /*
+ * Add one-time screen edge pan gesture recognizer with configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onScreenEdgePanOnce({ (screenEdgePanGestureRecognizer) in
+    // Handle screen edge pan gesture on view here...
+}) { (screenEdgePanGestureRecognizer) in
+    // Configure screen edge pan gesture recognizer here...
+}
+
+
+/*
  * Add screen edge pan gesture recognizer without configuration block to view.
  */
 
 view.onScreenEdgePan { (screenEdgePanGestureRecognizer) in
+    // Handle screen edge pan gesture on view here...
+}
+
+
+/*
+ * Add one-time screen edge pan gesture recognizer without configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onScreenEdgePanOnce { (screenEdgePanGestureRecognizer) in
     // Handle screen edge pan gesture on view here...
 }
 ```
