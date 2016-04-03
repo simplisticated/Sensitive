@@ -324,7 +324,7 @@ view.onSwipeDown { (swipeGestureRecognizer) -> Void in
  * Add swipe left gesture recognizer without configuration block to view.
  */
 
-view.onSwipeUpLeft { (swipeGestureRecognizer) -> Void in
+view.onSwipeLeft { (swipeGestureRecognizer) -> Void in
     // Handle swipe gesture with left direction on view...
 }
 
@@ -370,6 +370,15 @@ view.onScreenEdgePanOnce { (screenEdgePanGestureRecognizer) in
     // Handle screen edge pan gesture on view here...
 }
 ```
+
+Also, you can use directly gesture recognizers of these types:
+* `SNTapGestureRecognizer`
+* `SNLongPressGestureRecognizer`
+* `SNPanGestureRecognizer`
+* `SNPinchGestureRecognizer`
+* `SNRotationGestureRecognizer`
+* `SNSwipeGestureRecognizer`
+* `SNScreenEdgePanGestureRecognizer`
 
 ## License
 
