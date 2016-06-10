@@ -31,7 +31,7 @@ let view = UIView()
 
 view.onTap({ (tapGestureRecognizer) -> Void in
     // Handle tap on view
-view.backgroundColor = .greenColor()
+    view.backgroundColor = .greenColor()
 }) { (tapGestureRecognizer) -> Void in
     // Configure gesture recognizer
     tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -379,6 +379,24 @@ Also, you can use directly gesture recognizers of these types:
 * `SNRotationGestureRecognizer`
 * `SNSwipeGestureRecognizer`
 * `SNScreenEdgePanGestureRecognizer`
+
+Each of them is a subclass for native gesture recognizer. For example, `SNTapGestureRecognizer` is subclassed from `UITapGestureRecognizer`. The purpose of `SN...` subclasses is to take a closure as parameter instead of target-action. For example, this is how you initialize `UITapGestureRecognizer`:
+
+```swift
+let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SomeViewController.didTapWithGestureRecognizer(_:)))
+```
+
+And this is how you should use `SNTapGestureRecognizer`:
+
+```swift
+let tapGestureRecognizer = SNTapGestureRecognizer { (tapGestureRecognizer) in
+    // Do something...
+}
+```
+
+Quite simple, isn't it?
+
+All other `SN...` gesture recognizers can be initialized similar way.
 
 ## License
 
