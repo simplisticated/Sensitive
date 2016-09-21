@@ -27,19 +27,19 @@ class MainViewController: UIViewController {
     
     // MARK: Outlets
     
-    @IBOutlet private weak var circleView: CircleView!
+    @IBOutlet fileprivate weak var circleView: CircleView!
     
     
     // MARK: Variables & properties
     
-    private let colors: [UIColor] = [
-        .greenColor(),
-        .yellowColor(),
-        .orangeColor(),
-        .whiteColor()
+    fileprivate let colors: [UIColor] = [
+        .green,
+        .yellow,
+        .orange,
+        .white
     ]
     
-    private var indexOfCurrentColor: Int?
+    fileprivate var indexOfCurrentColor: Int?
     
     
     // MARK: Public methods
@@ -67,7 +67,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     

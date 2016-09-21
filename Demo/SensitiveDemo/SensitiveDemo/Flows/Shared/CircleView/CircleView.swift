@@ -40,7 +40,7 @@ class CircleView: UIView {
     
     // MARK: Variables & properties
     
-    private var _instructionLabel: UILabel!
+    fileprivate var _instructionLabel: UILabel!
     
     var instructionLabel: UILabel {
         get {
@@ -71,12 +71,12 @@ class CircleView: UIView {
     
     func attributesForInstructionLabelText() -> [String : AnyObject] {
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .Center
+        paragraphStyle.alignment = .center
         
         return [
-            NSFontAttributeName: UIFont.systemFontOfSize(15.0),
-            NSForegroundColorAttributeName: UIColor.blackColor(),
-            NSKernAttributeName: 0.5,
+            NSFontAttributeName: UIFont.systemFont(ofSize: 15.0),
+            NSForegroundColorAttributeName: UIColor.black,
+            NSKernAttributeName: 0.5 as AnyObject,
             NSParagraphStyleAttributeName: paragraphStyle
         ]
     }
@@ -84,10 +84,10 @@ class CircleView: UIView {
     
     // MARK: Private methods
     
-    private func customInitialization() {
+    fileprivate func customInitialization() {
         // Initialize view
         
-        backgroundColor = .whiteColor()
+        backgroundColor = .white
         layer.masksToBounds = true
         updateBounds()
         
@@ -104,8 +104,8 @@ class CircleView: UIView {
         addSubview(instructionLabel)
     }
     
-    private func updateBounds() {
-        layer.borderColor = UIColor.blackColor().CGColor
+    fileprivate func updateBounds() {
+        layer.borderColor = UIColor.black.cgColor
         layer.borderWidth = 1.0
         layer.cornerRadius = bounds.size.width / 2.0
         layer.masksToBounds = true
