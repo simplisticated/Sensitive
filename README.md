@@ -12,7 +12,9 @@
 
 or
 
-- Use `Sensitive` cocoapod
+- Use `Sensitive` cocoapod.
+
+**Note**: For Swift 2.x use `Sensitive v1.4`. For Swift 3.0 use `Sensitive v3.0`.
 
 ## Requirements
 
