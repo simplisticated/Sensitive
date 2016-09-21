@@ -91,7 +91,7 @@ This library changes the way how you work with gestures in Swift.
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Source", "Source/**/*"
+  s.source_files  = "Sensitive", "Sensitive/**/*"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
