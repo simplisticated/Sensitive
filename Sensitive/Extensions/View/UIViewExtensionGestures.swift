@@ -35,6 +35,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onTap(_ block: @escaping SNTapGestureRecognizerHandlerBlock, configureTapGestureRecognizer: SNTapGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -83,6 +84,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onTapOnce(_ block: @escaping SNTapGestureRecognizerHandlerBlock, configureTapGestureRecognizer: SNTapGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -133,6 +135,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onTap(_ block: @escaping SNTapGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -169,6 +172,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onTapOnce(_ block: @escaping SNTapGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -217,6 +221,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onLongPress(_ block: @escaping SNLongPressGestureRecognizerHandlerBlock, configureLongPressGestureRecognizer: SNLongPressGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -265,6 +270,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onLongPressOnce(_ block: @escaping SNLongPressGestureRecognizerHandlerBlock, configureLongPressGestureRecognizer: SNLongPressGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -315,6 +321,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onLongPress(_ block: @escaping SNLongPressGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -351,6 +358,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onLongPressOnce(_ block: @escaping SNLongPressGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -399,6 +407,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onPan(_ block: @escaping SNPanGestureRecognizerHandlerBlock, configurePanGestureRecognizer: SNPanGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -447,6 +456,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onPanOnce(_ block: @escaping SNPanGestureRecognizerHandlerBlock, configurePanGestureRecognizer: SNPanGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -497,6 +507,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onPan(_ block: @escaping SNPanGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -533,6 +544,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onPanOnce(_ block: @escaping SNPanGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -581,6 +593,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onPinch(_ block: @escaping SNPinchGestureRecognizerHandlerBlock, configurePinchGestureRecognizer: SNPinchGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -629,6 +642,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onPinchOnce(_ block: @escaping SNPinchGestureRecognizerHandlerBlock, configurePinchGestureRecognizer: SNPinchGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -679,6 +693,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onPinch(_ block: @escaping SNPinchGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -715,6 +730,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onPinchOnce(_ block: @escaping SNPinchGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -763,6 +779,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onRotation(_ block: @escaping SNRotationGestureRecognizerHandlerBlock, configureRotationGestureRecognizer: SNRotationGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -811,6 +828,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onRotationOnce(_ block: @escaping SNRotationGestureRecognizerHandlerBlock, configureRotationGestureRecognizer: SNRotationGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -861,6 +879,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onRotation(_ block: @escaping SNRotationGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -897,6 +916,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onRotationOnce(_ block: @escaping SNRotationGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -945,6 +965,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onSwipe(_ block: @escaping SNSwipeGestureRecognizerHandlerBlock, configureSwipeGestureRecognizer: SNSwipeGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -993,6 +1014,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onSwipeOnce(_ block: @escaping SNSwipeGestureRecognizerHandlerBlock, configureSwipeGestureRecognizer: SNSwipeGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -1043,6 +1065,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onSwipe(_ block: @escaping SNSwipeGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -1079,6 +1102,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onSwipeOnce(_ block: @escaping SNSwipeGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -1122,6 +1146,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onSwipeUp(_ block: @escaping SNSwipeGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -1156,6 +1181,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onSwipeRight(_ block: @escaping SNSwipeGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -1190,6 +1216,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onSwipeDown(_ block: @escaping SNSwipeGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -1224,6 +1251,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onSwipeLeft(_ block: @escaping SNSwipeGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -1263,6 +1291,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onScreenEdgePan(_ block: @escaping SNScreenEdgePanGestureRecognizerHandlerBlock, configureScreenEdgePanGestureRecognizer: SNScreenEdgePanGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -1311,6 +1340,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onScreenEdgePanOnce(_ block: @escaping SNScreenEdgePanGestureRecognizerHandlerBlock, configureScreenEdgePanGestureRecognizer: SNScreenEdgePanGestureRecognizerConfigurationBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
@@ -1361,6 +1391,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onScreenEdgePan(_ block: @escaping SNScreenEdgePanGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Create gesture recognizer instance.
@@ -1397,6 +1428,7 @@ public extension UIView {
     - returns:
         Receiver instance for support of chain calls.
     */
+    @discardableResult
     public func onScreenEdgePanOnce(_ block: @escaping SNScreenEdgePanGestureRecognizerHandlerBlock) -> UIView {
         /*
          * Obtain handler block for gesture recognizer.
