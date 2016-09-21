@@ -8,7 +8,7 @@
 
 ##How To Get Started
 
-- Copy content of `Source` folder to your project.
+- Copy content of `Sensitive` folder to your project.
 
 or
 
