@@ -447,6 +447,7 @@
 				TargetAttributes = {
 					694D5BB21BF020E9007D0EAA = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = AFEG59EG8E;
 						LastSwiftMigration = 0800;
 					};
 					694D5BC61BF020EA007D0EAA = {
@@ -677,8 +678,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AFEG59EG8E;
 				INFOPLIST_FILE = SensitiveDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visuality.SensitiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -690,8 +692,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AFEG59EG8E;
 				INFOPLIST_FILE = SensitiveDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visuality.SensitiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
