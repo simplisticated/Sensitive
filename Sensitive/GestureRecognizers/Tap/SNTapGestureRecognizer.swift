@@ -43,6 +43,9 @@ open class SNTapGestureRecognizer: UITapGestureRecognizer {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handler = nil
     }
     
     

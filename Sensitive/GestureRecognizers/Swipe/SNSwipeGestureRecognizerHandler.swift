@@ -31,6 +31,10 @@ internal class SNSwipeGestureRecognizerHandler: NSObject {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handlerBlock = nil
+        _swipeGestureRecognizer = nil
     }
     
     

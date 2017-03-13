@@ -43,6 +43,9 @@ open class SNScreenEdgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handler = nil
     }
     
     

@@ -43,6 +43,9 @@ open class SNLongPressGestureRecognizer: UILongPressGestureRecognizer {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handler = nil
     }
     
     

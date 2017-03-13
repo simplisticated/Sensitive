@@ -43,6 +43,9 @@ open class SNRotationGestureRecognizer: UIRotationGestureRecognizer {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handler = nil
     }
     
     

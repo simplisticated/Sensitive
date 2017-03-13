@@ -43,6 +43,9 @@ open class SNPanGestureRecognizer: UIPanGestureRecognizer {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handler = nil
     }
     
     

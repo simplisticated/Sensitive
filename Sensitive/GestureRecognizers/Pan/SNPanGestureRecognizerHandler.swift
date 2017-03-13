@@ -31,6 +31,10 @@ internal class SNPanGestureRecognizerHandler: NSObject {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handlerBlock = nil
+        _panGestureRecognizer = nil
     }
     
     

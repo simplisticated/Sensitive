@@ -43,6 +43,9 @@ open class SNPinchGestureRecognizer: UIPinchGestureRecognizer {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handler = nil
     }
     
     

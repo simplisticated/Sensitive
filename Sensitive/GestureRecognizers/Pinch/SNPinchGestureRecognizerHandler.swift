@@ -31,6 +31,10 @@ internal class SNPinchGestureRecognizerHandler: NSObject {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handlerBlock = nil
+        _pinchGestureRecognizer = nil
     }
     
     

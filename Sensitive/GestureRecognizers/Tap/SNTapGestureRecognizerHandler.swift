@@ -31,6 +31,10 @@ internal class SNTapGestureRecognizerHandler: NSObject {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handlerBlock = nil
+        _tapGestureRecognizer = nil
     }
     
     

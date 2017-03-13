@@ -43,6 +43,9 @@ open class SNSwipeGestureRecognizer: UISwipeGestureRecognizer {
     // MARK: Deinitializer
     
     deinit {
+        // Remove references
+        
+        _handler = nil
     }
     
     
