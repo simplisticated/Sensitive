@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
         
         // Initialize circle view
         
-        circleView.onTap { (tapGestureRecognizer) -> Void in
+        circleView.onTap(when: .always, handle: { (tapGestureRecognizer) in
             if (self.indexOfCurrentColor == nil) || (self.indexOfCurrentColor! >= self.colors.count - 1) {
                 self.indexOfCurrentColor = 0
             } else {
@@ -59,7 +59,7 @@ class MainViewController: UIViewController {
             
             let colorForCircleView = self.colors[self.indexOfCurrentColor!]
             self.circleView.backgroundColor = colorForCircleView
-        }
+        }, configure: nil)
     }
     
     override func didReceiveMemoryWarning() {
