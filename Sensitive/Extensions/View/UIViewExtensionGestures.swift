@@ -1551,21 +1551,7 @@ public extension UIView {
          */
         
         let swipeGestureRecognizer = SNSwipeGestureRecognizer(handlerBlock: handlerBlockForSwipeGestureRecognizer)
-        
-        switch direction {
-        case .up:
-            swipeGestureRecognizer.direction = .up
-            break
-        case .right:
-            swipeGestureRecognizer.direction = .right
-            break
-        case .down:
-            swipeGestureRecognizer.direction = .down
-            break
-        case .left:
-            swipeGestureRecognizer.direction = .left
-            break
-        }
+        swipeGestureRecognizer.direction = direction.swipeGestureRecognizerDirection
         
         /*
          * Add gesture recognizer to receiver.
