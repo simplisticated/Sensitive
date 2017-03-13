@@ -26,6 +26,8 @@ or
 * iOS 9.0 and later
 * Xcode 8 and later
 
+Swift 2 is not supported anymore. Use Swift 3 with this library.
+
 ## Usage
 
 ```swift
