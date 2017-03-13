@@ -45,6 +45,20 @@ view.onTap(when: .always, handle: { (tapGestureRecognizer) in
 }
 
 /*
+ * Also, you can use shorter expression
+ * (`when` argument is equal to `.always` by default).
+ */
+
+view.onTap(handle: { (tapGestureRecognizer) in
+    // Handle tap on view
+    tapGestureRecognizer.view!.backgroundColor = .green
+}) { (tapGestureRecognizer) in
+    // Configure gesture recognizer
+    tapGestureRecognizer.numberOfTouchesRequired = 1
+    tapGestureRecognizer.numberOfTapsRequired = 2
+}
+
+/*
  * Add one-time tap gesture recognizer with configuration block to view.
  * Gesture recognizer will be removed from view after first recognition.
  */
