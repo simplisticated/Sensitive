@@ -26,12 +26,15 @@ public class TapGestureRecognizer: UITapGestureRecognizer {
         // Initialize handler block
         
         _handlerBlock = handlerBlock
+        
+        // Initialize number of times handled value
+        
+        _numberOfTimesHandled = 0
     }
     
     // MARK: Deinitializer
     
     deinit {
-        NSLog("Will be removed")
     }
     
     // MARK: Variables & properties
@@ -44,11 +47,25 @@ public class TapGestureRecognizer: UITapGestureRecognizer {
         }
     }
     
+    fileprivate var _numberOfTimesHandled: Int!
+    
+    internal var numberOfTimesHandled: Int {
+        get {
+            return _numberOfTimesHandled
+        }
+    }
+    
     // MARK: Public methods
     
     // MARK: Private methods
     
     internal func runHandlerBlock() {
+        // Update number of times handled value
+        
+        _numberOfTimesHandled! += 1
+        
+        // Run handler block
+        
         _handlerBlock?(self)
     }
     

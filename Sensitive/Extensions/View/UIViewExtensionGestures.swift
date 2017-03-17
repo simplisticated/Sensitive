@@ -35,21 +35,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        var handlerBlockForTapGestureRecognizer: GestureRecognizerHandlerBlock<UITapGestureRecognizer>!
-        
-        switch handlerReuseCount {
-        case .once:
-            handlerBlockForTapGestureRecognizer = { (tapGestureRecognizer) in
-                handle(tapGestureRecognizer)
-                self.removeGestureRecognizer(tapGestureRecognizer)
-            }
-            break
-        case .always:
-            handlerBlockForTapGestureRecognizer = { (tapGestureRecognizer) in
-                handle(tapGestureRecognizer)
-            }
-            break
-        }
+        let handlerBlockForTapGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -94,21 +80,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        var handlerBlockForLongPressGestureRecognizer: GestureRecognizerHandlerBlock<UILongPressGestureRecognizer>!
-        
-        switch handlerReuseCount {
-        case .once:
-            handlerBlockForLongPressGestureRecognizer = { (longPressGestureRecognizer) in
-                handle(longPressGestureRecognizer)
-                self.removeGestureRecognizer(longPressGestureRecognizer)
-            }
-            break
-        case .always:
-            handlerBlockForLongPressGestureRecognizer = { (longPressGestureRecognizer) in
-                handle(longPressGestureRecognizer)
-            }
-            break
-        }
+        let handlerBlockForLongPressGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -153,21 +125,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        var handlerBlockForPanGestureRecognizer: GestureRecognizerHandlerBlock<UIPanGestureRecognizer>!
-        
-        switch handlerReuseCount {
-        case .once:
-            handlerBlockForPanGestureRecognizer = { (panGestureRecognizer) in
-                handle(panGestureRecognizer)
-                self.removeGestureRecognizer(panGestureRecognizer)
-            }
-            break
-        case .always:
-            handlerBlockForPanGestureRecognizer = { (panGestureRecognizer) in
-                handle(panGestureRecognizer)
-            }
-            break
-        }
+        let handlerBlockForPanGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -212,21 +170,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        var handlerBlockForPinchGestureRecognizer: GestureRecognizerHandlerBlock<UIPinchGestureRecognizer>!
-        
-        switch handlerReuseCount {
-        case .once:
-            handlerBlockForPinchGestureRecognizer = { (pinchGestureRecognizer) in
-                handle(pinchGestureRecognizer)
-                self.removeGestureRecognizer(pinchGestureRecognizer)
-            }
-            break
-        case .always:
-            handlerBlockForPinchGestureRecognizer = { (pinchGestureRecognizer) in
-                handle(pinchGestureRecognizer)
-            }
-            break
-        }
+        let handlerBlockForPinchGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -271,21 +215,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        var handlerBlockForRotationGestureRecognizer: GestureRecognizerHandlerBlock<UIRotationGestureRecognizer>!
-        
-        switch handlerReuseCount {
-        case .once:
-            handlerBlockForRotationGestureRecognizer = { (rotationGestureRecognizer) in
-                handle(rotationGestureRecognizer)
-                self.removeGestureRecognizer(rotationGestureRecognizer)
-            }
-            break
-        case .always:
-            handlerBlockForRotationGestureRecognizer = { (rotationGestureRecognizer) in
-                handle(rotationGestureRecognizer)
-            }
-            break
-        }
+        let handlerBlockForRotationGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -330,21 +260,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        var handlerBlockForSwipeGestureRecognizer: GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>!
-        
-        switch handlerReuseCount {
-        case .once:
-            handlerBlockForSwipeGestureRecognizer = { (swipeGestureRecognizer) in
-                handle(swipeGestureRecognizer)
-                self.removeGestureRecognizer(swipeGestureRecognizer)
-            }
-            break
-        case .always:
-            handlerBlockForSwipeGestureRecognizer = { (swipeGestureRecognizer) in
-                handle(swipeGestureRecognizer)
-            }
-            break
-        }
+        let handlerBlockForSwipeGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -390,21 +306,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        var handlerBlockForSwipeGestureRecognizer: GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>!
-        
-        switch handlerReuseCount {
-        case .once:
-            handlerBlockForSwipeGestureRecognizer = { (swipeGestureRecognizer) in
-                handle(swipeGestureRecognizer)
-                self.removeGestureRecognizer(swipeGestureRecognizer)
-            }
-            break
-        case .always:
-            handlerBlockForSwipeGestureRecognizer = { (swipeGestureRecognizer) in
-                handle(swipeGestureRecognizer)
-            }
-            break
-        }
+        let handlerBlockForSwipeGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -456,21 +358,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        var handlerBlockForScreenEdgePanGestureRecognizer: GestureRecognizerHandlerBlock<UIScreenEdgePanGestureRecognizer>!
-        
-        switch handlerReuseCount {
-        case .once:
-            handlerBlockForScreenEdgePanGestureRecognizer = { (screenEdgePanGestureRecognizer) in
-                handle(screenEdgePanGestureRecognizer)
-                self.removeGestureRecognizer(screenEdgePanGestureRecognizer)
-            }
-            break
-        case .always:
-            handlerBlockForScreenEdgePanGestureRecognizer = { (screenEdgePanGestureRecognizer) in
-                handle(screenEdgePanGestureRecognizer)
-            }
-            break
-        }
+        let handlerBlockForScreenEdgePanGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -498,5 +386,50 @@ public extension UIView {
     }
     
     // MARK: Private object methods
+    
+    fileprivate func stv_numberOfTimesGestureRecognizerIsHandled(gestureRecognizer: UIGestureRecognizer) -> Int? {
+        switch gestureRecognizer {
+        case is TapGestureRecognizer:
+            return (gestureRecognizer as! TapGestureRecognizer).numberOfTimesHandled
+        case is LongPressGestureRecognizer:
+            return (gestureRecognizer as! LongPressGestureRecognizer).numberOfTimesHandled
+        case is PanGestureRecognizer:
+            return (gestureRecognizer as! PanGestureRecognizer).numberOfTimesHandled
+        case is PinchGestureRecognizer:
+            return (gestureRecognizer as! PinchGestureRecognizer).numberOfTimesHandled
+        case is RotationGestureRecognizer:
+            return (gestureRecognizer as! RotationGestureRecognizer).numberOfTimesHandled
+        case is SwipeGestureRecognizer:
+            return (gestureRecognizer as! SwipeGestureRecognizer).numberOfTimesHandled
+        case is ScreenEdgePanGestureRecognizer:
+            return (gestureRecognizer as! ScreenEdgePanGestureRecognizer).numberOfTimesHandled
+        default:
+            return nil
+        }
+    }
+    
+    fileprivate func stv_applyReuseCount<GestureRecognizerType: UIGestureRecognizer>(reuseCount: GestureHandlerReuseCount, toHandlerBlock handlerBlock: @escaping GestureRecognizerHandlerBlock<GestureRecognizerType>) -> GestureRecognizerHandlerBlock<GestureRecognizerType> {
+        switch reuseCount {
+        case .once:
+            return { (gestureRecognizer) in
+                handlerBlock(gestureRecognizer)
+                gestureRecognizer.view?.removeGestureRecognizer(gestureRecognizer)
+            }
+        case let .count(times):
+            return { (gestureRecognizer) in
+                handlerBlock(gestureRecognizer)
+                
+                let numberOfTimesGestureRecognizersIsHandled = self.stv_numberOfTimesGestureRecognizerIsHandled(gestureRecognizer: gestureRecognizer) ?? 0
+                
+                if numberOfTimesGestureRecognizersIsHandled == times {
+                    gestureRecognizer.view?.removeGestureRecognizer(gestureRecognizer)
+                }
+            }
+        case .always:
+            return { (gestureRecognizer) in
+                handlerBlock(gestureRecognizer)
+            }
+        }
+    }
     
 }
