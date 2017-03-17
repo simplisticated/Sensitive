@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
         
         // Initialize circle view
         
-        circleView.onTap(handle: { (gestureRecognizer) in
+        circleView.onTap(when: .always, handle: { (gestureRecognizer) in
             if (self.indexOfCurrentColor == nil) || (self.indexOfCurrentColor! >= self.colors.count - 1) {
                 self.indexOfCurrentColor = 0
             } else {
