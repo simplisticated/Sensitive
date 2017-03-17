@@ -389,7 +389,7 @@ let tapGestureRecognizer = TapGestureRecognizer { (tapGestureRecognizer) in
 
 Quite simple, isn't it?
 
-All other gesture recognizers with can be initialized similar way.
+All other gesture recognizers can be initialized similar way.
 
 ## License
 
