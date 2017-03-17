@@ -34,23 +34,19 @@ Swift 2 is not supported anymore. Use Swift 3 with this library.
 let view = UIView()
 
 /*
+ * Add tap gesture recognizer without configuration block to view.
+ */
+
+view.onTap { (tapGestureRecognizer) in
+    // Handle tap on view
+    tapGestureRecognizer.view!.backgroundColor = .green
+}
+
+/*
  * Add tap gesture recognizer with configuration block to view.
  */
 
 view.onTap(when: .always, handle: { (tapGestureRecognizer) in
-    // Handle tap on view
-    tapGestureRecognizer.view!.backgroundColor = .green
-}) { (tapGestureRecognizer) in
-    // Configure gesture recognizer
-    tapGestureRecognizer.numberOfTouchesRequired = 1
-    tapGestureRecognizer.numberOfTapsRequired = 2
-}
-
-/*
- * By default, `when` parameter is equal to `.always`, so you can skip it.
- */
-
-view.onTap(handle: { (tapGestureRecognizer) in
     // Handle tap on view
     tapGestureRecognizer.view!.backgroundColor = .green
 }) { (tapGestureRecognizer) in
@@ -88,13 +84,13 @@ view.onTap(when: .count(times: 10), handle: { (tapGestureRecognizer) in
 }
 
 /*
- * Add tap gesture recognizer without configuration block to view.
+ * Add long press gesture recognizer without configuration block to view.
  */
 
-circleView.onTap(when: .always, handle: { (tapGestureRecognizer) in
-    // Handle tap on view
+view.onLongPress { (longPressGestureRecognizer) in
+    // Handle long press on view
     tapGestureRecognizer.view!.backgroundColor = .green
-}, configure: nil)
+}
 
 /*
  * Add long press gesture recognizer with configuration block to view.
@@ -135,13 +131,12 @@ view.onLongPress(when: .count(times: 10), handle: { (longPressGestureRecognizer)
 }
 
 /*
- * Add long press gesture recognizer without configuration block to view.
+ * Add pan gesture recognizer without configuration block to view.
  */
 
-view.onLongPress(when: .always, handle: { (longPressGestureRecognizer) in
-    // Handle long press on view
-    tapGestureRecognizer.view!.backgroundColor = .green
-}, configure: nil)
+view.onPan { (panGestureRecognizer) in
+    // Handle pan gesture on view here...
+}
 
 /*
  * Add pan gesture recognizer with configuration block to view.
@@ -176,12 +171,12 @@ view.onPan(when: .count(times: 10), handle: { (panGestureRecognizer) in
 }
 
 /*
- * Add pan gesture recognizer without configuration block to view.
+ * Add pinch gesture recognizer without configuration block to view.
  */
 
-view.onPan(when: .always, handle: { (panGestureRecognizer) in
-    // Handle pan gesture on view here...
-}, configure: nil)
+view.onPinch { (pinchGestureRecognizer) in
+    // Handle pinch gesture on view here...
+}
 
 /*
  * Add pinch gesture recognizer with configuration block to view.
@@ -216,12 +211,12 @@ view.onPinch(when: .count(times: 10), handle: { (pinchGestureRecognizer) in
 }
 
 /*
- * Add pinch gesture recognizer without configuration block to view.
+ * Add rotation gesture recognizer without configuration block to view.
  */
 
-view.onPinch(when: .always, handle: { (pinchGestureRecognizer) in
-    // Handle pinch gesture on view here...
-}, configure: nil)
+view.onRotation { (rotationGestureRecognizer) in
+    // Handle rotation gesture on view here...
+}
 
 /*
  * Add rotation gesture recognizer with configuration block to view.
@@ -256,12 +251,12 @@ view.onRotation(when: .count(times: 10), handle: { (rotationGestureRecognizer) i
 }
 
 /*
- * Add rotation gesture recognizer without configuration block to view.
+ * Add swipe gesture recognizer without configuration block to view.
  */
 
-view.onRotation(when: .always, handle: { (rotationGestureRecognizer) in
-    // Handle rotation gesture on view here...
-}, .configure: nil)
+view.onSwipe { (swipeGestureRecognizer) in
+    // Handle swipe gesture on view here...
+}
 
 /*
  * Add swipe gesture recognizer with configuration block to view.
@@ -299,45 +294,44 @@ view.onSwipe(when: .count(times: 10), { (swipeGestureRecognizer) in
 }
 
 /*
- * Add swipe gesture recognizer without configuration block to view.
- */
-
-view.onSwipe(when: .always, handle: { (swipeGestureRecognizer) in
-    // Handle swipe gesture on view here...
-}, configure: nil)
-
-/*
  * Add swipe up gesture recognizer without configuration block to view.
  */
 
-view.onSwipe(to: .up, when: .always, handle: { (swipeGestureRecognizer) in
+circleView.onSwipe(to: .up) { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
-}, configure: nil)
+}
 
 /*
  * Add swipe right gesture recognizer without configuration block to view.
  */
 
-view.onSwipe(to: .right, when: .always, handle: { (swipeGestureRecognizer) in
+circleView.onSwipe(to: .right) { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
-}, configure: nil)
+}
 
 /*
  * Add swipe down gesture recognizer without configuration block to view.
  */
 
-view.onSwipe(to: .down, when: .always, handle: { (swipeGestureRecognizer) in
+circleView.onSwipe(to: .down) { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
-}, configure: nil)
+}
 
 /*
  * Add swipe left gesture recognizer without configuration block to view.
  */
 
-view.onSwipe(to: .left, when: .always, handle: { (swipeGestureRecognizer)
-in
+circleView.onSwipe(to: .left) { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
-}, configure: nil)
+}
+
+/*
+ * Add screen edge pan gesture recognizer without configuration block to view.
+ */
+
+view.onScreenEdgePan { (screenEdgePanGestureRecognizer) in
+    // Handle screen edge pan gesture on view here...
+}
 
 /*
  * Add screen edge pan gesture recognizer with configuration block to view.
@@ -370,14 +364,6 @@ view.onScreenEdgePan(when: .count(times: 10), handle: { (screenEdgePanGestureRec
 }) { (screenEdgePanGestureRecognizer) in
     // Configure screen edge pan gesture recognizer here...
 }
-
-/*
- * Add screen edge pan gesture recognizer without configuration block to view.
- */
-
-view.onScreenEdgePan(when: .always, handle: { (screenEdgePanGestureRecognizer) in
-    // Handle screen edge pan gesture on view here...
-}, configure: nil)
 ```
 
 Also, you can use gesture recognizers of these types:
