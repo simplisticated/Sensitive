@@ -385,7 +385,7 @@ public extension UIView {
         Reference to receiver for support of chain calls.
     */
     @discardableResult
-    public func onSwipe(to direction: SwipeDirection, when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>, configure: GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>?) -> Self {
+    public func onSwipe(to direction: SwipeDirection, when handlerReuseCount: GestureHandlerReuseCount, handle: @escaping GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>, configure: GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>?) -> Self {
         /*
          * Obtain handler block for gesture recognizer.
          */
@@ -452,7 +452,7 @@ public extension UIView {
         Reference to receiver for support of chain calls.
     */
     @discardableResult
-    public func onScreenEdgePan(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UIScreenEdgePanGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIScreenEdgePanGestureRecognizer>?) -> Self {
+    public func onScreenEdgePan(when handlerReuseCount: GestureHandlerReuseCount, handle: @escaping GestureRecognizerHandlerBlock<UIScreenEdgePanGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIScreenEdgePanGestureRecognizer>?) -> Self {
         /*
          * Obtain handler block for gesture recognizer.
          */
