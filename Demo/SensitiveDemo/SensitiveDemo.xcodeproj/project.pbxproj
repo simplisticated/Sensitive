@@ -28,6 +28,7 @@
 		6976DE311E7B14D90095AB57 /* TapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6976DE271E7B14D90095AB57 /* TapGestureRecognizer.swift */; };
 		697A75321BF1708500229272 /* UIColorExtensionListOfColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */; };
 		69A1D5D71C39D91200ED2B7A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1D5D61C39D91200ED2B7A /* CircleView.swift */; };
+		69EC1C751E7B6D0A00E7082A /* ArrayExtensionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EC1C741E7B6D0A00E7082A /* ArrayExtensionViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		6976DE271E7B14D90095AB57 /* TapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizer.swift; sourceTree = "<group>"; };
 		697A75311BF1708500229272 /* UIColorExtensionListOfColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionListOfColors.swift; sourceTree = "<group>"; };
 		69A1D5D61C39D91200ED2B7A /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		69EC1C741E7B6D0A00E7082A /* ArrayExtensionViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				695355561E77063D00ACF184 /* View */,
+				69EC1C731E7B6CFD00E7082A /* Array */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -344,6 +347,14 @@
 			path = ../../../../Sensitive;
 			sourceTree = "<group>";
 		};
+		69EC1C731E7B6CFD00E7082A /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				69EC1C741E7B6D0A00E7082A /* ArrayExtensionViews.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -495,6 +506,7 @@
 				6976DE151E7B14280095AB57 /* GestureRecognizerHandlerBlock.swift in Sources */,
 				6976DE2F1E7B14D90095AB57 /* ScreenEdgePanGestureRecognizer.swift in Sources */,
 				6976DE2B1E7B14D90095AB57 /* LongPressGestureRecognizer.swift in Sources */,
+				69EC1C751E7B6D0A00E7082A /* ArrayExtensionViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

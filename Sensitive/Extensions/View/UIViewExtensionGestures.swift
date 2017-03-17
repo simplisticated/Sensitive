@@ -27,7 +27,7 @@ public extension UIView {
             It's recommended to change settings of gesture recognizer inside of this block.
     
     - returns:
-        GestureManager instance for support of chain calls.
+        Reference to receiver for support of chain calls.
     */
     @discardableResult
     public func onTap(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UITapGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UITapGestureRecognizer>?) -> Self {
@@ -86,7 +86,7 @@ public extension UIView {
             It's recommended to change settings of gesture recognizer inside of this block.
     
     - returns:
-        GestureManager instance for support of chain calls.
+        Reference to receiver for support of chain calls.
     */
     @discardableResult
     public func onLongPress(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UILongPressGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UILongPressGestureRecognizer>?) -> Self {
@@ -145,7 +145,7 @@ public extension UIView {
             It's recommended to change settings of gesture recognizer inside of this block.
     
     - returns:
-        GestureManager instance for support of chain calls.
+        Reference to receiver for support of chain calls.
     */
     @discardableResult
     public func onPan(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UIPanGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIPanGestureRecognizer>?) -> Self {
@@ -204,7 +204,7 @@ public extension UIView {
             It's recommended to change settings of gesture recognizer inside of this block.
     
     - returns:
-        GestureManager instance for support of chain calls.
+        Reference to receiver for support of chain calls.
     */
     @discardableResult
     public func onPinch(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UIPinchGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIPinchGestureRecognizer>?) -> Self {
@@ -263,7 +263,7 @@ public extension UIView {
             It's recommended to change settings of gesture recognizer inside of this block.
     
     - returns:
-        GestureManager instance for support of chain calls.
+        Reference to receiver for support of chain calls.
     */
     @discardableResult
     public func onRotation(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UIRotationGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIRotationGestureRecognizer>?) -> Self {
@@ -322,7 +322,7 @@ public extension UIView {
             It's recommended to change settings of gesture recognizer inside of this block.
     
     - returns:
-        GestureManager instance for support of chain calls.
+        Reference to receiver for support of chain calls.
     */
     @discardableResult
     public func onSwipe(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>, configure: GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>?) -> Self {
@@ -382,7 +382,7 @@ public extension UIView {
             It's recommended to change settings of gesture recognizer inside of this block.
     
     - returns:
-        GestureManager instance for support of chain calls.
+        Reference to receiver for support of chain calls.
     */
     @discardableResult
     public func onSwipe(to direction: SwipeDirection, when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>, configure: GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>?) -> Self {
@@ -448,7 +448,7 @@ public extension UIView {
             It's recommended to change settings of gesture recognizer inside of this block.
     
     - returns:
-        GestureManager instance for support of chain calls.
+        Reference to receiver for support of chain calls.
     */
     @discardableResult
     public func onScreenEdgePan(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UIScreenEdgePanGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIScreenEdgePanGestureRecognizer>?) -> Self {
