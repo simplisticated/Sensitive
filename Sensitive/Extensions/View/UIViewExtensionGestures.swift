@@ -30,7 +30,7 @@ public extension UIView {
         Reference to receiver for support of chain calls.
     */
     @discardableResult
-    public func onTap(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UITapGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UITapGestureRecognizer>?) -> Self {
+    public func onTap(when handlerReuseCount: GestureHandlerReuseCount, handle: @escaping GestureRecognizerHandlerBlock<UITapGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UITapGestureRecognizer>?) -> Self {
         /*
          * Obtain handler block for gesture recognizer.
          */
@@ -63,6 +63,20 @@ public extension UIView {
     }
     
     /**
+    Adds `UITapGestureRecognizer` instance to view.
+    
+    - parameters:
+        - handle: Called when `UITapGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Reference to receiver for support of chain calls.
+    */
+    @discardableResult
+    public func onTap(handle: @escaping GestureRecognizerHandlerBlock<UITapGestureRecognizer>) -> Self {
+        return onTap(when: .always, handle: handle, configure: nil)
+    }
+    
+    /**
     Adds `UILongPressGestureRecognizer` instance to view.
     
     - parameters:
@@ -75,7 +89,7 @@ public extension UIView {
         Reference to receiver for support of chain calls.
     */
     @discardableResult
-    public func onLongPress(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UILongPressGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UILongPressGestureRecognizer>?) -> Self {
+    public func onLongPress(when handlerReuseCount: GestureHandlerReuseCount, handle: @escaping GestureRecognizerHandlerBlock<UILongPressGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UILongPressGestureRecognizer>?) -> Self {
         /*
          * Obtain handler block for gesture recognizer.
          */
@@ -108,6 +122,20 @@ public extension UIView {
     }
     
     /**
+    Adds `UITapGestureRecognizer` instance to view.
+    
+    - parameters:
+        - handle: Called when `UILongPressGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Reference to receiver for support of chain calls.
+    */
+    @discardableResult
+    public func onLongPress(handle: @escaping GestureRecognizerHandlerBlock<UILongPressGestureRecognizer>) -> Self {
+        return onLongPress(when: .always, handle: handle, configure: nil)
+    }
+    
+    /**
     Adds `UIPanGestureRecognizer` instance to view.
     
     - parameters:
@@ -120,7 +148,7 @@ public extension UIView {
         Reference to receiver for support of chain calls.
     */
     @discardableResult
-    public func onPan(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UIPanGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIPanGestureRecognizer>?) -> Self {
+    public func onPan(when handlerReuseCount: GestureHandlerReuseCount, handle: @escaping GestureRecognizerHandlerBlock<UIPanGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIPanGestureRecognizer>?) -> Self {
         /*
          * Obtain handler block for gesture recognizer.
          */
@@ -153,6 +181,20 @@ public extension UIView {
     }
     
     /**
+    Adds `UIPanGestureRecognizer` instance to view.
+    
+    - parameters:
+        - handle: Called when `UIPanGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Reference to receiver for support of chain calls.
+    */
+    @discardableResult
+    public func onPan(handle: @escaping GestureRecognizerHandlerBlock<UIPanGestureRecognizer>) -> Self {
+        return onPan(when: .always, handle: handle, configure: nil)
+    }
+    
+    /**
     Adds `UIPinchGestureRecognizer` instance to view.
     
     - parameters:
@@ -165,7 +207,7 @@ public extension UIView {
         Reference to receiver for support of chain calls.
     */
     @discardableResult
-    public func onPinch(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UIPinchGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIPinchGestureRecognizer>?) -> Self {
+    public func onPinch(when handlerReuseCount: GestureHandlerReuseCount, handle: @escaping GestureRecognizerHandlerBlock<UIPinchGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIPinchGestureRecognizer>?) -> Self {
         /*
          * Obtain handler block for gesture recognizer.
          */
@@ -198,6 +240,20 @@ public extension UIView {
     }
     
     /**
+    Adds `UIPinchGestureRecognizer` instance to view.
+    
+    - parameters:
+        - handle: Called when `UIPinchGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Reference to receiver for support of chain calls.
+    */
+    @discardableResult
+    public func onPinch(handle: @escaping GestureRecognizerHandlerBlock<UIPinchGestureRecognizer>) -> Self {
+        return onPinch(when: .always, handle: handle, configure: nil)
+    }
+    
+    /**
     Adds `UIRotationGestureRecognizer` instance to view.
     
     - parameters:
@@ -210,7 +266,7 @@ public extension UIView {
         Reference to receiver for support of chain calls.
     */
     @discardableResult
-    public func onRotation(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UIRotationGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIRotationGestureRecognizer>?) -> Self {
+    public func onRotation(when handlerReuseCount: GestureHandlerReuseCount, handle: @escaping GestureRecognizerHandlerBlock<UIRotationGestureRecognizer>, configure: GestureRecognizerConfigurationBlock<UIRotationGestureRecognizer>?) -> Self {
         /*
          * Obtain handler block for gesture recognizer.
          */
@@ -243,6 +299,20 @@ public extension UIView {
     }
     
     /**
+    Adds `UIRotationGestureRecognizer` instance to view.
+    
+    - parameters:
+        - handle: Called when `UIRotationGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Reference to receiver for support of chain calls.
+    */
+    @discardableResult
+    public func onRotation(handle: @escaping GestureRecognizerHandlerBlock<UIRotationGestureRecognizer>) -> Self {
+        return onRotation(when: .always, handle: handle, configure: nil)
+    }
+    
+    /**
     Adds `UISwipeGestureRecognizer` instance to view.
     
     - parameters:
@@ -255,7 +325,7 @@ public extension UIView {
         Reference to receiver for support of chain calls.
     */
     @discardableResult
-    public func onSwipe(when handlerReuseCount: GestureHandlerReuseCount = .always, handle: @escaping GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>, configure: GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>?) -> Self {
+    public func onSwipe(when handlerReuseCount: GestureHandlerReuseCount, handle: @escaping GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>, configure: GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>?) -> Self {
         /*
          * Obtain handler block for gesture recognizer.
          */
@@ -285,6 +355,20 @@ public extension UIView {
          */
         
         return self
+    }
+    
+    /**
+    Adds `UISwipeGestureRecognizer` instance to view.
+    
+    - parameters:
+        - handle: Called when `UISwipeGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Reference to receiver for support of chain calls.
+    */
+    @discardableResult
+    public func onSwipe(handle: @escaping GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>) -> Self {
+        return onSwipe(when: .always, handle: handle, configure: nil)
     }
     
     /**
@@ -341,6 +425,21 @@ public extension UIView {
     }
     
     /**
+    Adds `UISwipeGestureRecognizer` instance to view.
+    
+    - parameters:
+        - to: Swipe direction.
+        - handle: Called when `UISwipeGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Reference to receiver for support of chain calls.
+    */
+    @discardableResult
+    public func onSwipe(to direction: SwipeDirection, handle: @escaping GestureRecognizerHandlerBlock<UISwipeGestureRecognizer>) -> Self {
+        return onSwipe(to: direction, when: .always, handle: handle, configure: nil)
+    }
+    
+    /**
     Adds `UIScreenEdgePanGestureRecognizer` instance to view.
     
     - parameters:
@@ -383,6 +482,20 @@ public extension UIView {
          */
         
         return self
+    }
+    
+    /**
+    Adds `UIScreenEdgePanGestureRecognizer` instance to view.
+    
+    - parameters:
+        - handle: Called when `UIScreenEdgePanGestureRecognizer` instance changes its state.
+    
+    - returns:
+        Reference to receiver for support of chain calls.
+    */
+    @discardableResult
+    public func onScreenEdgePan(handle: @escaping GestureRecognizerHandlerBlock<UIScreenEdgePanGestureRecognizer>) -> Self {
+        return onScreenEdgePan(when: .always, handle: handle, configure: nil)
     }
     
     // MARK: Private object methods
