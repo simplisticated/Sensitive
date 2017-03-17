@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Sensitive"
-  s.version      = "5.0"
+  s.version      = "5.1"
   s.summary      = "Fresh look at work with gestures in Swift."
 
   # This description is used to generate tags and improve search results.
