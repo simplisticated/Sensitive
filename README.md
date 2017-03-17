@@ -47,8 +47,7 @@ view.onTap(when: .always, handle: { (tapGestureRecognizer) in
 }
 
 /*
- * Also, you can use shorter expression
- * (`when` argument is equal to `.always` by default).
+ * By default, `when` parameter is equal to `.always`, so you can skip it.
  */
 
 view.onTap(handle: { (tapGestureRecognizer) in
@@ -75,20 +74,24 @@ view.onTap(when: .once, handle: { (tapGestureRecognizer) in
 }
 
 /*
+ * Set number of times to handle tap gesture in view.
+ * Gesture recognizer will be removed from view after 10 recognitions.
+ */
+
+view.onTap(when: .count(times: 10), handle: { (tapGestureRecognizer) in
+    // Handle tap on view
+    tapGestureRecognizer.view!.backgroundColor = .green
+}) { (tapGestureRecognizer) in
+    // Configure gesture recognizer
+    tapGestureRecognizer.numberOfTouchesRequired = 1
+    tapGestureRecognizer.numberOfTapsRequired = 2
+}
+
+/*
  * Add tap gesture recognizer without configuration block to view.
  */
 
 circleView.onTap(when: .always, handle: { (tapGestureRecognizer) in
-    // Handle tap on view
-    tapGestureRecognizer.view!.backgroundColor = .green
-}, configure: nil)
-
-/*
- * Add one-time tap gesture recognizer without configuration block to view.
- * Gesture recognizer will be removed from view after first recognition.
- */
-
-circleView.onTap(when: .once, handle: { (tapGestureRecognizer) in
     // Handle tap on view
     tapGestureRecognizer.view!.backgroundColor = .green
 }, configure: nil)
@@ -105,13 +108,25 @@ view.onLongPress(when: .always, handle: { (longPressGestureRecognizer) in
     longPressGestureRecognizer.numberOfTouchesRequired = 1
 }
 
-
 /*
  * Add one-time long press gesture recognizer with configuration block to view.
  * Gesture recognizer will be removed from view after first recognition.
  */
 
 view.onLongPress(when: .once, handle: { (longPressGestureRecognizer) in
+    // Handle long press on view
+    tapGestureRecognizer.view!.backgroundColor = .green
+}) { (longPressGestureRecognizer)
+    // Configure gesture recognizer
+    longPressGestureRecognizer.numberOfTouchesRequired = 1
+}
+
+/*
+ * Set number of times to handle long press gesture in view.
+ * Gesture recognizer will be removed from view after 10 recognitions.
+ */
+
+view.onLongPress(when: .count(times: 10), handle: { (longPressGestureRecognizer) in
     // Handle long press on view
     tapGestureRecognizer.view!.backgroundColor = .green
 }) { (longPressGestureRecognizer)
@@ -127,17 +142,6 @@ view.onLongPress(when: .always, handle: { (longPressGestureRecognizer) in
     // Handle long press on view
     tapGestureRecognizer.view!.backgroundColor = .green
 }, configure: nil)
-
-/*
- * Add one-time long press gesture recognizer without configuration block to view.
- * Gesture recognizer will be removed from view after first recognition.
- */
-
-view.onLongPress(when: .once, handle: { (longPressGestureRecognizer) in
-    // Handle long press on view
-    tapGestureRecognizer.view!.backgroundColor = .green
-}, configure: nil)
-
 
 /*
  * Add pan gesture recognizer with configuration block to view.
@@ -161,19 +165,21 @@ view.onPan(when: .once, handle: { (panGestureRecognizer) in
 }
 
 /*
+ * Set number of times to handle pan gesture in view.
+ * Gesture recognizer will be removed from view after 10 recognitions.
+ */
+
+view.onPan(when: .count(times: 10), handle: { (panGestureRecognizer) in
+    // Handle pan gesture on view here...
+}) { (longPressGestureRecognizer)
+    // Configure pan gesture recognizer here...
+}
+
+/*
  * Add pan gesture recognizer without configuration block to view.
  */
 
 view.onPan(when: .always, handle: { (panGestureRecognizer) in
-    // Handle pan gesture on view here...
-}, configure: nil)
-
-/*
- * Add one-time pan gesture recognizer without configuration block to view.
- * Gesture recognizer will be removed from view after first recognition.
- */
-
-view.onPan(when: .once, handle: { (panGestureRecognizer) in
     // Handle pan gesture on view here...
 }, configure: nil)
 
@@ -199,19 +205,21 @@ view.onPinch(when: .once, handle: { (pinchGestureRecognizer) in
 }
 
 /*
+ * Set number of times to handle pinch gesture in view.
+ * Gesture recognizer will be removed from view after 10 recognitions.
+ */
+
+view.onPinch(when: .count(times: 10), handle: { (pinchGestureRecognizer) in
+    // Handle pinch gesture on view here...
+}) { (pinchGestureRecognizer) in
+    // Configure pinch gesture recognizer here...
+}
+
+/*
  * Add pinch gesture recognizer without configuration block to view.
  */
 
 view.onPinch(when: .always, handle: { (pinchGestureRecognizer) in
-    // Handle pinch gesture on view here...
-}, configure: nil)
-
-/*
- * Add one-time pinch gesture recognizer without configuration block to view.
- * Gesture recognizer will be removed from view after first recognition.
- */
-
-view.onPinch(when: .once, handle: { (pinchGestureRecognizer) in
     // Handle pinch gesture on view here...
 }, configure: nil)
 
@@ -237,21 +245,23 @@ view.onRotation(when: .once, handle: { (rotationGestureRecognizer) in
 }
 
 /*
+ * Set number of times to handle rotation gesture in view.
+ * Gesture recognizer will be removed from view after 10 recognitions.
+ */
+
+view.onRotation(when: .count(times: 10), handle: { (rotationGestureRecognizer) in
+    // Handle rotation gesture on view here...
+}) { (rotationGestureRecognizer) in
+    // Configure rotation gesture recognizer here...
+}
+
+/*
  * Add rotation gesture recognizer without configuration block to view.
  */
 
 view.onRotation(when: .always, handle: { (rotationGestureRecognizer) in
     // Handle rotation gesture on view here...
 }, .configure: nil)
-
-/*
- * Add one-time rotation gesture recognizer without configuration block to view.
- * Gesture recognizer will be removed from view after first recognition.
- */
-
-view.onRotation(when: .once, handle: { (rotationGestureRecognizer) in
-    // Handle rotation gesture on view here...
-}, configure: nil)
 
 /*
  * Add swipe gesture recognizer with configuration block to view.
@@ -277,19 +287,22 @@ view.onSwipe(when: .once, { (swipeGestureRecognizer) in
 }
 
 /*
+ * Set number of times to handle swipe gesture in view.
+ * Gesture recognizer will be removed from view after 10 recognitions.
+ */
+
+view.onSwipe(when: .count(times: 10), { (swipeGestureRecognizer) in
+    // Handle swipe gesture on view here...
+}) { (swipeGestureRecognizer) in
+    // Configure swipe gesture recognizer here...
+    swipeGestureRecognizer.direction = .Right
+}
+
+/*
  * Add swipe gesture recognizer without configuration block to view.
  */
 
 view.onSwipe(when: .always, handle: { (swipeGestureRecognizer) in
-    // Handle swipe gesture on view here...
-}, configure: nil)
-
-/*
- * Add one-time swipe gesture recognizer without configuration block to view.
- * Gesture recognizer will be removed from view after first recognition.
- */
-
-view.onSwipe(when: .once, handle: { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
 }, configure: nil)
 
@@ -309,7 +322,6 @@ view.onSwipe(to: .right, when: .always, handle: { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
 }, configure: nil)
 
-
 /*
  * Add swipe down gesture recognizer without configuration block to view.
  */
@@ -317,7 +329,6 @@ view.onSwipe(to: .right, when: .always, handle: { (swipeGestureRecognizer) in
 view.onSwipe(to: .down, when: .always, handle: { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
 }, configure: nil)
-
 
 /*
  * Add swipe left gesture recognizer without configuration block to view.
@@ -350,19 +361,21 @@ view.onScreenEdgePan(when: .once, handle: { (screenEdgePanGestureRecognizer) in
 }
 
 /*
+ * Set number of times to handle screen edge pan gesture in view.
+ * Gesture recognizer will be removed from view after 10 recognitions.
+ */
+
+view.onScreenEdgePan(when: .count(times: 10), handle: { (screenEdgePanGestureRecognizer) in
+    // Handle screen edge pan gesture on view here...
+}) { (screenEdgePanGestureRecognizer) in
+    // Configure screen edge pan gesture recognizer here...
+}
+
+/*
  * Add screen edge pan gesture recognizer without configuration block to view.
  */
 
 view.onScreenEdgePan(when: .always, handle: { (screenEdgePanGestureRecognizer) in
-    // Handle screen edge pan gesture on view here...
-}, configure: nil)
-
-/*
- * Add one-time screen edge pan gesture recognizer without configuration block to view.
- * Gesture recognizer will be removed from view after first recognition.
- */
-
-view.onScreenEdgePan(when: .once, handle: { (screenEdgePanGestureRecognizer) in
     // Handle screen edge pan gesture on view here...
 }, configure: nil)
 ```
