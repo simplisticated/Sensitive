@@ -367,32 +367,32 @@ view.onScreenEdgePan(when: .once, handle: { (screenEdgePanGestureRecognizer) in
 }, configure: nil)
 ```
 
-Also, you can use directly gesture recognizers of these types:
-* `SNTapGestureRecognizer`
-* `SNLongPressGestureRecognizer`
-* `SNPanGestureRecognizer`
-* `SNPinchGestureRecognizer`
-* `SNRotationGestureRecognizer`
-* `SNSwipeGestureRecognizer`
-* `SNScreenEdgePanGestureRecognizer`
+Also, you can use gesture recognizers of these types:
+* `Sensitive.TapGestureRecognizer`
+* `Sensitive.LongPressGestureRecognizer`
+* `Sensitive.PanGestureRecognizer`
+* `Sensitive.PinchGestureRecognizer`
+* `Sensitive.RotationGestureRecognizer`
+* `Sensitive.SwipeGestureRecognizer`
+* `Sensitive.ScreenEdgePanGestureRecognizer`
 
-Each of them is a subclass for native gesture recognizer. For example, `SNTapGestureRecognizer` is subclassed from `UITapGestureRecognizer`. The purpose of `SN...` subclasses is to take a closure as parameter instead of target-action. For example, this is how you initialize `UITapGestureRecognizer`:
+Each of those gesture recognizers is a subclass of gesture recognizer from iOS SDK. For example, `Sensitive.TapGestureRecognizer` is subclassed from `UITapGestureRecognizer`. The purpose of subclasses is to use closure as parameter instead of target-action approach. For example, this is how you initialize `UITapGestureRecognizer`:
 
 ```swift
 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SomeViewController.didTapWithGestureRecognizer(_:)))
 ```
 
-And this is how you should use `SNTapGestureRecognizer`:
+And this is how you should use `Sensitive.TapGestureRecognizer`:
 
 ```swift
-let tapGestureRecognizer = SNTapGestureRecognizer { (tapGestureRecognizer) in
+let tapGestureRecognizer = TapGestureRecognizer { (tapGestureRecognizer) in
     // Do something...
 }
 ```
 
 Quite simple, isn't it?
 
-All other gesture recognizers with `SN` prefix can be initialized similar way.
+All other gesture recognizers with can be initialized similar way.
 
 ## License
 
