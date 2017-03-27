@@ -12,23 +12,18 @@ class MainViewController: UIViewController {
 
     // MARK: Class variables & properties
     
-    
     // MARK: Class methods
     
-    
     // MARK: Initializers
-    
     
     // MARK: Deinitializer
     
     deinit {
     }
     
-    
     // MARK: Outlets
     
     @IBOutlet fileprivate weak var circleView: CircleView!
-    
     
     // MARK: Variables & properties
     
@@ -41,12 +36,10 @@ class MainViewController: UIViewController {
     
     fileprivate var indexOfCurrentColor: Int?
     
-    
     // MARK: Public methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Initialize circle view
         
@@ -71,12 +64,9 @@ class MainViewController: UIViewController {
         return true
     }
     
-    
     // MARK: Private methods
     
-    
     // MARK: Actions
-    
     
     // MARK: Protocol methods
     

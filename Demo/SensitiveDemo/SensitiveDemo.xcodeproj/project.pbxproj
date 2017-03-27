@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		691254321E893261006DE5C2 /* TouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691254311E893261006DE5C2 /* TouchGestureRecognizer.swift */; };
+		691254341E89386B006DE5C2 /* TouchCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691254331E89386B006DE5C2 /* TouchCount.swift */; };
 		694D5BB71BF020E9007D0EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D5BB61BF020E9007D0EAA /* AppDelegate.swift */; };
 		694D5BBE1BF020EA007D0EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 694D5BBD1BF020EA007D0EAA /* Assets.xcassets */; };
 		694D5BC11BF020EA007D0EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694D5BBF1BF020EA007D0EAA /* LaunchScreen.storyboard */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		691254311E893261006DE5C2 /* TouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchGestureRecognizer.swift; sourceTree = "<group>"; };
+		691254331E89386B006DE5C2 /* TouchCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchCount.swift; sourceTree = "<group>"; };
 		694D5BB31BF020E9007D0EAA /* SensitiveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensitiveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694D5BB61BF020E9007D0EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		694D5BBD1BF020EA007D0EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		691254301E893261006DE5C2 /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+				691254311E893261006DE5C2 /* TouchGestureRecognizer.swift */,
+			);
+			path = Touch;
+			sourceTree = "<group>";
+		};
 		694D5BAA1BF020E9007D0EAA = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +202,7 @@
 				6976DE131E7B14280095AB57 /* GestureRecognizerHandlerBlock.swift */,
 				6953559F1E770ACC00ACF184 /* GestureHandlerReuseCount.swift */,
 				695355A31E7738A000ACF184 /* SwipeDirection.swift */,
+				691254331E89386B006DE5C2 /* TouchCount.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -229,6 +242,7 @@
 				6976DE201E7B14D90095AB57 /* Rotation */,
 				6976DE241E7B14D90095AB57 /* Swipe */,
 				6976DE221E7B14D90095AB57 /* ScreenEdgePan */,
+				691254301E893261006DE5C2 /* Touch */,
 			);
 			path = GestureRecognizers;
 			sourceTree = "<group>";
@@ -507,6 +521,8 @@
 				6976DE2F1E7B14D90095AB57 /* ScreenEdgePanGestureRecognizer.swift in Sources */,
 				6976DE2B1E7B14D90095AB57 /* LongPressGestureRecognizer.swift in Sources */,
 				69EC1C751E7B6D0A00E7082A /* ArrayExtensionViews.swift in Sources */,
+				691254341E89386B006DE5C2 /* TouchCount.swift in Sources */,
+				691254321E893261006DE5C2 /* TouchGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
