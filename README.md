@@ -72,7 +72,7 @@ view.onTap(when: .once, handle: { (tapGestureRecognizer) in
  * Gesture recognizer will be removed from view after 10 recognitions.
  */
 
-view.onTap(when: .count(times: 10), handle: { (tapGestureRecognizer) in
+view.onTap(when: .times(count: 10), handle: { (tapGestureRecognizer) in
     // Handle tap on view
     tapGestureRecognizer.view!.backgroundColor = .green
 }) { (tapGestureRecognizer) in
@@ -120,7 +120,7 @@ view.onLongPress(when: .once, handle: { (longPressGestureRecognizer) in
  * Gesture recognizer will be removed from view after 10 recognitions.
  */
 
-view.onLongPress(when: .count(times: 10), handle: { (longPressGestureRecognizer) in
+view.onLongPress(when: .times(count: 10), handle: { (longPressGestureRecognizer) in
     // Handle long press on view
     tapGestureRecognizer.view!.backgroundColor = .green
 }) { (longPressGestureRecognizer)
@@ -162,7 +162,7 @@ view.onPan(when: .once, handle: { (panGestureRecognizer) in
  * Gesture recognizer will be removed from view after 10 recognitions.
  */
 
-view.onPan(when: .count(times: 10), handle: { (panGestureRecognizer) in
+view.onPan(when: .times(count: 10), handle: { (panGestureRecognizer) in
     // Handle pan gesture on view here...
 }) { (longPressGestureRecognizer)
     // Configure pan gesture recognizer here...
@@ -202,7 +202,7 @@ view.onPinch(when: .once, handle: { (pinchGestureRecognizer) in
  * Gesture recognizer will be removed from view after 10 recognitions.
  */
 
-view.onPinch(when: .count(times: 10), handle: { (pinchGestureRecognizer) in
+view.onPinch(when: .times(count: 10), handle: { (pinchGestureRecognizer) in
     // Handle pinch gesture on view here...
 }) { (pinchGestureRecognizer) in
     // Configure pinch gesture recognizer here...
@@ -242,7 +242,7 @@ view.onRotation(when: .once, handle: { (rotationGestureRecognizer) in
  * Gesture recognizer will be removed from view after 10 recognitions.
  */
 
-view.onRotation(when: .count(times: 10), handle: { (rotationGestureRecognizer) in
+view.onRotation(when: .times(count: 10), handle: { (rotationGestureRecognizer) in
     // Handle rotation gesture on view here...
 }) { (rotationGestureRecognizer) in
     // Configure rotation gesture recognizer here...
@@ -284,7 +284,7 @@ view.onSwipe(when: .once, { (swipeGestureRecognizer) in
  * Gesture recognizer will be removed from view after 10 recognitions.
  */
 
-view.onSwipe(when: .count(times: 10), { (swipeGestureRecognizer) in
+view.onSwipe(when: .times(count: 10), { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
 }) { (swipeGestureRecognizer) in
     // Configure swipe gesture recognizer here...
@@ -357,7 +357,7 @@ view.onScreenEdgePan(when: .once, handle: { (screenEdgePanGestureRecognizer) in
  * Gesture recognizer will be removed from view after 10 recognitions.
  */
 
-view.onScreenEdgePan(when: .count(times: 10), handle: { (screenEdgePanGestureRecognizer) in
+view.onScreenEdgePan(when: .times(count: 10), handle: { (screenEdgePanGestureRecognizer) in
     // Handle screen edge pan gesture on view here...
 }) { (screenEdgePanGestureRecognizer) in
     // Configure screen edge pan gesture recognizer here...
