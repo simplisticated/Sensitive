@@ -362,6 +362,46 @@ view.onScreenEdgePan(when: .times(count: 10), handle: { (screenEdgePanGestureRec
 }) { (screenEdgePanGestureRecognizer) in
     // Configure screen edge pan gesture recognizer here...
 }
+
+/*
+ * Add touch gesture recognizer without configuration block to view.
+ */
+
+view.onTouch { (touchGestureRecognizer) in
+    // Handle touch gesture on view here...
+}
+
+/*
+ * Add touch gesture recognizer with configuration block to view.
+ */
+
+view.onTouch(when: .always, handle: { (touchGestureRecognizer) in
+    // Handle touch gesture on view here...
+}) { (touchGestureRecognizer) in
+    // Configure touch gesture recognizer here...
+}
+
+/*
+ * Add one-time touch gesture recognizer with configuration block to view.
+ * Gesture recognizer will be removed from view after first recognition.
+ */
+
+view.onTouch(when: .once, handle: { (touchGestureRecognizer) in
+    // Handle touch gesture on view here...
+}) { (touchGestureRecognizer) in
+    // Configure touch gesture recognizer here...
+}
+
+/*
+ * Set number of times to handle touch gesture in view.
+ * Gesture recognizer will be removed from view after 10 recognitions.
+ */
+
+view.onTouch(when: .times(count: 10), handle: { (touchGestureRecognizer) in
+    // Handle touch gesture on view here...
+}) { (touchGestureRecognizer) in
+    // Configure touch gesture recognizer here...
+}
 ```
 
 Also, you can use gesture recognizers of these types:
@@ -372,8 +412,9 @@ Also, you can use gesture recognizers of these types:
 * `Sensitive.RotationGestureRecognizer`
 * `Sensitive.SwipeGestureRecognizer`
 * `Sensitive.ScreenEdgePanGestureRecognizer`
+* `Sensitive.TouchGestureRecognizer`
 
-Each of those gesture recognizers is a subclass of gesture recognizer from iOS SDK. For example, `Sensitive.TapGestureRecognizer` is subclassed from `UITapGestureRecognizer`. The purpose of subclasses is to use closure as parameter instead of target-action approach. For example, this is how you initialize `UITapGestureRecognizer`:
+Each of those gesture recognizers (except `TouchGestureRecognizer` is a subclass of gesture recognizer from iOS SDK. For example, `Sensitive.TapGestureRecognizer` is subclassed from `UITapGestureRecognizer`. The purpose of subclasses is to use closure as parameter instead of target-action approach. For example, this is how you initialize `UITapGestureRecognizer`:
 
 ```swift
 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SomeViewController.didTapWithGestureRecognizer(_:)))
@@ -390,6 +431,36 @@ let tapGestureRecognizer = TapGestureRecognizer { (tapGestureRecognizer) in
 Quite simple, isn't it?
 
 All other gesture recognizers can be initialized similar way.
+
+`TouchGestureRecognizer` has no analogues in iOS SDK. The purpose of `TouchGestureRecognizer` is to handle any touches on the view (tap, pan, pinch, swipe, rotation, etc). You can initialize `TouchGestureRecognizer` instance similar to this way:
+
+```swift
+let touchGestureRecognizer = TouchGestureRecognizer { (touchGestureRecognizer) in
+    NSLog("Recognized gesture with \(touchGestureRecognizer.numberOfTouches) touches")
+}
+
+/*
+ * Now let's tell to gesture recognizer to handle gestures with one touch only.
+ */
+
+touchGestureRecognizer.numberOfTouchesRequired = .equalTo(count: 1)
+
+/*
+ * Or handle gestures with 1 or 3 touches only.
+ */
+
+touchGestureRecognizer.numberOfTouchesRequired = .predicate(block: { (numberOfTouches) -> Bool in
+    return (numberOfTouches == 1)
+        || (numberOfTouches == 3)
+})
+
+
+/*
+ * Or handle gestures with any number of touches.
+ */
+
+touchGestureRecognizer.numberOfTouchesRequired = .any
+```
 
 ## License
 
