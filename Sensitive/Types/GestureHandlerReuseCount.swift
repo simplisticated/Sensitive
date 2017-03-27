@@ -10,6 +10,6 @@ import Foundation
 
 public enum GestureHandlerReuseCount {
     case once
-    case count(times: Int)
+    case times(count: Int)
     case always
 }

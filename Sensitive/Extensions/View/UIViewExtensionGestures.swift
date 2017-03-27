@@ -528,13 +528,13 @@ public extension UIView {
                 handlerBlock(gestureRecognizer)
                 gestureRecognizer.view?.removeGestureRecognizer(gestureRecognizer)
             }
-        case let .count(times):
+        case let .times(count):
             return { (gestureRecognizer) in
                 handlerBlock(gestureRecognizer)
                 
                 let numberOfTimesGestureRecognizersIsHandled = self.stv_numberOfTimesGestureRecognizerIsHandled(gestureRecognizer: gestureRecognizer) ?? 0
                 
-                if numberOfTimesGestureRecognizersIsHandled == times {
+                if numberOfTimesGestureRecognizersIsHandled == count {
                     gestureRecognizer.view?.removeGestureRecognizer(gestureRecognizer)
                 }
             }
