@@ -21,12 +21,11 @@ or
 
 - Use `Sensitive` cocoapod.
 
-For Swift 4 use `Sensitive v5.2.1` and later.
-
 ## Requirements
 
 * iOS 9.0 and later
 * Xcode 9.0 and later
+* Swift 4
 
 ## Usage
 
