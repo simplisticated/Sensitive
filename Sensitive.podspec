@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Sensitive"
-  s.version      = "5.2.1"
+  s.version      = "5.2.2"
   s.summary      = "Fresh look at work with gestures in Swift."
 
   # This description is used to generate tags and improve search results.
@@ -56,7 +56,7 @@ This library changes the way how you work with gestures in Swift.
   s.author             = { "Igor Matyushkin" => "igormatyushkin014@gmail.com" }
   # s.author    = "Igor Matyushkin"
   # s.authors            = { "Igor Matyushkin" => "igormatyushkin014@gmail.com" }
-  # s.social_media_url   = "http://twitter.com/igormatyushkin1"
+  s.social_media_url   = "http://twitter.com/imatyushkin1"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
