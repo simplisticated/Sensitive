@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat"></a>
+<a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-4-orange.svg?style=flat"></a>
 <a href="https://cocoapods.org"><img src="https://img.shields.io/cocoapods/v/Sensitive.svg?maxAge=2592000"></a>
 <a href="https://cocoapods.org"><img src="https://img.shields.io/cocoapods/dt/Sensitive.svg?maxAge=2592000"></a>
 <a href="https://tldrlegal.com/license/mit-license"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat"></a>
@@ -24,7 +24,8 @@ or
 ## Requirements
 
 * iOS 9.0 and later
-* Xcode 8 and later
+* Xcode 9.0 and later
+* Swift 4
 
 ## Usage
 
