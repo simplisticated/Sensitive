@@ -139,7 +139,6 @@
 		694D5BB51BF020E9007D0EAA /* SensitiveDemo */ = {
 			isa = PBXGroup;
 			children = (
-				697A752E1BF1706F00229272 /* Classes */,
 				697A752F1BF1706F00229272 /* Extensions */,
 				694D5BE41BF02114007D0EAA /* Flows */,
 				69C26E7A1D941C6C005CE3ED /* Libraries */,
@@ -301,13 +300,6 @@
 				6976DE271E7B14D90095AB57 /* TapGestureRecognizer.swift */,
 			);
 			path = Tap;
-			sourceTree = "<group>";
-		};
-		697A752E1BF1706F00229272 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		697A752F1BF1706F00229272 /* Extensions */ = {
@@ -660,7 +652,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visuality.SensitiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -674,7 +666,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visuality.SensitiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
