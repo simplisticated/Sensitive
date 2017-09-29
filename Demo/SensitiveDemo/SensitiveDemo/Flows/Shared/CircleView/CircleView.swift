@@ -69,19 +69,19 @@ class CircleView: UIView {
         return "Tap this circle"
     }
     
-    func attributesForInstructionLabelText() -> [String : AnyObject] {
+    func attributesForInstructionLabelText() -> [NSAttributedStringKey : Any] {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
         
         return [
-            NSFontAttributeName: UIFont.systemFont(ofSize: 15.0),
-            NSForegroundColorAttributeName: UIColor.black,
-            NSKernAttributeName: 0.5 as AnyObject,
-            NSParagraphStyleAttributeName: paragraphStyle
+            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15.0),
+            NSAttributedStringKey.foregroundColor: UIColor.black,
+            NSAttributedStringKey.kern: 0.5 as AnyObject,
+            NSAttributedStringKey.paragraphStyle: paragraphStyle
         ]
     }
     
-    
+
     // MARK: Private methods
     
     fileprivate func customInitialization() {
