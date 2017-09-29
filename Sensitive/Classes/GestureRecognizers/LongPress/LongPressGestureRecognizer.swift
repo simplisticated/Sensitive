@@ -21,7 +21,7 @@ public class LongPressGestureRecognizer: UILongPressGestureRecognizer {
         
         // Add target
         
-        addTarget(self, action: #selector(TapGestureRecognizer.runHandlerBlock))
+        addTarget(self, action: #selector(LongPressGestureRecognizer.runHandlerBlock))
         
         // Initialize handler block
         
@@ -59,6 +59,7 @@ public class LongPressGestureRecognizer: UILongPressGestureRecognizer {
     
     // MARK: Private methods
     
+    @objc
     internal func runHandlerBlock() {
         // Update number of times handled value
         

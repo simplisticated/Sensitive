@@ -21,7 +21,7 @@ public class PanGestureRecognizer: UIPanGestureRecognizer {
         
         // Add target
         
-        addTarget(self, action: #selector(TapGestureRecognizer.runHandlerBlock))
+        addTarget(self, action: #selector(PanGestureRecognizer.runHandlerBlock))
         
         // Initialize handler block
         
@@ -59,6 +59,7 @@ public class PanGestureRecognizer: UIPanGestureRecognizer {
     
     // MARK: Private methods
     
+    @objc
     internal func runHandlerBlock() {
         // Update number of times handled value
         

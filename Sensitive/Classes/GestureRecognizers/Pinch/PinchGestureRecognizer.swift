@@ -21,7 +21,7 @@ public class PinchGestureRecognizer: UIPinchGestureRecognizer {
         
         // Add target
         
-        addTarget(self, action: #selector(TapGestureRecognizer.runHandlerBlock))
+        addTarget(self, action: #selector(PinchGestureRecognizer.runHandlerBlock))
         
         // Initialize handler block
         
@@ -59,6 +59,7 @@ public class PinchGestureRecognizer: UIPinchGestureRecognizer {
     
     // MARK: Private methods
     
+    @objc
     internal func runHandlerBlock() {
         // Update number of times handled value
         

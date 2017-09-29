@@ -139,6 +139,7 @@ public class TouchGestureRecognizer: UIGestureRecognizer {
     
     // MARK: Private object methods
     
+    @objc
     internal func runHandlerBlock() {
         // Update number of times handled value
         

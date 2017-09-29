@@ -59,6 +59,7 @@ public class TapGestureRecognizer: UITapGestureRecognizer {
     
     // MARK: Private methods
     
+    @objc
     internal func runHandlerBlock() {
         // Update number of times handled value
         

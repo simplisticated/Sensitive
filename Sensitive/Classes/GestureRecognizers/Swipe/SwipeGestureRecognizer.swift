@@ -21,7 +21,7 @@ public class SwipeGestureRecognizer: UISwipeGestureRecognizer {
         
         // Add target
         
-        addTarget(self, action: #selector(TapGestureRecognizer.runHandlerBlock))
+        addTarget(self, action: #selector(SwipeGestureRecognizer.runHandlerBlock))
         
         // Initialize handler block
         
@@ -59,6 +59,7 @@ public class SwipeGestureRecognizer: UISwipeGestureRecognizer {
     
     // MARK: Private methods
     
+    @objc
     internal func runHandlerBlock() {
         // Update number of times handled value
         
