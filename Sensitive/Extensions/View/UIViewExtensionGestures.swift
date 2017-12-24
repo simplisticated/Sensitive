@@ -35,7 +35,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForTapGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForTapGestureRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -94,7 +94,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForLongPressGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForLongPressGestureRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -153,7 +153,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForPanGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForPanGestureRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -212,7 +212,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForPinchGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForPinchGestureRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -271,7 +271,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForRotationGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForRotationGestureRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -330,7 +330,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForSwipeGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForSwipeGestureRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -390,7 +390,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForSwipeGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForSwipeGestureRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -457,7 +457,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForScreenEdgePanGestureRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForScreenEdgePanGestureRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -516,7 +516,7 @@ public extension UIView {
          * Obtain handler block for gesture recognizer.
          */
         
-        let handlerBlockForTouchRecognizer = stv_applyReuseCount(reuseCount: handlerReuseCount, toHandlerBlock: handle)
+        let handlerBlockForTouchRecognizer = self.stv_applyReuseCount(handlerReuseCount, toHandlerBlock: handle)
         
         /*
          * Create gesture recognizer instance.
@@ -580,7 +580,7 @@ public extension UIView {
         }
     }
     
-    fileprivate func stv_applyReuseCount<GestureRecognizerType: UIGestureRecognizer>(reuseCount: GestureHandlerReuseCount, toHandlerBlock handlerBlock: @escaping GestureRecognizerHandlerBlock<GestureRecognizerType>) -> GestureRecognizerHandlerBlock<GestureRecognizerType> {
+    fileprivate func stv_applyReuseCount<GestureRecognizerType: UIGestureRecognizer>(_ reuseCount: GestureHandlerReuseCount, toHandlerBlock handlerBlock: @escaping GestureRecognizerHandlerBlock<GestureRecognizerType>) -> GestureRecognizerHandlerBlock<GestureRecognizerType> {
         switch reuseCount {
         case .once:
             return { (gestureRecognizer) in
