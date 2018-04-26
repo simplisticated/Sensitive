@@ -103,7 +103,7 @@ view.onScreenEdgePan { (screenEdgePanGestureRecognizer) in
 * `ScreenEdgePanGestureRecognizer`
 * `TouchGestureRecognizer`
 
-Each of the gesture recognizers listed above is a subclass of gesture recognizer from native iOS SDK. For example, `TapGestureRecognizer` is subclassed from `UITapGestureRecognizer`, `SwipeGestureRecognizer` is a subclass of `UISwipeGestureRecognizer`, etc. The purpose of subclasses is to use closure within constructor instead of target-action approach. For example, this is how you initialize `UITapGestureRecognizer`:
+Each of gesture recognizers listed above is a subclass of gesture recognizer from native iOS SDK. For example, `TapGestureRecognizer` is subclassed from `UITapGestureRecognizer`, `SwipeGestureRecognizer` is a subclass of `UISwipeGestureRecognizer`, etc. The purpose of subclasses is to use closure within constructor instead of target-action approach. For example, this is how you initialize `UITapGestureRecognizer`:
 
 ```swift
 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SomeViewController.didTapWithGestureRecognizer(_:)))
