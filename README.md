@@ -40,12 +40,29 @@ view.onTap { (tapGestureRecognizer) in
     // Handle tap on view
     tapGestureRecognizer.view!.backgroundColor = .green
 }
+
+/*
+ * Also, if you don't need a reference to gesture recognizer,
+ * you can use the simplified version:
+ */
+
+view.onTap {
+    // Handle tap on view
+    tapGestureRecognizer.view!.backgroundColor = .green
+}
 ```
 
 Long press gesture:
 
 ```swift
 view.onLongPress { (longPressGestureRecognizer) in
+    // Handle long press on view
+    tapGestureRecognizer.view!.backgroundColor = .green
+}
+
+// or
+
+view.onLongPress {
     // Handle long press on view
     tapGestureRecognizer.view!.backgroundColor = .green
 }
@@ -57,12 +74,24 @@ Pan gesture:
 view.onPan { (panGestureRecognizer) in
     // Handle pan gesture on view here...
 }
+
+// or
+
+view.onPan {
+    // Handle pan gesture on view here...
+}
 ```
 
 Pinch gesture:
 
 ```swift
 view.onPinch { (pinchGestureRecognizer) in
+    // Handle pinch gesture on view here...
+}
+
+// or
+
+view.onPinch {
     // Handle pinch gesture on view here...
 }
 ```
@@ -73,6 +102,12 @@ Rotation gesture:
 view.onRotation { (rotationGestureRecognizer) in
     // Handle rotation gesture on view here...
 }
+
+// or
+
+view.onRotation {
+    // Handle rotation gesture on view here...
+}
 ```
 
 Swipe gesture:
@@ -81,12 +116,24 @@ Swipe gesture:
 view.onSwipe { (swipeGestureRecognizer) in
     // Handle swipe gesture on view here...
 }
+
+// or
+
+view.onSwipe {
+    // Handle swipe gesture on view here...
+}
 ```
 
 Screen edge pan gesture:
 
 ```swift
 view.onScreenEdgePan { (screenEdgePanGestureRecognizer) in
+    // Handle screen edge pan gesture on view here...
+}
+
+// or
+
+view.onScreenEdgePan {
     // Handle screen edge pan gesture on view here...
 }
 ```
