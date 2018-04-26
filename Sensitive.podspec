@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Sensitive"
-  s.version      = "5.2.2"
+  s.version      = "6.0"
   s.summary      = "Fresh look at work with gestures in Swift."
 
   # This description is used to generate tags and improve search results.
@@ -56,7 +56,7 @@ This library changes the way how you work with gestures in Swift.
   s.author             = { "Igor Matyushkin" => "igormatyushkin014@gmail.com" }
   # s.author    = "Igor Matyushkin"
   # s.authors            = { "Igor Matyushkin" => "igormatyushkin014@gmail.com" }
-  s.social_media_url   = "http://twitter.com/imatyushkin1"
+  # s.social_media_url   = ""
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -91,7 +91,7 @@ This library changes the way how you work with gestures in Swift.
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Sensitive", "Sensitive/**/*"
+  s.source_files  = "Source", "Source/**/*"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
