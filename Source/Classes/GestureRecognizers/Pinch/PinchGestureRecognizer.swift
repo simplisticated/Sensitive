@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PinchGestureRecognizer: UIPinchGestureRecognizer {
+public class PinchGestureRecognizer: UIPinchGestureRecognizer, UIGestureRecognizerDelegate {
     
     // MARK: Class variables & properties
     
@@ -19,6 +19,7 @@ public class PinchGestureRecognizer: UIPinchGestureRecognizer {
     public init(handler: @escaping GestureRecognizerHandler<UIPinchGestureRecognizer>) {
         super.init(target: nil, action: nil)
         self.handler = handler
+        self.recognizeSimultaneouslyWithOtherGestures = true
         self.addTarget(self, action: #selector(runHandler))
     }
     
@@ -31,6 +32,15 @@ public class PinchGestureRecognizer: UIPinchGestureRecognizer {
     
     fileprivate var handler: GestureRecognizerHandler<UIPinchGestureRecognizer>?
     
+    public var recognizeSimultaneouslyWithOtherGestures: Bool {
+        get {
+            return self.delegate === self
+        }
+        set {
+            self.delegate = self
+        }
+    }
+    
     // MARK: Public methods
     
     // MARK: Private methods
@@ -41,5 +51,9 @@ public class PinchGestureRecognizer: UIPinchGestureRecognizer {
     }
     
     // MARK: Protocol methods
+    
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
 }
