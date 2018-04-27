@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SwipeGestureRecognizer: UISwipeGestureRecognizer {
+public class SwipeGestureRecognizer: UISwipeGestureRecognizer, UIGestureRecognizerDelegate {
     
     // MARK: Class variables & properties
     
@@ -19,6 +19,7 @@ public class SwipeGestureRecognizer: UISwipeGestureRecognizer {
     public init(handler: @escaping GestureRecognizerHandler<UISwipeGestureRecognizer>) {
         super.init(target: nil, action: nil)
         self.handler = handler
+        self.recognizeSimultaneouslyWithOtherGestures = true
         self.addTarget(self, action: #selector(runHandler))
     }
     
@@ -31,6 +32,15 @@ public class SwipeGestureRecognizer: UISwipeGestureRecognizer {
     
     fileprivate var handler: GestureRecognizerHandler<UISwipeGestureRecognizer>?
     
+    public var recognizeSimultaneouslyWithOtherGestures: Bool {
+        get {
+            return self.delegate === self
+        }
+        set {
+            self.delegate = newValue ? self : nil
+        }
+    }
+    
     // MARK: Public methods
     
     // MARK: Private methods
@@ -41,5 +51,9 @@ public class SwipeGestureRecognizer: UISwipeGestureRecognizer {
     }
     
     // MARK: Protocol methods
+    
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
 }
