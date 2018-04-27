@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PanGestureRecognizer: UIPanGestureRecognizer {
+public class PanGestureRecognizer: UIPanGestureRecognizer, UIGestureRecognizerDelegate {
     
     // MARK: Class variables & properties
     
@@ -19,6 +19,7 @@ public class PanGestureRecognizer: UIPanGestureRecognizer {
     public init(handler: @escaping GestureRecognizerHandler<UIPanGestureRecognizer>) {
         super.init(target: nil, action: nil)
         self.handler = handler
+        self.recognizeSimultaneouslyWithOtherGestures = true
         self.addTarget(self, action: #selector(runHandler))
     }
     
@@ -31,6 +32,15 @@ public class PanGestureRecognizer: UIPanGestureRecognizer {
     
     fileprivate var handler: GestureRecognizerHandler<UIPanGestureRecognizer>?
     
+    public var recognizeSimultaneouslyWithOtherGestures: Bool {
+        get {
+            return self.delegate === self
+        }
+        set {
+            self.delegate = self
+        }
+    }
+    
     // MARK: Public methods
     
     // MARK: Private methods
@@ -41,5 +51,9 @@ public class PanGestureRecognizer: UIPanGestureRecognizer {
     }
     
     // MARK: Protocol methods
+    
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
 }
