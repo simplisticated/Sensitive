@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class RotationGestureRecognizer: UIRotationGestureRecognizer {
+public class RotationGestureRecognizer: UIRotationGestureRecognizer, UIGestureRecognizerDelegate {
     
     // MARK: Class variables & properties
     
@@ -19,6 +19,7 @@ public class RotationGestureRecognizer: UIRotationGestureRecognizer {
     public init(handler: @escaping GestureRecognizerHandler<UIRotationGestureRecognizer>) {
         super.init(target: nil, action: nil)
         self.handler = handler
+        self.recognizeSimultaneouslyWithOtherGestures = true
         self.addTarget(self, action: #selector(runHandler))
     }
     
@@ -31,6 +32,15 @@ public class RotationGestureRecognizer: UIRotationGestureRecognizer {
     
     fileprivate var handler: GestureRecognizerHandler<UIRotationGestureRecognizer>?
     
+    public var recognizeSimultaneouslyWithOtherGestures: Bool {
+        get {
+            return self.delegate === self
+        }
+        set {
+            self.delegate = self
+        }
+    }
+    
     // MARK: Public methods
     
     // MARK: Private methods
@@ -41,6 +51,10 @@ public class RotationGestureRecognizer: UIRotationGestureRecognizer {
     }
     
     // MARK: Protocol methods
+    
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
 }
 
