@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TapGestureRecognizer: UITapGestureRecognizer {
+public class TapGestureRecognizer: UITapGestureRecognizer, UIGestureRecognizerDelegate {
     
     // MARK: Class variables & properties
     
@@ -19,6 +19,7 @@ public class TapGestureRecognizer: UITapGestureRecognizer {
     public init(handler: @escaping GestureRecognizerHandler<UITapGestureRecognizer>) {
         super.init(target: nil, action: nil)
         self.handler = handler
+        self.recognizeSimultaneouslyWithOtherGestures = true
         self.addTarget(self, action: #selector(runHandler))
     }
     
@@ -31,6 +32,15 @@ public class TapGestureRecognizer: UITapGestureRecognizer {
     
     fileprivate var handler: GestureRecognizerHandler<UITapGestureRecognizer>?
     
+    public var recognizeSimultaneouslyWithOtherGestures: Bool {
+        get {
+            return self.delegate === self
+        }
+        set {
+            self.delegate = self
+        }
+    }
+    
     // MARK: Public methods
     
     // MARK: Private methods
@@ -41,5 +51,9 @@ public class TapGestureRecognizer: UITapGestureRecognizer {
     }
     
     // MARK: Protocol methods
+    
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
 }
