@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LongPressGestureRecognizer: UILongPressGestureRecognizer {
+public class LongPressGestureRecognizer: UILongPressGestureRecognizer, UIGestureRecognizerDelegate {
     
     // MARK: Class variables & properties
     
@@ -19,6 +19,7 @@ public class LongPressGestureRecognizer: UILongPressGestureRecognizer {
     public init(handler: @escaping GestureRecognizerHandler<UILongPressGestureRecognizer>) {
         super.init(target: nil, action: nil)
         self.handler = handler
+        self.recognizeSimultaneouslyWithOtherGestures = true
         self.addTarget(self, action: #selector(runHandler))
     }
     
@@ -31,6 +32,15 @@ public class LongPressGestureRecognizer: UILongPressGestureRecognizer {
     
     fileprivate var handler: GestureRecognizerHandler<UILongPressGestureRecognizer>?
     
+    public var recognizeSimultaneouslyWithOtherGestures: Bool {
+        get {
+            return self.delegate === self
+        }
+        set {
+            self.delegate = self
+        }
+    }
+    
     // MARK: Public methods
     
     // MARK: Private methods
@@ -41,5 +51,9 @@ public class LongPressGestureRecognizer: UILongPressGestureRecognizer {
     }
     
     // MARK: Protocol methods
+    
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
 }
