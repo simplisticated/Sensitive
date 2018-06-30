@@ -31,143 +31,57 @@ or
 
 ### Adding Gesture Recognizers to View
 
-Tap gesture:
+All gestures are available via special variables that you can call on any `UIView` instance. Examples:
 
 ```swift
-let view = UIView()
+view.onTap
+    .configure(with: { (gestureRecognizer) in
+        // Configure `UITapGestureRecognizer` instance
+        gestureRecognizer.numberOfTapsRequired = 2
+    })
+    .handle { (gestureRecognizer) in
+        // Handle tap on view
+        gestureRecognizer.view!.backgroundColor = .green
+    }
 
-view.onTap { (tapGestureRecognizer) in
-    // Handle tap on view
-    tapGestureRecognizer.view!.backgroundColor = .green
-}
-
-/*
- * Also, if you don't need a reference to gesture recognizer,
- * you can use the simplified version:
- */
-
-view.onTap {
-    // Handle tap on view
-    tapGestureRecognizer.view!.backgroundColor = .green
-}
+view.onSwipe
+    .configure(with: { (gestureRecognizer) in
+        // Configure `UISwipeGestureRecognizer` instance
+        gestureRecognizer.direction = .left
+    })
+    .handle { (gestureRecognizer) in
+        // Handle tap on view
+        gestureRecognizer.view!.backgroundColor = .green
+    }
 ```
 
-Long press gesture:
+Full list of available gestures:
+
+- `onTap`
+- `onLongPress`
+- `onPan`
+- `onPinch`
+- `onRotation`
+- `onSwipe`
+- `onScreenEdgePan`
+
+### Simultaneous Recognition
+
+If you need few gestures to work together on the same view, you can also use `recognizeSimultaneously` method:
 
 ```swift
-view.onLongPress { (longPressGestureRecognizer) in
-    // Handle long press on view
-    tapGestureRecognizer.view!.backgroundColor = .green
-}
+view.onTap
+    .handle { (gestureRecognizer) in
+        // Your implementation here...
+    }
+    .recognizeSimultaneously(true)
 
-// or
-
-view.onLongPress {
-    // Handle long press on view
-    tapGestureRecognizer.view!.backgroundColor = .green
-}
+view.onPinch
+    .handle { (gestureRecognizer) in
+        // Your implementation here...
+    }
+    .recognizeSimultaneously(true)
 ```
-
-Pan gesture:
-
-```swift
-view.onPan { (panGestureRecognizer) in
-    // Handle pan gesture on view here...
-}
-
-// or
-
-view.onPan {
-    // Handle pan gesture on view here...
-}
-```
-
-Pinch gesture:
-
-```swift
-view.onPinch { (pinchGestureRecognizer) in
-    // Handle pinch gesture on view here...
-}
-
-// or
-
-view.onPinch {
-    // Handle pinch gesture on view here...
-}
-```
-
-Rotation gesture:
-
-```swift
-view.onRotation { (rotationGestureRecognizer) in
-    // Handle rotation gesture on view here...
-}
-
-// or
-
-view.onRotation {
-    // Handle rotation gesture on view here...
-}
-```
-
-Swipe gesture:
-
-```swift
-view.onSwipe { (swipeGestureRecognizer) in
-    // Handle swipe gesture on view here...
-}
-
-// or
-
-view.onSwipe {
-    // Handle swipe gesture on view here...
-}
-```
-
-Screen edge pan gesture:
-
-```swift
-view.onScreenEdgePan { (screenEdgePanGestureRecognizer) in
-    // Handle screen edge pan gesture on view here...
-}
-
-// or
-
-view.onScreenEdgePan {
-    // Handle screen edge pan gesture on view here...
-}
-```
-
-### Using Gesture Recognizers Directly
-
-`Sensitive` provides set of `UIGestureRecognizer` subclasses that makes your code cleaner and simpler:
-* `TapGestureRecognizer`
-* `LongPressGestureRecognizer`
-* `PanGestureRecognizer`
-* `PinchGestureRecognizer`
-* `RotationGestureRecognizer`
-* `SwipeGestureRecognizer`
-* `ScreenEdgePanGestureRecognizer`
-
-Each of gesture recognizers listed above is a subclass of gesture recognizer from native iOS SDK. For example, `TapGestureRecognizer` is subclassed from `UITapGestureRecognizer`, `SwipeGestureRecognizer` is a subclass of `UISwipeGestureRecognizer`, etc. The purpose of subclasses is to use closure within constructor instead of target-action approach. For example, this is how you initialize `UITapGestureRecognizer`:
-
-```swift
-let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SomeViewController.didTapWithGestureRecognizer(_:)))
-view.addGestureRecognizer(tapGestureRecognizer)
-```
-
-And this is how you can use `TapGestureRecognizer`:
-
-```swift
-let tapGestureRecognizer = TapGestureRecognizer { (tapGestureRecognizer) in
-    // Do something...
-}
-view.addGestureRecognizer(tapGestureRecognizer)
-```
-
-Quite simple, isn't it?
-
-All other gesture recognizers can be initialized similar way.
 
 ## License
 
