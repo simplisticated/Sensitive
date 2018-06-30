@@ -44,16 +44,17 @@ class MainViewController: UIViewController {
         
         // Initialize circle view
         
-        circleView.onTap { (gestureRecognizer) in
-            if (self.indexOfCurrentColor == nil) || (self.indexOfCurrentColor! >= self.colors.count - 1) {
-                self.indexOfCurrentColor = 0
-            } else {
-                self.indexOfCurrentColor = self.indexOfCurrentColor! + 1
+        self.circleView.onTap
+            .handle { (tapGestureRecognizer) in
+                if (self.indexOfCurrentColor == nil) || (self.indexOfCurrentColor! >= self.colors.count - 1) {
+                    self.indexOfCurrentColor = 0
+                } else {
+                    self.indexOfCurrentColor = self.indexOfCurrentColor! + 1
+                }
+                
+                let colorForCircleView = self.colors[self.indexOfCurrentColor!]
+                self.circleView.backgroundColor = colorForCircleView
             }
-            
-            let colorForCircleView = self.colors[self.indexOfCurrentColor!]
-            self.circleView.backgroundColor = colorForCircleView
-        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TapGestureRecognizer: UITapGestureRecognizer, UIGestureRecognizerDelegate {
+public final class TapGestureRecognizer: UITapGestureRecognizer, UIGestureRecognizerDelegate {
     
     // MARK: Class variables & properties
     

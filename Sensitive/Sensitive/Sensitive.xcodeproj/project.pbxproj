@@ -8,42 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		691E99C320914B130051B750 /* Sensitive.h in Headers */ = {isa = PBXBuildFile; fileRef = 691E99C120914B130051B750 /* Sensitive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		691E99E520914B200051B750 /* LongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99CD20914B200051B750 /* LongPressGestureRecognizer.swift */; };
-		691E99E620914B200051B750 /* PanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99CF20914B200051B750 /* PanGestureRecognizer.swift */; };
-		691E99E720914B200051B750 /* PinchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99D120914B200051B750 /* PinchGestureRecognizer.swift */; };
-		691E99E820914B200051B750 /* RotationGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99D320914B200051B750 /* RotationGestureRecognizer.swift */; };
-		691E99E920914B200051B750 /* ScreenEdgePanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99D520914B200051B750 /* ScreenEdgePanGestureRecognizer.swift */; };
-		691E99EA20914B200051B750 /* SwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99D720914B200051B750 /* SwipeGestureRecognizer.swift */; };
-		691E99EB20914B200051B750 /* TapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99D920914B200051B750 /* TapGestureRecognizer.swift */; };
-		691E99EC20914B200051B750 /* UIViewExtensionLongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99DC20914B200051B750 /* UIViewExtensionLongPressGesture.swift */; };
-		691E99ED20914B200051B750 /* UIViewExtensionPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99DD20914B200051B750 /* UIViewExtensionPanGesture.swift */; };
-		691E99EE20914B200051B750 /* UIViewExtensionPinchGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99DE20914B200051B750 /* UIViewExtensionPinchGesture.swift */; };
-		691E99EF20914B200051B750 /* UIViewExtensionRotationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99DF20914B200051B750 /* UIViewExtensionRotationGesture.swift */; };
-		691E99F020914B200051B750 /* UIViewExtensionScreenEdgePanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99E020914B200051B750 /* UIViewExtensionScreenEdgePanGesture.swift */; };
-		691E99F120914B200051B750 /* UIViewExtensionSwipeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99E120914B200051B750 /* UIViewExtensionSwipeGesture.swift */; };
-		691E99F220914B200051B750 /* UIViewExtensionTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99E220914B200051B750 /* UIViewExtensionTapGesture.swift */; };
 		691E99F320914B200051B750 /* GestureRecognizerHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E99E420914B200051B750 /* GestureRecognizerHandlers.swift */; };
+		696117C820E7787200074C8C /* LongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117BB20E7787200074C8C /* LongPressGestureRecognizer.swift */; };
+		696117C920E7787200074C8C /* PanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117BD20E7787200074C8C /* PanGestureRecognizer.swift */; };
+		696117CA20E7787200074C8C /* PinchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117BF20E7787200074C8C /* PinchGestureRecognizer.swift */; };
+		696117CB20E7787200074C8C /* RotationGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117C120E7787200074C8C /* RotationGestureRecognizer.swift */; };
+		696117CC20E7787200074C8C /* ScreenEdgePanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117C320E7787200074C8C /* ScreenEdgePanGestureRecognizer.swift */; };
+		696117CD20E7787200074C8C /* SwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117C520E7787200074C8C /* SwipeGestureRecognizer.swift */; };
+		696117CE20E7787200074C8C /* TapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117C720E7787200074C8C /* TapGestureRecognizer.swift */; };
+		696117D620E78ECE00074C8C /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117D520E78ECE00074C8C /* Gesture.swift */; };
+		696117DB20E7CBE000074C8C /* GestureRetainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117DA20E7CBE000074C8C /* GestureRetainer.swift */; };
+		696117DD20E7DECF00074C8C /* UIViewExtensionGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696117DC20E7DECF00074C8C /* UIViewExtensionGestures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		691E99BE20914B130051B750 /* Sensitive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sensitive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		691E99C120914B130051B750 /* Sensitive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sensitive.h; sourceTree = "<group>"; };
 		691E99C220914B130051B750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		691E99CD20914B200051B750 /* LongPressGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressGestureRecognizer.swift; sourceTree = "<group>"; };
-		691E99CF20914B200051B750 /* PanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureRecognizer.swift; sourceTree = "<group>"; };
-		691E99D120914B200051B750 /* PinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchGestureRecognizer.swift; sourceTree = "<group>"; };
-		691E99D320914B200051B750 /* RotationGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationGestureRecognizer.swift; sourceTree = "<group>"; };
-		691E99D520914B200051B750 /* ScreenEdgePanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEdgePanGestureRecognizer.swift; sourceTree = "<group>"; };
-		691E99D720914B200051B750 /* SwipeGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeGestureRecognizer.swift; sourceTree = "<group>"; };
-		691E99D920914B200051B750 /* TapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizer.swift; sourceTree = "<group>"; };
-		691E99DC20914B200051B750 /* UIViewExtensionLongPressGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionLongPressGesture.swift; sourceTree = "<group>"; };
-		691E99DD20914B200051B750 /* UIViewExtensionPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionPanGesture.swift; sourceTree = "<group>"; };
-		691E99DE20914B200051B750 /* UIViewExtensionPinchGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionPinchGesture.swift; sourceTree = "<group>"; };
-		691E99DF20914B200051B750 /* UIViewExtensionRotationGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionRotationGesture.swift; sourceTree = "<group>"; };
-		691E99E020914B200051B750 /* UIViewExtensionScreenEdgePanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionScreenEdgePanGesture.swift; sourceTree = "<group>"; };
-		691E99E120914B200051B750 /* UIViewExtensionSwipeGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionSwipeGesture.swift; sourceTree = "<group>"; };
-		691E99E220914B200051B750 /* UIViewExtensionTapGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTapGesture.swift; sourceTree = "<group>"; };
 		691E99E420914B200051B750 /* GestureRecognizerHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureRecognizerHandlers.swift; sourceTree = "<group>"; };
+		696117BB20E7787200074C8C /* LongPressGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongPressGestureRecognizer.swift; sourceTree = "<group>"; };
+		696117BD20E7787200074C8C /* PanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureRecognizer.swift; sourceTree = "<group>"; };
+		696117BF20E7787200074C8C /* PinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinchGestureRecognizer.swift; sourceTree = "<group>"; };
+		696117C120E7787200074C8C /* RotationGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationGestureRecognizer.swift; sourceTree = "<group>"; };
+		696117C320E7787200074C8C /* ScreenEdgePanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEdgePanGestureRecognizer.swift; sourceTree = "<group>"; };
+		696117C520E7787200074C8C /* SwipeGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeGestureRecognizer.swift; sourceTree = "<group>"; };
+		696117C720E7787200074C8C /* TapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizer.swift; sourceTree = "<group>"; };
+		696117D520E78ECE00074C8C /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		696117DA20E7CBE000074C8C /* GestureRetainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRetainer.swift; sourceTree = "<group>"; };
+		696117DC20E7DECF00074C8C /* UIViewExtensionGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionGestures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,79 +89,10 @@
 		691E99CA20914B200051B750 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				691E99CB20914B200051B750 /* GestureRecognizers */,
+				696117D420E78ECE00074C8C /* Gesture */,
+				696117B920E7787200074C8C /* Recognizers */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		691E99CB20914B200051B750 /* GestureRecognizers */ = {
-			isa = PBXGroup;
-			children = (
-				691E99D820914B200051B750 /* Tap */,
-				691E99CC20914B200051B750 /* LongPress */,
-				691E99CE20914B200051B750 /* Pan */,
-				691E99D020914B200051B750 /* Pinch */,
-				691E99D220914B200051B750 /* Rotation */,
-				691E99D620914B200051B750 /* Swipe */,
-				691E99D420914B200051B750 /* ScreenEdgePan */,
-			);
-			path = GestureRecognizers;
-			sourceTree = "<group>";
-		};
-		691E99CC20914B200051B750 /* LongPress */ = {
-			isa = PBXGroup;
-			children = (
-				691E99CD20914B200051B750 /* LongPressGestureRecognizer.swift */,
-			);
-			path = LongPress;
-			sourceTree = "<group>";
-		};
-		691E99CE20914B200051B750 /* Pan */ = {
-			isa = PBXGroup;
-			children = (
-				691E99CF20914B200051B750 /* PanGestureRecognizer.swift */,
-			);
-			path = Pan;
-			sourceTree = "<group>";
-		};
-		691E99D020914B200051B750 /* Pinch */ = {
-			isa = PBXGroup;
-			children = (
-				691E99D120914B200051B750 /* PinchGestureRecognizer.swift */,
-			);
-			path = Pinch;
-			sourceTree = "<group>";
-		};
-		691E99D220914B200051B750 /* Rotation */ = {
-			isa = PBXGroup;
-			children = (
-				691E99D320914B200051B750 /* RotationGestureRecognizer.swift */,
-			);
-			path = Rotation;
-			sourceTree = "<group>";
-		};
-		691E99D420914B200051B750 /* ScreenEdgePan */ = {
-			isa = PBXGroup;
-			children = (
-				691E99D520914B200051B750 /* ScreenEdgePanGestureRecognizer.swift */,
-			);
-			path = ScreenEdgePan;
-			sourceTree = "<group>";
-		};
-		691E99D620914B200051B750 /* Swipe */ = {
-			isa = PBXGroup;
-			children = (
-				691E99D720914B200051B750 /* SwipeGestureRecognizer.swift */,
-			);
-			path = Swipe;
-			sourceTree = "<group>";
-		};
-		691E99D820914B200051B750 /* Tap */ = {
-			isa = PBXGroup;
-			children = (
-				691E99D920914B200051B750 /* TapGestureRecognizer.swift */,
-			);
-			path = Tap;
 			sourceTree = "<group>";
 		};
 		691E99DA20914B200051B750 /* Extensions */ = {
@@ -183,13 +106,7 @@
 		691E99DB20914B200051B750 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				691E99E220914B200051B750 /* UIViewExtensionTapGesture.swift */,
-				691E99DC20914B200051B750 /* UIViewExtensionLongPressGesture.swift */,
-				691E99DD20914B200051B750 /* UIViewExtensionPanGesture.swift */,
-				691E99DE20914B200051B750 /* UIViewExtensionPinchGesture.swift */,
-				691E99DF20914B200051B750 /* UIViewExtensionRotationGesture.swift */,
-				691E99E120914B200051B750 /* UIViewExtensionSwipeGesture.swift */,
-				691E99E020914B200051B750 /* UIViewExtensionScreenEdgePanGesture.swift */,
+				696117DC20E7DECF00074C8C /* UIViewExtensionGestures.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +117,85 @@
 				691E99E420914B200051B750 /* GestureRecognizerHandlers.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		696117B920E7787200074C8C /* Recognizers */ = {
+			isa = PBXGroup;
+			children = (
+				696117C620E7787200074C8C /* Tap */,
+				696117BA20E7787200074C8C /* LongPress */,
+				696117BC20E7787200074C8C /* Pan */,
+				696117BE20E7787200074C8C /* Pinch */,
+				696117C020E7787200074C8C /* Rotation */,
+				696117C420E7787200074C8C /* Swipe */,
+				696117C220E7787200074C8C /* ScreenEdgePan */,
+			);
+			path = Recognizers;
+			sourceTree = "<group>";
+		};
+		696117BA20E7787200074C8C /* LongPress */ = {
+			isa = PBXGroup;
+			children = (
+				696117BB20E7787200074C8C /* LongPressGestureRecognizer.swift */,
+			);
+			path = LongPress;
+			sourceTree = "<group>";
+		};
+		696117BC20E7787200074C8C /* Pan */ = {
+			isa = PBXGroup;
+			children = (
+				696117BD20E7787200074C8C /* PanGestureRecognizer.swift */,
+			);
+			path = Pan;
+			sourceTree = "<group>";
+		};
+		696117BE20E7787200074C8C /* Pinch */ = {
+			isa = PBXGroup;
+			children = (
+				696117BF20E7787200074C8C /* PinchGestureRecognizer.swift */,
+			);
+			path = Pinch;
+			sourceTree = "<group>";
+		};
+		696117C020E7787200074C8C /* Rotation */ = {
+			isa = PBXGroup;
+			children = (
+				696117C120E7787200074C8C /* RotationGestureRecognizer.swift */,
+			);
+			path = Rotation;
+			sourceTree = "<group>";
+		};
+		696117C220E7787200074C8C /* ScreenEdgePan */ = {
+			isa = PBXGroup;
+			children = (
+				696117C320E7787200074C8C /* ScreenEdgePanGestureRecognizer.swift */,
+			);
+			path = ScreenEdgePan;
+			sourceTree = "<group>";
+		};
+		696117C420E7787200074C8C /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				696117C520E7787200074C8C /* SwipeGestureRecognizer.swift */,
+			);
+			path = Swipe;
+			sourceTree = "<group>";
+		};
+		696117C620E7787200074C8C /* Tap */ = {
+			isa = PBXGroup;
+			children = (
+				696117C720E7787200074C8C /* TapGestureRecognizer.swift */,
+			);
+			path = Tap;
+			sourceTree = "<group>";
+		};
+		696117D420E78ECE00074C8C /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				696117D520E78ECE00074C8C /* Gesture.swift */,
+				696117DA20E7CBE000074C8C /* GestureRetainer.swift */,
+			);
+			path = Gesture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,21 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691E99EA20914B200051B750 /* SwipeGestureRecognizer.swift in Sources */,
-				691E99F020914B200051B750 /* UIViewExtensionScreenEdgePanGesture.swift in Sources */,
-				691E99EE20914B200051B750 /* UIViewExtensionPinchGesture.swift in Sources */,
-				691E99E720914B200051B750 /* PinchGestureRecognizer.swift in Sources */,
+				696117CB20E7787200074C8C /* RotationGestureRecognizer.swift in Sources */,
+				696117CE20E7787200074C8C /* TapGestureRecognizer.swift in Sources */,
+				696117D620E78ECE00074C8C /* Gesture.swift in Sources */,
 				691E99F320914B200051B750 /* GestureRecognizerHandlers.swift in Sources */,
-				691E99EC20914B200051B750 /* UIViewExtensionLongPressGesture.swift in Sources */,
-				691E99ED20914B200051B750 /* UIViewExtensionPanGesture.swift in Sources */,
-				691E99F120914B200051B750 /* UIViewExtensionSwipeGesture.swift in Sources */,
-				691E99EB20914B200051B750 /* TapGestureRecognizer.swift in Sources */,
-				691E99E820914B200051B750 /* RotationGestureRecognizer.swift in Sources */,
-				691E99E520914B200051B750 /* LongPressGestureRecognizer.swift in Sources */,
-				691E99E920914B200051B750 /* ScreenEdgePanGestureRecognizer.swift in Sources */,
-				691E99EF20914B200051B750 /* UIViewExtensionRotationGesture.swift in Sources */,
-				691E99F220914B200051B750 /* UIViewExtensionTapGesture.swift in Sources */,
-				691E99E620914B200051B750 /* PanGestureRecognizer.swift in Sources */,
+				696117DB20E7CBE000074C8C /* GestureRetainer.swift in Sources */,
+				696117CA20E7787200074C8C /* PinchGestureRecognizer.swift in Sources */,
+				696117C820E7787200074C8C /* LongPressGestureRecognizer.swift in Sources */,
+				696117CC20E7787200074C8C /* ScreenEdgePanGestureRecognizer.swift in Sources */,
+				696117DD20E7DECF00074C8C /* UIViewExtensionGestures.swift in Sources */,
+				696117CD20E7787200074C8C /* SwipeGestureRecognizer.swift in Sources */,
+				696117C920E7787200074C8C /* PanGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
