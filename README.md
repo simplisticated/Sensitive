@@ -83,6 +83,12 @@ view.onPinch
     .recognizeSimultaneously(true)
 ```
 
+## Contact Me
+
+Impressed? I'm actually open to your projects.
+
+If you want some particular app for iOS, drop me a line at igormatyushkin014@gmail.com
+
 ## License
 
 `Sensitive` is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
