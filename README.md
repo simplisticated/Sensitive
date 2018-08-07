@@ -1,5 +1,5 @@
 <p align="center" >
-<img src="https://github.com/igormatyushkin014/Sensitive/blob/master/Logo/logo-1024-300.png" alt="Sensitive" title="Sensitive">
+<img src="https://github.com/igormatyushkin014/Sensitive/blob/master/Logo/logo_1024_300.png" alt="Sensitive" title="Sensitive">
 </p>
 
 <p align="center">
