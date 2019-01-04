@@ -34,6 +34,7 @@ public final class Gesture<Recognizer: UIGestureRecognizer>: NSObject, UIGesture
     
     deinit {
         self.view = nil
+        self.recognizer.removeObserver(self, forKeyPath: "view")
         self.recognizer = nil
         self.handler = nil
         self.shouldRecognizeSimultaneouslyWithOtherGestures = nil
