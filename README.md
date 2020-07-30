@@ -25,7 +25,7 @@ or
 
 * iOS 9.0 and later
 * Xcode 9.0 and later
-* Swift 4.1
+* Swift 4.1 or later
 
 ## Usage
 
