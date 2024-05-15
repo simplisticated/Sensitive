@@ -11,14 +11,6 @@
 
 `Sensitive` is a library that simplifies work with gestures in iOS. Forget about target/action pattern of primitive `UIGestureRecognizer`. With `Sensitive` you can call `onTap`, `onPinch`, `onSwipe` on any `UIView` instance and implement handler for the gesture. That's all that you should know to start. For details, see [Usage](#usage) section.
 
-## Important
-
-I dedicate a considerable amount of my free time to developing and maintaining my open source software. To help ensure this package is kept updated, new features are added and bugfixes are implemented quickly, please donate a couple of dollars (or a little more if you can stretch) as this will help me to afford to dedicate time to its maintenance. Please consider donating if you're using this software in an app that makes you money, if you're being paid to make the app, if you're asking for new features or priority bug fixes. I accept donations only in Bitcoin and Ethereum. Thank you for your support!
-
-Bitcoin: 3GYbxsDPni2TDiijiiKWh2RvWyx8YeMa14
-
-Ethereum: 0x576E29793F1BdfF6fA061D096feb8197E7Aae78B
-
 ## How To Get Started
 
 - Copy content of `Source` folder to your project.
